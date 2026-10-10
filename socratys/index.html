@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Socratys — dissertation de philosophie</title>
+<meta name="description" content="Socratys accompagne l'élève de terminale dans la rédaction de sa dissertation de philosophie, en lui posant des questions. Sans compte, sans connexion.">
+<link rel="stylesheet" href="../assets/css/socratys.css">
+</head>
+<body>
+<div id="w">
+  <header class="tete">
+    <div class="mark">Socratys</div>
+    <div class="sub">Dissertation de philosophie</div>
+    <nav class="outils" aria-label="Session">
+      <button type="button" id="changer" hidden>changer de sujet</button>
+      <button type="button" id="effacer" hidden>effacer mes réponses</button>
+    </nav>
+  </header>
+  <main id="fil" aria-live="polite"></main>
+  <noscript><p class="confid">Socratys a besoin de JavaScript pour fonctionner. Active-le dans ton navigateur.</p></noscript>
+</div>
+<div id="ctl"></div>
+<article id="impression" aria-hidden="true"></article>
+
+<script src="../assets/js/socratys/communs.js"></script>
+<script src="../assets/js/socratys/sujet-bonheur.js"></script>
+<script src="../assets/js/socratys/sujet-paroles.js"></script>
+<script src="../assets/js/socratys/sujet-etat.js"></script>
+<script src="../assets/js/socratys/moteur.js"></script>
+</body>
+</html>
