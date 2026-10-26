@@ -8,8 +8,7 @@
 
   /* introduction assemblée à partir des réponses de l'élève, qu'il réécrit ensuite */
   const INTRO =
-    "Avons-nous la maîtrise de nos paroles ? Le sujet grammatical de cette question est {sujetGram}, et son prédicat {predicat}. " +
-    "Ce prédicat peut se définir à partir du couple {couple}. Du point de vue subjectif, la parole se définit comme {defs2.0|defs.0} ; on l'oppose alors à {defs.1}. " +
+    "Avons-nous la maîtrise de nos paroles ? La parole peut s'entendre en deux sens, que distingue le couple {couple}. Du point de vue subjectif, la parole se définit comme {defs2.0|defs.0} ; on l'oppose alors à {defs.1}. " +
     "Du point de vue objectif, elle se définit comme {defs2.1|defs.3} ; on l'oppose alors à {defs.4}.\n\n" +
     "Se demander si nous avons la maîtrise de nos paroles, revient à se demander si nous avons la maîtrise de la parole comme {reform.0}, ou comme {reform.1}. " +
     "Si nous avons la maîtrise de nos paroles au sens subjectif, alors {probl.0}. Or {probl.1}. " +
@@ -71,7 +70,7 @@
         dit: ["Quel est le prédicat de ce sujet ?"],
         reponse: "Ta réponse", id: "predicat",
         motsCles: ["parole"],
-        relances: ["Sur quoi porte la maîtrise dont parle la question ?"]
+        relances: [window.SOCRATYS.AIDE_PREDICAT, "Sur quoi porte la maîtrise dont parle la question ?"]
       },
       {
         dit: ["Et quel est le sujet grammatical de cette question ?"],

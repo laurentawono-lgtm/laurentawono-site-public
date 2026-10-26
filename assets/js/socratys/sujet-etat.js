@@ -8,8 +8,7 @@
 
   /* introduction assemblée à partir des réponses de l'élève, qu'il peut ensuite modifier */
   const INTRO =
-    "Est-ce à l'État de faire la justice ? Le sujet grammatical de cette question est {sujetGram}, et son prédicat {predicat}. " +
-    "Ce prédicat peut se définir à partir du couple {couple}. Au sens de la légalité, la justice se définit comme {defs2.0|defs.0} ; on l'oppose alors à {defs.1}. " +
+    "Est-ce à l'État de faire la justice ? La justice peut s'entendre en deux sens, que distingue le couple {couple}. Au sens de la légalité, la justice se définit comme {defs2.0|defs.0} ; on l'oppose alors à {defs.1}. " +
     "Au sens de l'égalité, elle se définit comme {defs2.1|defs.3} ; on l'oppose alors à {defs.4}.\n\n" +
     "Se demander si c'est à l'État de faire la justice, revient à se demander s'il doit la faire comme {reform.0}, ou comme {reform.1}. " +
     "Si c'est à l'État de faire la justice au sens de la légalité, alors {probl.0}, toutefois {probl.1}. " +
@@ -96,7 +95,7 @@
         dit: ["Quel est le prédicat de ce sujet ?"],
         reponse: "Ta réponse", id: "predicat",
         motsCles: ["justice"],
-        relances: ["Que se demande-t-on si l'État doit le faire ?"]
+        relances: [window.SOCRATYS.AIDE_PREDICAT, "Que se demande-t-on si l'État doit le faire ?"]
       },
       {
         dit: ["Et quel est le sujet grammatical de cette question ?"],

@@ -7,8 +7,7 @@
 
   /* introduction assemblée à partir des réponses de l'élève, qu'il réécrit ensuite */
   const INTRO =
-    "Le bonheur est-il une affaire de raison ? Le sujet grammatical de cette question est {sujetGram}, et son prédicat {predicat}. " +
-    "Ce prédicat peut se définir à partir du couple {couple}. Du point de vue théorique, la raison se définit comme {defs2.0|defs.0} ; on l'oppose alors à {defs.1}. " +
+    "Le bonheur est-il une affaire de raison ? La raison peut s'entendre en deux sens, que distingue le couple {couple}. Du point de vue théorique, la raison se définit comme {defs2.0|defs.0} ; on l'oppose alors à {defs.1}. " +
     "Du point de vue pratique, elle se définit comme {defs2.1|defs.3} ; on l'oppose alors à {defs.4}.\n\n" +
     "Se demander si le bonheur est une affaire de raison, revient à se demander s'il est une affaire de {reform.0}, ou une affaire de {reform.1}. " +
     "Si le bonheur est une affaire de {reform.0}, alors {probl.0}. Or {probl.1}. " +
@@ -50,7 +49,7 @@
         dit: ["Quel est le prédicat de ce sujet ?"],
         reponse: "Ta réponse", id: "predicat",
         motsCles: ["raison"],
-        relances: ["Regarde bien la fin de la phrase : sur quoi porte-t-elle, une fois qu'on a mis « le bonheur » de côté ?"]
+        relances: [window.SOCRATYS.AIDE_PREDICAT, "Regarde bien la fin de la phrase : sur quoi porte-t-elle, une fois qu'on a mis « le bonheur » de côté ?"]
       },
       {
         dit: ["Et quel est le sujet grammatical de cette question ?"],
