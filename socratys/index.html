@@ -2,25 +2,36 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
 <title>Socratys — dissertation de philosophie</title>
 <meta name="description" content="Socratys accompagne l'élève de terminale dans la rédaction de sa dissertation de philosophie, en lui posant des questions. Sans compte, sans connexion.">
+<link rel="stylesheet" href="../assets/css/polices.css">
+<link rel="stylesheet" href="../assets/css/tokens.css">
 <link rel="stylesheet" href="../assets/css/socratys.css">
 </head>
 <body>
-<div id="w">
-  <header class="tete">
-    <div class="mark">Socratys</div>
-    <div class="sub">Dissertation de philosophie</div>
-    <nav class="outils" aria-label="Session">
-      <button type="button" id="changer" hidden>changer de sujet</button>
-      <button type="button" id="effacer" hidden>effacer mes réponses</button>
-    </nav>
+<div class="app" id="app">
+  <header class="top">
+    <span class="brand">Socratys</span>
+    <span class="subject-top" id="titre-sujet"></span>
+    <span class="saved" id="enreg" hidden><i></i><span id="enreg-t">Enregistré</span></span>
   </header>
-  <main id="fil" aria-live="polite"></main>
-  <noscript><p class="confid">Socratys a besoin de JavaScript pour fonctionner. Active-le dans ton navigateur.</p></noscript>
+  <div class="dgrid">
+    <div class="main">
+      <div class="prog" id="prog" hidden></div>
+      <main class="talk" id="fil" aria-live="polite"></main>
+      <noscript><p class="meta noscript">Socratys a besoin de JavaScript pour fonctionner. Active-le dans ton navigateur.</p></noscript>
+      <div class="composer" id="ctl"></div>
+      <button type="button" class="dtab" id="dtab" hidden aria-controls="side" aria-expanded="false">
+        <span class="grip" aria-hidden="true"></span>
+        <span>Ma dissertation <small id="dtab-n"></small></span>
+        <small class="add" id="dtab-add" hidden></small>
+      </button>
+    </div>
+    <aside class="side" id="side" hidden aria-label="Ma dissertation"></aside>
+  </div>
+  <div class="scrim" id="scrim"></div>
 </div>
-<div id="ctl"></div>
 <article id="impression" aria-hidden="true"></article>
 
 <script src="../assets/js/socratys/communs.js"></script>

@@ -1,0 +1,72 @@
+/* Socratys — jetons de design (générés depuis le design system Socratys) */
+/* Les polices sont hébergées sur le site : voir polices.css (pas d'appel à Google Fonts). */
+
+/* Thème clair (par défaut) */
+:root, [data-theme="light"] {
+  --paper: #faf6ef;
+  --paper-raised: #ffffff;
+  --paper-sunk: #f1e9dc;
+  --ink: #2a211a;
+  --ink-muted: #665848;
+  --line: #e3d8c8;
+  --line-control: #8c7a66;
+  --terra: #a2462a;
+  --terra-soft: #f4e1d5;
+  --on-terra: #ffffff;
+  --shadow-sheet: 0 -6px 24px rgba(42,33,26,0.12);
+}
+
+/* Thème sombre : automatique selon le téléphone, ou forcé avec data-theme="dark" */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --paper: #1b1814;
+  --paper-raised: #25211c;
+  --paper-sunk: #141210;
+  --ink: #f2eadf;
+  --ink-muted: #b9ab9a;
+  --line: #3a342c;
+  --line-control: #85776a;
+  --terra: #e28a64;
+  --terra-soft: #3b271e;
+  --on-terra: #1b1814;
+  --shadow-sheet: 0 -6px 24px rgba(0,0,0,0.5);
+  }
+}
+[data-theme="dark"] {
+  --paper: #1b1814;
+  --paper-raised: #25211c;
+  --paper-sunk: #141210;
+  --ink: #f2eadf;
+  --ink-muted: #b9ab9a;
+  --line: #3a342c;
+  --line-control: #85776a;
+  --terra: #e28a64;
+  --terra-soft: #3b271e;
+  --on-terra: #1b1814;
+  --shadow-sheet: 0 -6px 24px rgba(0,0,0,0.5);
+}
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --touch-min: 44px;
+  --font-serif: Literata, Georgia, "Times New Roman", serif;
+  --font-sans: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* Styles de texte */
+.question { font-family: var(--font-serif); font-size: 22px; line-height: 30px; font-weight: 500; }
+.relance { font-family: var(--font-serif); font-size: 18px; line-height: 26px; font-weight: 400; font-style: italic; }
+.subject { font-family: var(--font-serif); font-size: 17px; line-height: 24px; font-weight: 600; }
+.body { font-family: var(--font-sans); font-size: 16px; line-height: 24px; font-weight: 400; }
+.label { font-family: var(--font-sans); font-size: 14px; line-height: 20px; font-weight: 700; }
+.meta { font-family: var(--font-sans); font-size: 13px; line-height: 18px; font-weight: 400; }
+.eyebrow { font-family: var(--font-sans); font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
