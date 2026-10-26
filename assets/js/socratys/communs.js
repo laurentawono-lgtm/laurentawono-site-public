@@ -15,12 +15,16 @@ window.SOCRATYS = {
     these:
       "La thèse d'un texte est son affirmation principale. Cette affirmation est soutenue par des arguments.",
     conclusion:
-      "La conclusion rappelle le chemin argumentatif en montrant les variations des principaux termes du sujet, que sont le prédicat et le sujet grammatical. Elle ne fournit pas une réponse définitive : elle montre la complexité de la question posée."
+      "La conclusion rappelle le chemin argumentatif en montrant les variations des principaux termes du sujet, que sont le prédicat et le sujet grammatical. Elle ne fournit pas une réponse définitive : elle montre la complexité de la question posée. Dans ta copie, nomme ces termes par leurs mots, sans écrire « prédicat » ni « sujet grammatical »."
   },
 
   /* aide de la question sur le prédicat : un outil d'analyse, qui ne figure pas dans la copie */
   AIDE_PREDICAT:
     "Le prédicat, c'est le mot qu'il faudra définir. C'est un outil d'analyse : dans ton introduction, tu n'écriras pas « le prédicat est… », tu définiras directement ce mot.",
+
+  /* aide de la question sur le sujet grammatical : même règle que pour le prédicat */
+  AIDE_SUJETGRAM:
+    "Le sujet grammatical, c'est le terme sur lequel porte la question : ta troisième partie l'interrogera. C'est un outil d'analyse : dans ta dissertation, tu n'écriras pas « le sujet grammatical est… », tu emploieras directement ce mot.",
 
   SYNTHESE_PROBLEMES:
     "Ces deux hypothèses soulèvent chacune un problème — ce qui nous laisse deux problèmes à résoudre.",
@@ -35,7 +39,7 @@ window.SOCRATYS = {
     partie:
       "Rédige maintenant cette partie, avec tes propres phrases, en suivant le chemin que tu viens de parcourir : la question de la partie, chaque hypothèse avec son argument, les textes et ce que tu en as tiré, puis ta conclusion. Tes notes sont au-dessus.",
     conclusion:
-      "Rédige maintenant ta conclusion, avec tes propres phrases : rappelle le sujet et la problématique, montre comment le sens du prédicat puis celui du sujet grammatical ont varié d'une partie à l'autre, et ce que ces variations montrent de la question posée."
+      "Rédige maintenant ta conclusion, avec tes propres phrases : rappelle le sujet et la problématique, montre comment le sens du mot que tu as défini, puis celui du terme sur lequel porte la question, ont varié d'une partie à l'autre, et ce que ces variations montrent de la question posée."
   }
 };
 window.SOCRATYS_SUJETS = window.SOCRATYS_SUJETS || [];

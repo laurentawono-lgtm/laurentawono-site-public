@@ -76,7 +76,7 @@
         dit: ["Et quel est le sujet grammatical de cette question ?"],
         reponse: "Ta réponse", id: "sujetGram",
         motsCles: ["maitrise"],
-        relances: ["Que se demande-t-on si nous l'avons, sur nos paroles ?"]
+        relances: [window.SOCRATYS.AIDE_SUJETGRAM, "Que se demande-t-on si nous l'avons, sur nos paroles ?"]
       },
       {
         bon: B.couple,
@@ -136,7 +136,7 @@
         redaction: "intro", titre: "Ton introduction", modele: INTRO, consigne: C.reecrireIntro,
         notes: [
           ["Sujet", "Avons-nous la maîtrise de nos paroles ?"],
-          ["Prédicat · sujet grammatical", "{predicat} · {sujetGram}"],
+          ["Les deux termes du sujet", "{predicat} · {sujetGram}"],
           ["Couple", "{couple}"],
           ["Sens subjectif", "{defs2.0|defs.0} (opposé à {defs.1}) — exemple : {defs.2}"],
           ["Sens objectif", "{defs2.1|defs.3} (opposé à {defs.4}) — exemple : {defs.5}"],

@@ -55,7 +55,7 @@
         dit: ["Et quel est le sujet grammatical de cette question ?"],
         reponse: "Ta réponse", id: "sujetGram",
         motsCles: ["bonheur"],
-        relances: ["De quoi se demande-t-on s'il est une affaire de raison ?"]
+        relances: [window.SOCRATYS.AIDE_SUJETGRAM, "De quoi se demande-t-on s'il est une affaire de raison ?"]
       },
       {
         bon: B.couple,
@@ -114,7 +114,7 @@
         redaction: "intro", titre: "Ton introduction", modele: INTRO, consigne: C.reecrireIntro,
         notes: [
           ["Sujet", "Le bonheur est-il une affaire de raison ?"],
-          ["Prédicat · sujet grammatical", "{predicat} · {sujetGram}"],
+          ["Les deux termes du sujet", "{predicat} · {sujetGram}"],
           ["Couple", "{couple}"],
           ["Sens théorique", "{defs2.0|defs.0} (opposé à {defs.1}) — exemple : {defs.2}"],
           ["Sens pratique", "{defs2.1|defs.3} (opposé à {defs.4}) — exemple : {defs.5}"],

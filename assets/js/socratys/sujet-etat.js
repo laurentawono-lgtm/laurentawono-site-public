@@ -101,7 +101,7 @@
         dit: ["Et quel est le sujet grammatical de cette question ?"],
         reponse: "Ta réponse", id: "sujetGram",
         motsCles: ["etat"],
-        relances: ["Quel est le sujet grammatical ?"]
+        relances: [window.SOCRATYS.AIDE_SUJETGRAM, "Quel est le sujet grammatical ?"]
       },
       {
         bon: B.couple,
