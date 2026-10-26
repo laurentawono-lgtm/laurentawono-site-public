@@ -51,7 +51,8 @@
 
     fiche: [
       ["Sujet grammatical", "{sujetGram}"],
-      ["Prédicat", "{predicat}"],
+      ["Prédicat", "la parole"],
+      ["Première définition de la parole", "{predicat}"],
       ["Couple philosophique", "{couple}"],
       ["Sens subjectif", "{defs2.0|defs.0}"],
       ["Sens objectif", "{defs2.1|defs.3}"],
@@ -67,10 +68,10 @@
       { section: "Introduction · le sujet" },
       {
         bon: B.sujet,
-        dit: ["Quel est le prédicat de ce sujet ?"],
-        reponse: "Ta réponse", id: "predicat",
-        motsCles: ["parole"],
-        relances: [window.SOCRATYS.AIDE_PREDICAT, "Sur quoi porte la maîtrise dont parle la question ?"]
+        dit: ["Comment peux-tu définir la parole ?"],
+        reponse: "Ta définition", id: "predicat",
+        relances: ["Dans ce sujet, c'est la parole qui joue le rôle de prédicat : c'est le premier mot que tu vas définir. Dans ton introduction, tu n'écriras pas « le prédicat est… », tu définiras directement la parole.",
+                   "Que fait-on quand on parle ? Qu'est-ce qui distingue une parole d'un simple cri ?"]
       },
       {
         dit: ["Et quel est le sujet grammatical de cette question ?"],
@@ -80,7 +81,7 @@
       },
       {
         bon: B.couple,
-        dit: ["Pour bien cerner ce prédicat, il faut définir le terme « parole » à partir d'un couple philosophique.",
+        dit: ["Pour bien cerner la parole, il faut la définir à partir d'un couple philosophique.",
               "Avec quel couple philosophique peux-tu le définir ?"],
         choix: [{ l: "subjectif / objectif", bon: true }, { l: "individuel / collectif" }, { l: "particulier / général" }],
         id: "couple",
@@ -136,7 +137,8 @@
         redaction: "intro", titre: "Ton introduction", modele: INTRO, consigne: C.reecrireIntro,
         notes: [
           ["Sujet", "Avons-nous la maîtrise de nos paroles ?"],
-          ["Les deux termes du sujet", "{predicat} · {sujetGram}"],
+          ["Les deux termes du sujet", "la parole · {sujetGram}"],
+          ["Ta première définition de la parole", "{predicat}"],
           ["Couple", "{couple}"],
           ["Sens subjectif", "{defs2.0|defs.0} (opposé à {defs.1}) — exemple : {defs.2}"],
           ["Sens objectif", "{defs2.1|defs.3} (opposé à {defs.4}) — exemple : {defs.5}"],
@@ -546,18 +548,18 @@
       /* ============ CONCLUSION ============ */
       { section: "Conclusion" },
       {
-        bon: B.conclusion,
+        bon: "La conclusion rappelle le chemin argumentatif en montrant les différents sens qu'a pris le mot « parole », puis les différents sens du mot « maîtrise ». Elle ne fournit pas une réponse définitive : elle montre la complexité de la question posée.",
         dit: ["À quel sujet répondais-tu ? Quelle en était la problématique ?"],
         champs: ["Le sujet", "La problématique"],
         id: "cclA"
       },
       {
-        dit: ["Quel sens as-tu donné à la parole dans la première, la deuxième et la troisième partie ?"],
+        dit: ["Montre les différents sens qu'a pris le mot « parole » dans la première, la deuxième et la troisième partie."],
         champs: ["Dans la première partie", "Dans la deuxième partie", "Dans la troisième partie"],
         id: "cclB"
       },
       {
-        dit: ["Quels sont les sens qu'a pris la maîtrise dans la première, la deuxième et la troisième partie ?"],
+        dit: ["Montre maintenant les différents sens du mot « maîtrise » dans la première, la deuxième et la troisième partie."],
         champs: ["Dans la première partie", "Dans la deuxième partie", "Dans la troisième partie"],
         id: "cclC"
       },

@@ -76,7 +76,8 @@
 
     fiche: [
       ["Sujet grammatical", "{sujetGram}"],
-      ["Prédicat", "{predicat}"],
+      ["Prédicat", "faire la justice"],
+      ["Première définition de « faire la justice »", "{predicat}"],
       ["Couple philosophique", "{couple}"],
       ["Justice-légalité", "{defs2.0|defs.0}"],
       ["Justice-égalité", "{defs2.1|defs.3}"],
@@ -92,10 +93,10 @@
       { section: "Introduction · le sujet" },
       {
         bon: B.sujet,
-        dit: ["Quel est le prédicat de ce sujet ?"],
-        reponse: "Ta réponse", id: "predicat",
-        motsCles: ["justice"],
-        relances: [window.SOCRATYS.AIDE_PREDICAT, "Que se demande-t-on si l'État doit le faire ?"]
+        dit: ["Comment peux-tu définir « faire la justice » ?"],
+        reponse: "Ta définition", id: "predicat",
+        relances: ["Dans ce sujet, c'est « faire la justice » qui joue le rôle de prédicat : c'est la première expression que tu vas définir. Dans ton introduction, tu n'écriras pas « le prédicat est… », tu définiras directement ce que signifie faire la justice.",
+                   "Quand dit-on qu'une décision ou un partage est juste ? Qu'est-ce qui le distingue d'une décision ou d'un partage injuste ?"]
       },
       {
         dit: ["Et quel est le sujet grammatical de cette question ?"],
@@ -105,7 +106,7 @@
       },
       {
         bon: B.couple,
-        dit: ["Pour bien cerner ce prédicat, il faut définir l'expression « faire la justice » à partir d'un couple philosophique.",
+        dit: ["Pour bien cerner ce que signifie faire la justice, il faut définir l'expression « faire la justice » à partir d'un couple philosophique.",
               "Avec quel couple philosophique peux-tu la définir ?"],
         choix: [{ l: "légalité / égalité", bon: true }, { l: "subjectif / objectif" }, { l: "individuel / collectif" }],
         id: "couple",
@@ -602,18 +603,18 @@
       /* ============ CONCLUSION ============ */
       { section: "Conclusion" },
       {
-        bon: B.conclusion,
+        bon: "La conclusion rappelle le chemin argumentatif en montrant les différents sens qu'a pris l'expression « faire la justice », puis les différents sens du mot « État ». Elle ne fournit pas une réponse définitive : elle montre la complexité de la question posée.",
         dit: ["À quel sujet répondais-tu ? Quelle en était la problématique ?"],
         champs: ["Le sujet", "La problématique"],
         id: "cclA"
       },
       {
-        dit: ["Quel sens as-tu donné à « faire la justice » dans la première, la deuxième et la troisième partie ?"],
+        dit: ["Montre les différents sens qu'a pris l'expression « faire la justice » dans la première, la deuxième et la troisième partie."],
         champs: ["Dans la première partie", "Dans la deuxième partie", "Dans la troisième partie"],
         id: "cclB"
       },
       {
-        dit: ["Quels sont les sens qu'a pris l'État dans la première, la deuxième et la troisième partie ?"],
+        dit: ["Montre maintenant les différents sens du mot « État » dans la première, la deuxième et la troisième partie."],
         champs: ["Dans la première partie", "Dans la deuxième partie", "Dans la troisième partie"],
         id: "cclC"
       },
