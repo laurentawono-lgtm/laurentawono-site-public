@@ -49,7 +49,7 @@
         dit: ["Quel est le prédicat de ce sujet ?"],
         reponse: "Ta réponse", id: "predicat",
         motsCles: ["raison"],
-        relances: [window.SOCRATYS.AIDE_PREDICAT, "Regarde bien la fin de la phrase : sur quoi porte-t-elle, une fois qu'on a mis « le bonheur » de côté ?"]
+        relances: [window.SOCRATYS.AIDE_PREDICAT, "Trouver le prédicat t'aide à identifier le premier mot que tu vas définir."]
       },
       {
         dit: ["Et quel est le sujet grammatical de cette question ?"],
