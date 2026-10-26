@@ -482,18 +482,18 @@
       /* ============ CONCLUSION ============ */
       { section: "Conclusion" },
       {
-        bon: B.conclusion,
+        bon: "La conclusion rappelle le chemin argumentatif en montrant les différents sens qu'a pris le mot « raison », puis les différents sens du mot « bonheur ». Elle ne fournit pas une réponse définitive : elle montre la complexité de la question posée.",
         dit: ["À quel sujet répondais-tu ? Quelle en était la problématique ?"],
         champs: ["Le sujet", "La problématique"],
         id: "cclA"
       },
       {
-        dit: ["Quel sens as-tu donné à la raison dans la première, la deuxième et la troisième partie ?"],
+        dit: ["Montre les différents sens qu'a pris le mot « raison » dans la première, la deuxième et la troisième partie."],
         champs: ["Dans la première partie", "Dans la deuxième partie", "Dans la troisième partie"],
         id: "cclB"
       },
       {
-        dit: ["Quels sont les sens qu'a pris le concept de bonheur dans la première, la deuxième et la troisième partie ?"],
+        dit: ["Montre maintenant les différents sens du mot « bonheur » dans la première, la deuxième et la troisième partie."],
         champs: ["Dans la première partie", "Dans la deuxième partie", "Dans la troisième partie"],
         id: "cclC"
       },
