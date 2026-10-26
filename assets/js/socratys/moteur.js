@@ -55,7 +55,7 @@
   /* Les neuf étapes de la frise, communes à tous les sujets. */
   const ETAPES = [
     null,
-    { l: "Prédicat", fin: "Tu as trouvé le prédicat." },
+    { l: "Prédicat", fin: "Tu as cerné le premier mot à définir." },
     { l: "Sujet grammatical", fin: "Tu as nommé le sujet grammatical." },
     { l: "Couple philosophique", fin: "Tu as trouvé ton couple philosophique." },
     { l: "Définitions", fin: "Tu as défini les deux sens du prédicat." },
