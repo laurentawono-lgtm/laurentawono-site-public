@@ -386,6 +386,11 @@
       {
         repere: ["Première hypothèse", "Le bonheur serait une conséquence nécessaire de la raison."],
         bon: "Est nécessaire ce qui est universellement valable. Est contingent ce qui est accidentel.",
+        dit: ["Que veut dire cette phrase : « le bonheur serait une conséquence nécessaire de la raison » ? Traduis-la avec tes propres mots."],
+        reponse: "Ta traduction", id: "tradCons",
+        relances: ["Si le bonheur découlait nécessairement de la raison, que suffirait-il de faire pour être heureux ? Et cela vaudrait-il pour tout le monde ?"]
+      },
+      {
         dit: ["Pourquoi ne peut-on affirmer que le bonheur soit une conséquence nécessaire de la raison ?"],
         reponse: "Ta réponse", id: "necess",
         relances: ["Pour qu'un lien soit nécessaire, combien de cas doit-il couvrir ?",
@@ -446,7 +451,7 @@
         notes: [
           ["Question de la partie", "Le bonheur est-il une conséquence de la raison, ou un effet ?", true],
           ["Les deux significations", "Que le bonheur soit une affaire de raison peut signifier soit que le bonheur est une conséquence de la raison, soit qu'il est un effet de la raison.", true],
-          ["Conséquence nécessaire", "{necess}<br>arguments pour l'écarter : {ecarter}"],
+          ["Conséquence nécessaire", "ce que cela veut dire : {tradCons}<br>{necess}<br>arguments pour l'écarter : {ecarter}"],
           ["Effet contingent", "{effet}"],
           ["Descartes", "thèse : {these}<br>usage de la raison : {usage}<br>la sortie de la forêt : {foret}<br>forme de raison : {formeraison}"],
           ["Conclusion", "{ccl3}"]
