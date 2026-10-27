@@ -135,7 +135,8 @@
       /* ============ PARTIE I ============ */
       { section: "Partie I · la raison au sens théorique" },
       {
-        dit: ["Si le bonheur est une affaire de raison au sens théorique, qu'est-ce que cela veut dire ?"],
+        dit: ["Première partie : le bonheur est-il une affaire de raison au sens théorique ?",
+              "Si le bonheur est une affaire de raison au sens théorique, qu'est-ce que cela veut dire ?"],
         reponse: "Ta réponse", id: "p1q",
         relances: ["Il faut trouver deux significations à cette hypothèse, en te basant sur le sens du mot « théorique »."]
       },
@@ -240,6 +241,7 @@
       {
         redaction: "p1", titre: "Ta première partie", brouillon: true, consigne: C.reecrire,
         notes: [
+          ["Question de la partie", "Le bonheur est-il une affaire de raison au sens théorique ?", true],
           ["Ce que veut dire l'hypothèse", "{p1q}"],
           ["Significations", "soit que nous savons {implic.0} ; soit que nous savons {implic.1}"],
           ["Première signification", "argument : {arg1}"],
@@ -261,10 +263,10 @@
       /* ============ PARTIE II ============ */
       { section: "Partie II · la raison au sens pratique" },
       {
-        dit: ["Reprends ce que tu as annoncé pour ta deuxième partie et pose-le sous la forme d'une question."],
-        reponse: "Ta question", id: "p2q",
-        motsCles: ["?"],
-        relances: ["Si le bonheur est une affaire de raison au sens pratique, qu'est-ce que cela veut dire ? Écris-le sous la forme d'une question."]
+        dit: ["Deuxième partie : le bonheur est-il une affaire de raison au sens pratique ?",
+              "Si le bonheur est une affaire de raison au sens pratique, qu'est-ce que cela veut dire ?"],
+        reponse: "Ta réponse", id: "p2q",
+        relances: ["Il faut trouver ce que signifie cette hypothèse, en te basant sur le sens du mot « pratique »."]
       },
       {
         dit: ["Qu'est-ce que la raison pratique ?"],
@@ -353,7 +355,8 @@
       {
         redaction: "p2", titre: "Ta deuxième partie", brouillon: true, consigne: C.reecrire,
         notes: [
-          ["Question de la partie", "{p2q}"],
+          ["Question de la partie", "Le bonheur est-il une affaire de raison au sens pratique ?", true],
+          ["Ce que veut dire l'hypothèse", "{p2q}"],
           ["La raison pratique", "{p2def}<br>être raisonnable : {raisonnable}"],
           ["Reformulation", "{p2ref}"],
           ["La bonne action", "{p2sens}<br>bonne pour qui : {pourqui}"],

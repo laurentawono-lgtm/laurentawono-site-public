@@ -155,6 +155,8 @@
     /* les choix cliqués et les associations ne sont pas des phrases de l'élève */
     const clics = new Set(sujet.etapes.filter((e) => e.choix || e.association).map((e) => e.id));
     return n.notes.map((x) => {
+      /* une ligne marquée (troisième élément) entre telle quelle dans le premier jet */
+      if (x[2]) return interpPhrase(x[1]);
       const v = [];
       String(x[1]).replace(MOTIF, (_, c) => {
         if (clics.has(c.split(/[.|]/)[0])) return "";
