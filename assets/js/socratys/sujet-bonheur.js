@@ -436,13 +436,6 @@
                    "Est-il sorti de la forêt parce qu'il savait être sur le bon chemin, ou découvre-t-il que c'était le bon chemin parce qu'il en est sorti ?"]
       },
       {
-        dit: ["Quelle forme de raison est en usage ici ?"],
-        reponse: "Ta réponse", id: "formeraison",
-        motsCles: ["pratique", "prudence", "prudent", "decid", "agir", "action"],
-        relances: ["Le voyageur cherche-t-il à savoir quel est le bon chemin, ou à en suivre un ?",
-                   "Descartes recommande-t-il de connaître, ou de se déterminer ?"]
-      },
-      {
         repere: ["Seconde hypothèse", "Le bonheur serait un effet contingent de la raison."],
         dit: ["Que veut dire cette phrase : « le bonheur serait un effet contingent de la raison » ? Traduis-la avec tes propres mots."],
         reponse: "Ta traduction", id: "effet",
@@ -461,7 +454,7 @@
           ["Question de la partie", "Le bonheur est-il une conséquence de la raison, ou un effet ?", true],
           ["Les deux significations", "Que le bonheur soit une affaire de raison peut signifier soit que le bonheur est une conséquence de la raison, soit qu'il est un effet de la raison.", true],
           ["Conséquence nécessaire", "ce que cela veut dire : {tradCons}<br>ce que cela implique : {necess}<br>validité : {validCons}<br>réfutation : {ecarter}"],
-          ["Descartes", "thèse : {these}<br>usage de la raison : {usage}<br>la sortie de la forêt : {foret}<br>forme de raison : {formeraison}"],
+          ["Descartes", "thèse : {these}<br>usage de la raison : {usage}<br>la sortie de la forêt : {foret}"],
           ["Effet contingent", "ce que cela veut dire : {effet}"],
           ["Conclusion", "{ccl3}"]
         ]
