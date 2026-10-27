@@ -7,7 +7,7 @@
 
   /* introduction assemblée à partir des réponses de l'élève, qu'il réécrit ensuite */
   const INTRO =
-    "Le bonheur est-il une affaire de raison ? La raison peut s'entendre en deux sens, que distingue le couple {couple}. Du point de vue théorique, la raison se définit comme {defs2.0|defs.0} ; on l'oppose alors à {defs.1}. " +
+    "{amorce} Le bonheur est-il une affaire de raison ? La raison peut s'entendre en deux sens, que distingue le couple {couple}. Du point de vue théorique, la raison se définit comme {defs2.0|defs.0} ; on l'oppose alors à {defs.1}. " +
     "Du point de vue pratique, elle se définit comme {defs2.1|defs.3} ; on l'oppose alors à {defs.4}.\n\n" +
     "Se demander si le bonheur est une affaire de raison, revient à se demander s'il est une affaire de {reform.0}, ou une affaire de {reform.1}. " +
     "Si le bonheur est une affaire de {reform.0}, alors {probl.0}. Or {probl.1}. " +
@@ -30,6 +30,7 @@
     ],
 
     fiche: [
+      ["Amorce", "{amorce}"],
       ["Sujet grammatical", "{sujetGram}"],
       ["Prédicat", "la raison"],
       ["Couple philosophique", "{couple}"],
@@ -43,6 +44,18 @@
 
     etapes: [
       /* ============ INTRODUCTION ============ */
+      { section: "Introduction · l'amorce" },
+      {
+        bon: B.amorce,
+        dit: ["Commençons par l'amorce de ton introduction.",
+              "Ce sujet associe le bonheur (le sujet grammatical) et la raison (le prédicat). Rédige une amorce qui les dissocie."],
+        reponse: "Ton amorce", id: "amorce",
+        relances: [
+          "Dissocier, c'est séparer : cherche une opinion courante, une situation ou un exemple où le bonheur semble n'avoir rien à voir avec la raison.",
+          "Pense à ce que l'on dit de l'amoureux, de l'enfant qui joue, ou de celui qui « ne se pose pas de questions » : est-ce grâce à leur raison qu'ils sont heureux ?"
+        ]
+      },
+
       { section: "Introduction · le sujet" },
       {
         bon: B.couple,
@@ -107,6 +120,7 @@
         redaction: "intro", titre: "Ton introduction", modele: INTRO, consigne: C.reecrireIntro,
         notes: [
           ["Sujet", "Le bonheur est-il une affaire de raison ?"],
+          ["Ton amorce", "{amorce}"],
           ["Les deux termes du sujet", "la raison · {sujetGram}"],
           ["Couple", "{couple}"],
           ["Sens théorique", "{defs2.0|defs.0} (opposé à {defs.1}) — exemple : {defs.2}"],

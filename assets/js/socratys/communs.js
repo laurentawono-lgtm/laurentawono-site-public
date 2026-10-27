@@ -10,6 +10,8 @@ window.SOCRATYS = {
     "Si tu as suivi le cours, je t'aide aussi à le réviser : je reprends, étape par étape, la méthode vue en classe, pour que tu puisses t'y exercer en autonomie, à ton rythme.",
 
   BON: {
+    amorce:
+      "L'amorce introduit la question en jouant sur un effet de contraste. Si le sujet associe le sujet grammatical et le prédicat, l'amorce les dissocie. Si le sujet les dissocie, l'amorce les associe.",
     sujet:
       "Le mot « sujet » a deux sens : c'est d'abord la question qui t'est posée, mais c'est aussi le sujet grammatical — le terme sur lequel porte la question. Le deuxième terme de la question, lui, s'appelle le prédicat.",
     couple:

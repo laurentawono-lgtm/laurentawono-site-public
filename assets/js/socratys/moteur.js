@@ -52,10 +52,10 @@
     back: '<svg viewBox="0 0 18 18" width="18" height="18" aria-hidden="true"><path d="M11 4.5L6.5 9l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'
   };
 
-  /* Les neuf étapes possibles de la frise. Chaque sujet n'affiche que celles qu'il
+  /* Les étapes possibles de la frise (l'amorce, puis les neuf étapes de la méthode). Chaque sujet n'affiche que celles qu'il
      contient, dans l'ordre où il les parcourt (voir calculerEtapes). */
   const ETAPES = [
-    null,
+    { l: "Amorce", fin: "Tu as rédigé ton amorce." },
     { l: "Prédicat", fin: "Tu as cerné le premier mot à définir." },
     { l: "Sujet grammatical", fin: "Tu as nommé le sujet grammatical." },
     { l: "Couple philosophique", fin: "Tu as trouvé ton couple philosophique." },
@@ -68,7 +68,7 @@
   ];
   const ROMAINS = ["", "I", "II", "III"];
   const ORDINAUX = ["", "première", "deuxième", "troisième"];
-  const ID_ETAPE = { predicat: 1, sujetGram: 2, couple: 3, defs: 4, distinctes: 4, defs2: 4, reform: 5, probl: 6, plan: 7 };
+  const ID_ETAPE = { amorce: 0, predicat: 1, sujetGram: 2, couple: 3, defs: 4, distinctes: 4, defs2: 4, reform: 5, probl: 6, plan: 7 };
   /* Notes de cohérence : étape modifiée → étapes qui reçoivent la question. */
   const DEPEND = { 1: [3, 4, 5], 2: [3, 4, 5], 3: [4, 5, 6], 4: [5, 6], 5: [6, 7], 6: [7, 8], 7: [8, 9], 8: [9] };
 
@@ -179,7 +179,7 @@
         else if (/^Conclusion/.test(e.section)) { st = 9; part = 0; }
       }
       if (st < 8) {
-        if (ID_ETAPE[e.id]) st = ID_ETAPE[e.id];
+        if (e.id in ID_ETAPE) st = ID_ETAPE[e.id];
         if (e.redaction === "intro") st = 7;
       }
       return { s: st, p: part };
@@ -647,6 +647,7 @@
   function cartes() {
     const c = [];
     const simple = (s, id, t) => c.push({ k: id, s: s, t: t, g: "Introduction", slots: [{ cle: id }] });
+    simple(0, "amorce", "Amorce");
     simple(1, "predicat", "Prédicat");
     simple(2, "sujetGram", "Sujet grammatical");
     simple(3, "couple", "Couple philosophique");
