@@ -202,35 +202,6 @@
         reponse: "Ta réponse", id: "dissim"
       },
       {
-        dit: ["Lis ce texte de Descartes."],
-        texte: DESCARTES,
-        bon: B.these
-      },
-      {
-        dit: ["Quelle est la thèse de ce texte ?"],
-        reponse: "La thèse", id: "descThese",
-        motsCles: ["homme seul", "seul", "pensee", "pense", "bete", "animal"],
-        relances: ["À qui seul, selon Descartes, la parole convient-elle ?",
-                   "Qu'est-ce que la parole révèle chez celui qui parle ?"]
-      },
-      {
-        dit: ["Pourquoi les bêtes ne parlent-elles pas comme nous ?"],
-        reponse: "Ta réponse", id: "betes",
-        motsCles: ["pens", "organe"],
-        relances: ["Selon Descartes, est-ce une question d'organes ?"]
-      },
-      {
-        dit: ["Pourquoi Descartes inclut-il la parole des fous, et exclut-il celle des perroquets ?"],
-        reponse: "Ta réponse", id: "fous",
-        motsCles: ["propos", "repet", "pens", "sens", "situation"],
-        relances: ["Le perroquet choisit-il ses mots en fonction de la situation ?",
-                   "Le fou parle-t-il « à propos des sujets qui se présentent » ?"]
-      },
-      {
-        dit: ["Que nous apprend ce texte sur notre question : au sens subjectif, avons-nous la maîtrise de nos paroles ?"],
-        reponse: "Ta réponse", id: "descPont"
-      },
-      {
         dit: ["Mais toute parole véhicule-t-elle une pensée ? Le juge qui prononce une condamnation, le prêtre qui dit la messe, l'homme politique qui lit un discours : parlent-ils en leur nom propre ?"],
         reponse: "Ta réponse", id: "porteParole",
         motsCles: ["non", "porte", "au nom", "institution", "fonction", "communaut", "circonstance", "role"],
@@ -239,7 +210,7 @@
       },
       {
         repere: ["Le chemin parcouru",
-          "La maîtrise du silence : {maitrise1}<br>Ce qui lui résiste : {theatre} / {temoin}<br>La parole qui dissimule : {traitresse}<br>Descartes : {descPont}<br>Le porte-parole : {porteParole}"],
+          "La maîtrise du silence : {maitrise1}<br>Ce qui lui résiste : {theatre} / {temoin}<br>La parole qui dissimule : {traitresse}<br>Le porte-parole : {porteParole}"],
         dit: ["Formule maintenant la conclusion de ta première partie : au sens subjectif, avons-nous la maîtrise de nos paroles ?"],
         reponse: "Ta conclusion", id: "cclP1",
         relances: ["Nos paroles disent-elles toujours ce qui est en nous ?"]
@@ -251,7 +222,6 @@
           ["Ce que veut dire l'hypothèse", "{p1q}"],
           ["La maîtrise du silence", "{maitrise1}<br>argument : {arg1}<br>le théâtre : {theatre}<br>le témoin : {temoin}"],
           ["La parole qui dissimule", "{traitresse}<br>exemple : {exFigure}<br>{dissim}"],
-          ["Descartes", "thèse : {descThese}<br>les bêtes : {betes}<br>fous et perroquets : {fous}<br>pour notre question : {descPont}"],
           ["Le porte-parole", "{porteParole}"],
           ["Conclusion", "{cclP1}"]
         ]
@@ -413,10 +383,35 @@
       },
       {
         repere: ["Première hypothèse", "La maîtrise de la parole serait naturelle."],
-        dit: ["Si la maîtrise de la parole est naturelle, quel argument peux-tu tirer du texte de Descartes, que tu as lu en première partie ?"],
+        dit: ["Lis ce texte de Descartes."],
+        texte: DESCARTES,
+        bon: B.these
+      },
+      {
+        dit: ["Quelle est la thèse de ce texte ?"],
+        reponse: "La thèse", id: "descThese",
+        motsCles: ["homme seul", "seul", "pensee", "pense", "bete", "animal"],
+        relances: ["À qui seul, selon Descartes, la parole convient-elle ?",
+                   "Qu'est-ce que la parole révèle chez celui qui parle ?"]
+      },
+      {
+        dit: ["Pourquoi les bêtes ne parlent-elles pas comme nous ?"],
+        reponse: "Ta réponse", id: "betes",
+        motsCles: ["pens", "organe"],
+        relances: ["Selon Descartes, est-ce une question d'organes ?"]
+      },
+      {
+        dit: ["Pourquoi Descartes inclut-il la parole des fous, et exclut-il celle des perroquets ?"],
+        reponse: "Ta réponse", id: "fous",
+        motsCles: ["propos", "repet", "pens", "sens", "situation"],
+        relances: ["Le perroquet choisit-il ses mots en fonction de la situation ?",
+                   "Le fou parle-t-il « à propos des sujets qui se présentent » ?"]
+      },
+      {
+        dit: ["Quel argument ce texte fournit-il à l'hypothèse d'une maîtrise naturelle de la parole ?"],
         reponse: "Ton argument", id: "argNat",
         motsCles: ["homme seul", "seul", "pens", "nature", "animal", "bete", "propre"],
-        relances: ["Selon Descartes, à qui seul la parole convient-elle ?"]
+        relances: ["Selon Descartes, la parole est-elle propre à tous les hommes, même au plus imparfait ?"]
       },
       {
         dit: ["Cette disposition naturelle suffit-elle à en avoir la maîtrise ? Un nouveau-né a-t-il, comme tout homme, la faculté de parler ? En a-t-il pour autant la maîtrise ?"],
@@ -425,20 +420,7 @@
         relances: ["Que manque-t-il au nouveau-né, qui a pourtant la faculté de parler ?"]
       },
       {
-        dit: ["Si la maîtrise de la parole n'est pas naturelle, que peut-on en déduire ?"],
-        reponse: "Ta réponse", id: "deduire",
-        motsCles: ["artifici", "appren", "techni", "acqui", "travail"],
-        relances: ["Quel est l'autre terme de ton couple ?"]
-      },
-      {
-        dit: ["Que signifie le fait que la maîtrise soit artificielle ? Qu'est-ce que cela implique ?"],
-        reponse: "Ta réponse", id: "implArt",
-        motsCles: ["appren", "techni", "art", "travail", "exerc", "regle"],
-        relances: ["Comment acquiert-on ce qui ne nous est pas donné par la nature ?"]
-      },
-      {
-        repere: ["Seconde hypothèse", "La maîtrise de la parole serait un art."],
-        dit: ["Lis ce texte de Platon."],
+        dit: ["Lis maintenant ce texte de Platon."],
         texte: {
           corps: ["Tant qu'on ne connaîtra pas la vérité sur chacune des questions dont on parle et sur lesquelles on écrit ; tant qu'on ne sera pas capable de définir toute chose en elle-même ; tant que, après avoir défini cette chose, on ne saura pas, à l'inverse, la diviser selon ses espèces jusqu'à ce qu'on atteigne l'indivisible ; tant que, après avoir selon la même méthode analysé la nature de l'âme et découvert l'espèce de discours qui correspond à chaque nature, on ne disposera et on n'organisera pas son discours en conséquence. En offrant à une âme complexe des discours complexes et qui correspondent exactement à ce qu'elle demande, et des discours simples à une âme simple, on restera incapable de manier le genre oratoire avec autant d'art que sa nature le permet, que ce soit pour enseigner ou pour persuader."],
           source: "Platon, <em>Phèdre</em>, 277b"
@@ -460,6 +442,13 @@
       {
         dit: ["Pourquoi un même discours ne convient-il pas à toute âme ?"],
         reponse: "Ta réponse", id: "touteAme"
+      },
+      {
+        repere: ["Seconde hypothèse", "La maîtrise de la parole serait un art."],
+        dit: ["Que signifie le fait que la maîtrise de la parole soit un art ? Qu'est-ce que cela implique ?"],
+        reponse: "Ta réponse", id: "implArt",
+        motsCles: ["appren", "techni", "art", "travail", "exerc", "regle"],
+        relances: ["Comment acquiert-on ce qui ne nous est pas donné par la nature ?"]
       },
       {
         bon: "Platon compare ailleurs le discours à une graine, et les âmes à des sols dans lesquels on la sème. Comme un bon cultivateur choisit un sol adapté à sa semence, l'orateur doit discerner la nature de l'âme à laquelle il s'adresse.",
@@ -490,9 +479,9 @@
           ["Question de la partie", "La maîtrise de nos paroles est-elle naturelle, ou artificielle ?", true],
           ["Les deux significations", "Avoir la maîtrise de nos paroles peut signifier soit que cette maîtrise est naturelle, soit qu'elle est artificielle.", true],
           ["Couple naturel / artificiel", "naturel : {defs3.0}<br>artificiel : {defs3.1}"],
-          ["Hypothèse du naturel", "Descartes : {argNat}<br>le nouveau-né : {nouveauNe}"],
-          ["Hypothèse de l'artifice", "{deduire}<br>{implArt}"],
+          ["Hypothèse du naturel", "Descartes, thèse : {descThese}<br>les bêtes : {betes}<br>fous et perroquets : {fous}<br>argument : {argNat}<br>le nouveau-né : {nouveauNe}"],
           ["Platon", "thèse : {platonThese}<br>l'orateur : {orateur}<br>toute âme : {touteAme}"],
+          ["Hypothèse de l'art", "{implArt}"],
           ["L'agriculteur", "{metaphore}<br>bien semé : {seme}<br>fécondité : {fecondite}"],
           ["Conclusion", "{ccl3}"]
         ]
