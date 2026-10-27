@@ -69,10 +69,10 @@
       { section: "Introduction · l'amorce" },
       {
         bon: B.amorce,
-        dit: ["Commençons par l'amorce de ton introduction.",
-              "Ce sujet associe la maîtrise (le sujet grammatical) et nos paroles (le prédicat). Rédige une amorce qui les dissocie, en donnant un exemple qui montre le caractère volatil ou éphémère des paroles."],
+        dit: ["Commençons par l'amorce de ton introduction. Rédige-la."],
         reponse: "Ton amorce", id: "amorce",
         relances: [
+          "Dans ce sujet, la maîtrise est le sujet grammatical et la parole est le prédicat : la question les associe, puisqu'elle suppose que nous pourrions maîtriser nos paroles. Ton amorce doit donc les dissocier, par exemple en montrant le caractère volatil ou éphémère des paroles. Dans ta copie, n'écris pas « sujet grammatical » ni « prédicat » : nomme directement la maîtrise et la parole.",
           "Une parole, une fois prononcée, peut-on la rattraper ? Pense à une parole qui t'a échappé, ou qui a été oubliée aussitôt dite.",
           "Pense au proverbe « Les paroles s'envolent, les écrits restent » : que dit-il de notre pouvoir sur ce que nous disons ?"
         ]
