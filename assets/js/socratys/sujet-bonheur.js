@@ -122,7 +122,6 @@
         notes: [
           ["Sujet", "Le bonheur est-il une affaire de raison ?"],
           ["Ton amorce", "{amorce}"],
-          ["Les deux termes du sujet", "la raison · le bonheur"],
           ["Couple", "{couple}"],
           ["Sens théorique", "{defs2.0|defs.0} (opposé à {defs.1})"],
           ["Sens pratique", "{defs2.1|defs.2} (opposé à {defs.3})"],
