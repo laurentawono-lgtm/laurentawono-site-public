@@ -90,7 +90,8 @@
       },
       {
         ancre: "reformulation",
-        dit: ["Reformule maintenant le sujet : remplace le mot « raison » par les deux sens que tu as obtenus.",
+        bon: B.reformulation,
+        dit: ["Reformule maintenant le sujet à partir de tes deux définitions.",
               "Se demander si le bonheur est une affaire de raison, revient à se demander s'il est une affaire de… ou une affaire de…"],
         champs: ["…s'il est une affaire de", "…ou une affaire de"],
         id: "reform"

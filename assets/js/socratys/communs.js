@@ -18,6 +18,8 @@ window.SOCRATYS = {
       "Un couple philosophique, ce sont les deux termes dont on se sert pour dissocier une notion : il sert à donner deux sens du mot à définir.",
     distinctes:
       "Ces deux définitions doivent être suffisamment distinctes pour ne pas les confondre, et c'est leur distinction qui fera la clarté de ton propos tout au long de ta rédaction.",
+    reformulation:
+      "Reformuler le sujet, c'est remplacer le mot à définir par chacun des deux sens que tu as distingués. La question posée devient ainsi deux questions.",
     these:
       "La thèse d'un texte est son affirmation principale. Cette affirmation est soutenue par des arguments.",
     conclusion:
