@@ -103,6 +103,7 @@
         id: "probl"
       },
       {
+        bon: B.problematisation,
         dit: ["Ces deux hypothèses soulèvent chacune un problème. Lequel ?"],
         champs: ["Si le bonheur est une affaire de {reform.0}, alors {probl.0}. Or…", "Si le bonheur est une affaire de {reform.1}, alors {probl.1}. Or…"],
         id: "problemes"

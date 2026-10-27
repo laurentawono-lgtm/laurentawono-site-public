@@ -20,6 +20,8 @@ window.SOCRATYS = {
       "Ces deux définitions doivent être suffisamment distinctes pour ne pas les confondre, et c'est leur distinction qui fera la clarté de ton propos tout au long de ta rédaction.",
     reformulation:
       "Reformuler le sujet, c'est remplacer le mot à définir par chacun des deux sens que tu as distingués. La question posée devient ainsi deux questions.",
+    problematisation:
+      "C'est l'étape décisive : celle de la problématisation. Le « Or » introduit le fait que l'hypothèse se heurte soit à la réalité, soit à une certaine forme d'expérience : c'est ce qui fait émerger un problème.",
     these:
       "La thèse d'un texte est son affirmation principale. Cette affirmation est soutenue par des arguments.",
     conclusion:
