@@ -141,13 +141,13 @@
       },
       {
         dit: ["Concentre-toi maintenant sur les deux significations que tu viens de trouver. Complète :"],
-        champs: ["Si le bonheur est une affaire de raison au sens théorique, cela implique deux choses : soit que nous savons…",
+        champs: ["Si le bonheur est une affaire de raison au sens théorique, cela peut signifier deux choses : soit que nous savons…",
                  "…soit que nous savons…"],
         id: "implic"
       },
 
       {
-        repere: ["Première implication", "Nous savons quand nous sommes heureux."],
+        repere: ["Première signification", "Nous savons quand nous sommes heureux."],
         dit: ["Pourquoi peut-on soutenir que nous savons quand nous sommes heureux ?"],
         reponse: "Ton argument", id: "arg1",
         motsCles: ["sent", "ressent", "sensation", "eprouv", "moi", "soi", "interieur", "plaisir"],
@@ -187,7 +187,7 @@
       { repere: ["Ta première réfutation", "{ccl1}"] },
 
       {
-        repere: ["Seconde implication", "Nous savons ce qui nous rend heureux : je connais mes désirs, donc je sais ce qui me rendra heureux."],
+        repere: ["Seconde signification", "Nous savons ce qui nous rend heureux : je connais mes désirs, donc je sais ce qui me rendra heureux."],
         dit: ["Quel argument soutiendrait cette hypothèse ?"],
         reponse: "Ton argument", id: "arg2",
         relances: ["Peux-tu nommer ce que tu veux dans la vie ?",
@@ -225,21 +225,21 @@
       },
       {
         repere: ["Le chemin parcouru",
-          "Première implication : nous savons quand nous sommes heureux. Ta réfutation : {ccl1}<br>Seconde implication : nous savons ce qui nous rend heureux. Ta réfutation : {refut2}"],
-        dit: ["Formule maintenant la conclusion de ta première partie : au terme de ces deux implications, que peut-on dire du bonheur, si on le considère comme une affaire de raison au sens théorique ?"],
+          "Première signification : nous savons quand nous sommes heureux. Ta réfutation : {ccl1}<br>Seconde signification : nous savons ce qui nous rend heureux. Ta réfutation : {refut2}"],
+        dit: ["Formule maintenant la conclusion de ta première partie : au terme de l'examen de ces deux significations, que peut-on dire du bonheur, si on le considère comme une affaire de raison au sens théorique ?"],
         reponse: "Ta conclusion", id: "cclP1",
         motsCles: ["indetermin", "ignor", "sait pas", "savons pas", "inconnu", "ne peut pas savoir", "incertain"],
-        relances: ["Au terme de ces deux implications, savons-nous quand nous sommes heureux ?",
+        relances: ["Au terme de l'examen de ces deux significations, savons-nous quand nous sommes heureux ?",
                    "Et savons-nous ce qui peut nous y conduire ?"]
       },
       {
         redaction: "p1", titre: "Ta première partie", brouillon: true, consigne: C.reecrire,
         notes: [
           ["Ce que veut dire l'hypothèse", "{p1q}"],
-          ["Implications", "soit que nous savons {implic.0} ; soit que nous savons {implic.1}"],
-          ["Première implication", "argument : {arg1}"],
+          ["Significations", "soit que nous savons {implic.0} ; soit que nous savons {implic.1}"],
+          ["Première signification", "argument : {arg1}"],
           ["Aristote", "thèse : {aristThese}<br>les enfants et les hommes faits : {arist}<br>réfutation : {ccl1}"],
-          ["Seconde implication", "argument : {arg2} — exemple : {ex2}"],
+          ["Seconde signification", "argument : {arg2} — exemple : {ex2}"],
           ["Kant", "thèse : {kantThese}<br>ton exemple : {kantEx}<br>réfutation : {refut2}"],
           ["Conclusion", "{cclP1}"]
         ]
