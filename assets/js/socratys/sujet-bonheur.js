@@ -342,27 +342,18 @@
         repere: ["Seconde signification", "La bonne action est ce qui fait le bien : la raison pratique est alors une raison morale."]
       },
       {
-        bon: "Un nouveau couple philosophique t'est utile ici : moyen / fin. Un moyen sert à obtenir autre chose ; une fin vaut pour elle-même.",
-        dit: ["Penses-tu qu'une bonne action soit un moyen ou une fin ?"],
-        choix: [{ l: "Un moyen" }, { l: "Une fin" }],
-        id: "mf"
-      },
-      {
-        dit: ["Examinons les deux cas."],
-        champs: ["Si la bonne action est un moyen, qu'est-ce que cela implique pour le sens du bonheur ?",
-                 "Et si elle est une fin, quelle incidence cela a-t-il sur le sens du bonheur ?"],
-        id: "moyenfin"
-      },
-      {
-        dit: ["Dans l'un et l'autre cas, qu'advient-il du bonheur ?"],
-        reponse: "Ta conclusion", id: "cclP2",
-        motsCles: ["echappe", "incertain", "garanti", "perd", "quitte", "morale", "n'est plus", "pas assure"],
-        relances: ["Si la bonne action est un moyen, garantit-elle d'être heureux ?",
-                   "Et si elle est une fin, a-t-elle encore besoin du bonheur ?"]
+        dit: ["Reviens maintenant à la seconde signification : « la bonne action est ce qui fait le bien ». Que devient-elle après la lecture de Kant ?",
+              "Formule toi-même la réfutation."],
+        reponse: "Ta réfutation", id: "refutMor",
+        relances: ["Selon Kant, rendre un homme bon, est-ce le rendre heureux ?"]
       },
       {
         repere: ["Le chemin parcouru",
-          "La bonne action comme moyen : {moyenfin.0}<br>La bonne action comme fin : {moyenfin.1}<br>Ta conclusion : {cclP2}"]
+          "Première signification : la bonne action est ce qui est bien fait. Ta réfutation : {refutInst}<br>Seconde signification : la bonne action est ce qui fait le bien. Ta réfutation : {refutMor}"],
+        dit: ["Formule maintenant la conclusion de ta deuxième partie : au terme de l'examen de ces deux significations, que peut-on dire du bonheur, si on le considère comme une affaire de raison au sens pratique ?"],
+        reponse: "Ta conclusion", id: "cclP2",
+        relances: ["Au terme de l'examen de ces deux significations, l'action efficace nous rend-elle heureux ?",
+                   "Et l'action morale nous le garantit-elle ?"]
       },
       {
         redaction: "p2", titre: "Ta deuxième partie", brouillon: true, consigne: C.reecrire,
@@ -374,7 +365,7 @@
           ["Kant", "thèse : {kant2These}<br>bonheur et moralité : {kant2}"],
           ["Le sens de la bonne action", "{kant2Pont}"],
           ["Transition", "{tIM}"],
-          ["Moyen / fin", "moyen : {moyenfin.0}<br>fin : {moyenfin.1}"],
+          ["Seconde signification", "réfutation : {refutMor}"],
           ["Conclusion", "{cclP2}"]
         ]
       },
