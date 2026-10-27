@@ -422,8 +422,8 @@
       {
         dit: ["Lis maintenant ce texte de Platon."],
         texte: {
-          corps: ["Tant qu'on ne connaîtra pas la vérité sur chacune des questions dont on parle et sur lesquelles on écrit ; tant qu'on ne sera pas capable de définir toute chose en elle-même ; tant que, après avoir défini cette chose, on ne saura pas, à l'inverse, la diviser selon ses espèces jusqu'à ce qu'on atteigne l'indivisible ; tant que, après avoir selon la même méthode analysé la nature de l'âme et découvert l'espèce de discours qui correspond à chaque nature, on ne disposera et on n'organisera pas son discours en conséquence. En offrant à une âme complexe des discours complexes et qui correspondent exactement à ce qu'elle demande, et des discours simples à une âme simple, on restera incapable de manier le genre oratoire avec autant d'art que sa nature le permet, que ce soit pour enseigner ou pour persuader."],
-          source: "Platon, <em>Phèdre</em>, 277b"
+          corps: ["Tant qu'on ne sera pas capable de définir toute chose en elle-même ; tant que, après avoir défini cette chose, on ne saura pas, à l'inverse, la diviser selon ses espèces jusqu'à ce qu'on atteigne l'indivisible ; tant que, après avoir selon la même méthode analysé la nature de l'âme et découvert l'espèce de discours qui correspond à chaque nature, on ne disposera et on n'organisera pas son discours en conséquence – en offrant à une âme complexe des discours complexes et qui correspondent exactement à ce qu'elle demande, et des discours simples à une âme simple –, on restera incapable de manier le genre oratoire avec autant d'art que sa nature le permet, que ce soit pour enseigner ou pour persuader."],
+          source: "Platon, <em>Phèdre</em>, 277b-c"
         },
         bon: B.these
       },
@@ -437,7 +437,7 @@
         dit: ["Que doit connaître l'orateur avant de composer son discours ?"],
         reponse: "Ta réponse", id: "orateur",
         motsCles: ["ame", "auditoire", "verit", "nature", "celui"],
-        relances: ["Suffit-il, selon Platon, de connaître la vérité sur ce dont on parle ?"]
+        relances: ["Suffit-il, selon Platon, de savoir définir ce dont on parle ? Que faut-il encore connaître ?"]
       },
       {
         dit: ["Pourquoi un même discours ne convient-il pas à toute âme ?"],
