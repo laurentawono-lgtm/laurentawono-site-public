@@ -109,7 +109,7 @@
         id: "problemes"
       },
       {
-        bon: "Les deux hypothèses te fournissent déjà les deux premières parties. La troisième interrogera le bonheur à partir d'un nouveau couple philosophique.",
+        bon: "Les deux hypothèses indiquent déjà le plan : le premier problème sera traité dans la première partie, et le deuxième problème sera traité dans la deuxième partie.",
         dit: ["Annonce maintenant ton plan."],
         champs: ["Dans une première partie, nous nous demanderons ce qu'implique…",
                  "Dans une deuxième partie, nous nous demanderons ce que suppose…",
