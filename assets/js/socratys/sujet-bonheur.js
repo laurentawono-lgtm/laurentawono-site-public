@@ -384,13 +384,6 @@
               "Que le bonheur soit une affaire de raison peut signifier soit que le bonheur est une conséquence de la raison, soit qu'il est un effet de la raison."]
       },
       {
-        dit: ["De ces deux hypothèses, quelle est la plus fragile ? Pourquoi ?"],
-        reponse: "Ta réponse", id: "fragile",
-        motsCles: ["consequence", "necessaire"],
-        relances: ["Laquelle des deux promet le plus ? Celle qui promet le plus est-elle la plus facile à tenir ?",
-                   "Souviens-toi de tes deux premières parties : le savoir te donnait-il le bonheur ? l'action te le garantissait-elle ?"]
-      },
-      {
         repere: ["Première hypothèse", "Le bonheur serait une conséquence nécessaire de la raison."],
         bon: "Est nécessaire ce qui est universellement valable. Est contingent ce qui est accidentel.",
         dit: ["Pourquoi ne peut-on affirmer que le bonheur soit une conséquence nécessaire de la raison ?"],
@@ -467,7 +460,6 @@
         notes: [
           ["Question de la partie", "Le bonheur est-il une conséquence de la raison, ou un effet ?", true],
           ["Les deux significations", "Que le bonheur soit une affaire de raison peut signifier soit que le bonheur est une conséquence de la raison, soit qu'il est un effet de la raison.", true],
-          ["L'hypothèse la plus fragile", "{fragile}"],
           ["Conséquence nécessaire", "{necess}<br>arguments pour l'écarter : {ecarter}"],
           ["Le calcul des plaisirs (Bentham)", "{calcul}<br>limites : {limites}"],
           ["Effet contingent", "{effet}"],
