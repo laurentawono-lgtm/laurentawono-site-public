@@ -8,7 +8,7 @@
   /* introduction assemblée à partir des réponses de l'élève, qu'il réécrit ensuite */
   const INTRO =
     "{amorce} Le bonheur est-il une affaire de raison ? La raison peut s'entendre en deux sens, que distingue le couple {couple}. Du point de vue théorique, la raison se définit comme {defs2.0|defs.0} ; on l'oppose alors à {defs.1}. " +
-    "Du point de vue pratique, elle se définit comme {defs2.1|defs.3} ; on l'oppose alors à {defs.4}.\n\n" +
+    "Du point de vue pratique, elle se définit comme {defs2.1|defs.2} ; on l'oppose alors à {defs.3}.\n\n" +
     "Se demander si le bonheur est une affaire de raison, revient à se demander s'il est une affaire de {reform.0}, ou une affaire de {reform.1}. " +
     "Si le bonheur est une affaire de {reform.0}, alors {probl.0}. Or {probl.1}. " +
     "Si le bonheur est une affaire de {reform.1}, alors {probl.2}. Or {probl.3}.\n\n" +
@@ -35,7 +35,7 @@
       ["Prédicat", "la raison"],
       ["Couple philosophique", "{couple}"],
       ["Sens théorique", "{defs2.0|defs.0}"],
-      ["Sens pratique", "{defs2.1|defs.3}"],
+      ["Sens pratique", "{defs2.1|defs.2}"],
       ["Reformulation", "Se demander si le bonheur est une affaire de raison, revient à se demander s'il est une affaire de {reform.0}, ou une affaire de {reform.1}."],
       ["Première hypothèse", "Si le bonheur est une affaire de {reform.0}, alors {probl.0} Or {probl.1}"],
       ["Seconde hypothèse", "Si le bonheur est une affaire de {reform.1}, alors {probl.2} Or {probl.3}"],
@@ -72,9 +72,9 @@
       { section: "Introduction · définir et problématiser" },
       {
         dit: ["Définis maintenant la raison à partir de ce couple."],
-        champs: ["Du point de vue théorique, la raison peut se définir comme…", "On l'oppose alors à…", "Peux-tu donner un exemple ?",
-                 "Du point de vue pratique, la raison peut se définir comme…", "On l'oppose alors à…", "Peux-tu donner un exemple ?"],
-        id: "defs", requis: [0, 1, 3, 4]
+        champs: ["Du point de vue théorique, la raison peut se définir comme…", "On l'oppose alors à…",
+                 "Du point de vue pratique, la raison peut se définir comme…", "On l'oppose alors à…"],
+        id: "defs"
       },
       {
         bon: B.distinctes,
@@ -116,8 +116,8 @@
           ["Ton amorce", "{amorce}"],
           ["Les deux termes du sujet", "la raison · le bonheur"],
           ["Couple", "{couple}"],
-          ["Sens théorique", "{defs2.0|defs.0} (opposé à {defs.1}) — exemple : {defs.2}"],
-          ["Sens pratique", "{defs2.1|defs.3} (opposé à {defs.4}) — exemple : {defs.5}"],
+          ["Sens théorique", "{defs2.0|defs.0} (opposé à {defs.1})"],
+          ["Sens pratique", "{defs2.1|defs.2} (opposé à {defs.3})"],
           ["Reformulation", "s'il est une affaire de {reform.0}, ou une affaire de {reform.1}"],
           ["Hypothèse 1", "Si le bonheur est une affaire de {reform.0}, alors {probl.0} Or {probl.1}"],
           ["Hypothèse 2", "Si le bonheur est une affaire de {reform.1}, alors {probl.2} Or {probl.3}"],
