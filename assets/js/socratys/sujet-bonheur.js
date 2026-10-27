@@ -140,18 +140,7 @@
         relances: ["Il faut trouver deux significations à cette hypothèse, en te basant sur le sens du mot « théorique »."]
       },
       {
-        dit: ["Reviens à la définition que tu as donnée de la raison théorique. Si tu devais la résumer en un seul mot, lequel choisirais-tu ?"],
-        reponse: "Un seul mot", id: "mot",
-        motsCles: ["savoir", "connaiss", "connait", "science", "comprendre", "verite"],
-        relances: ["Quand la raison théorique fonctionne bien, qu'est-ce qu'elle produit ?",
-                   "Que possède quelqu'un qui a compris et expliqué quelque chose ?"]
-      },
-      {
-        dit: ["Reprends maintenant la question de ta première partie en remplaçant « raison au sens théorique » par ce mot."],
-        reponse: "Ta reformulation", id: "p1ref"
-      },
-      {
-        dit: ["Ce savoir peut porter sur deux choses différentes. Complète :"],
+        dit: ["Concentre-toi maintenant sur les deux significations que tu viens de trouver. Complète :"],
         champs: ["Si le bonheur est une affaire de raison au sens théorique, cela implique deux choses : soit que nous savons…",
                  "…soit que nous savons…"],
         id: "implic"
@@ -247,7 +236,6 @@
         redaction: "p1", titre: "Ta première partie", brouillon: true, consigne: C.reecrire,
         notes: [
           ["Ce que veut dire l'hypothèse", "{p1q}"],
-          ["Reformulation", "{p1ref}"],
           ["Implications", "soit que nous savons {implic.0} ; soit que nous savons {implic.1}"],
           ["Première implication", "argument : {arg1}"],
           ["Aristote", "thèse : {aristThese}<br>les enfants et les hommes faits : {arist}<br>réfutation : {ccl1}"],
