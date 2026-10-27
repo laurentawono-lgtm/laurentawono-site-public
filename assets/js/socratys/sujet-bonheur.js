@@ -393,8 +393,7 @@
       {
         dit: ["Si le bonheur est une conséquence de la raison, qu'est-ce que cela implique ?"],
         reponse: "Ta réponse", id: "necess",
-        relances: ["Reviens à ta deuxième partie : y as-tu établi que certaines actions mènent nécessairement au bonheur ?",
-                   "Relis la réfutation que tu as formulée à la fin de ta deuxième partie : « {refutMor} ». Que t'apprend-elle sur cette hypothèse ?"]
+        relances: ["Si le bonheur découle nécessairement de la raison, toute action raisonnable devrait-elle rendre heureux ?"]
       },
       {
         dit: ["Examinons la validité de cette hypothèse. Pour que le bonheur soit une conséquence nécessaire de la raison, que faudrait-il ? Cette condition est-elle remplie ?"],
@@ -406,8 +405,9 @@
         dit: ["Reviens maintenant à la première hypothèse : « le bonheur serait une conséquence nécessaire de la raison ». Que devient-elle ?",
               "Formule toi-même la réfutation."],
         reponse: "Ta réfutation", id: "ecarter",
-        relances: ["Reviens à ta première partie : qu'as-tu établi sur la raison théorique ?",
-                   "Et sur la raison pratique, dans ta deuxième partie ?"]
+        relances: ["Reviens à ta deuxième partie : y as-tu établi que certaines actions mènent nécessairement au bonheur ?",
+                   "Relis la réfutation que tu as formulée à la fin de ta deuxième partie : « {refutMor} ». Que t'apprend-elle sur cette hypothèse ?",
+                   "Et dans ta première partie, qu'avais-tu établi sur la raison théorique ?"]
       },
       { repere: ["Ta première réfutation", "{ecarter}"] },
       {
