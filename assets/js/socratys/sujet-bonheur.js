@@ -32,7 +32,6 @@
     fiche: [
       ["Sujet grammatical", "{sujetGram}"],
       ["Prédicat", "la raison"],
-      ["Première définition de la raison", "{predicat}"],
       ["Couple philosophique", "{couple}"],
       ["Sens théorique", "{defs2.0|defs.0}"],
       ["Sens pratique", "{defs2.1|defs.3}"],
@@ -46,29 +45,22 @@
       /* ============ INTRODUCTION ============ */
       { section: "Introduction · le sujet" },
       {
-        bon: B.sujet,
-        dit: ["Comment peux-tu définir la raison ?"],
-        reponse: "Ta définition", id: "predicat",
-        relances: ["Dans ce sujet, c'est la raison qui joue le rôle de prédicat : c'est le premier mot que tu vas définir. Dans ton introduction, tu n'écriras pas « le prédicat est… », tu définiras directement la raison.",
-                   "Quand dit-on de quelqu'un qu'il est raisonnable ? Qu'est-ce qui le distingue de celui qui ne l'est pas ?"]
-      },
-      {
-        dit: ["Et quel est le sujet grammatical de cette question ?"],
-        reponse: "Ta réponse", id: "sujetGram",
-        motsCles: ["bonheur"],
-        relances: [window.SOCRATYS.AIDE_SUJETGRAM, "De quoi se demande-t-on s'il est une affaire de raison ?"]
-      },
-      {
         bon: B.couple,
-        dit: ["Pour bien cerner la raison, il faut la définir à partir d'un couple philosophique.",
-              "Avec quel couple philosophique peux-tu le définir ?"],
-        choix: [{ l: "théorie / pratique", bon: true }, { l: "individuel / collectif" }, { l: "particulier / général" }],
-        id: "couple",
+        dit: ["Avec quel couple philosophique peux-tu t'aider pour définir la raison : théorie / pratique, individuel / collectif, particulier / général ?"],
+        reponse: "Ta réponse", id: "couple",
+        motsCles: ["theori", "pratiq"],
         relances: [
           "Essaie d'appliquer ce couple au prédicat : une raison « {couple} »… est-ce que cela éclaire vraiment ce dont parle le sujet ?",
           "Dans la vie de tous les jours, quand on dit de quelqu'un qu'il « raisonne » avant d'agir, à quoi pense-t-on : à quelqu'un qui comprend, ou à quelqu'un qui se conduit bien ?",
           "Dans quels domaines parle-t-on de la raison ? Y en a-t-il un où elle connaît, et un autre où elle agit ?"
         ]
+      },
+      {
+        bon: B.sujet,
+        dit: ["Et quel est le sujet grammatical de cette question ?"],
+        reponse: "Ta réponse", id: "sujetGram",
+        motsCles: ["bonheur"],
+        relances: [window.SOCRATYS.AIDE_SUJETGRAM, "De quoi se demande-t-on s'il est une affaire de raison ?"]
       },
 
       { section: "Introduction · définir et problématiser" },
@@ -116,7 +108,6 @@
         notes: [
           ["Sujet", "Le bonheur est-il une affaire de raison ?"],
           ["Les deux termes du sujet", "la raison · {sujetGram}"],
-          ["Ta première définition de la raison", "{predicat}"],
           ["Couple", "{couple}"],
           ["Sens théorique", "{defs2.0|defs.0} (opposé à {defs.1}) — exemple : {defs.2}"],
           ["Sens pratique", "{defs2.1|defs.3} (opposé à {defs.4}) — exemple : {defs.5}"],

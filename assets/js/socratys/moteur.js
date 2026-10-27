@@ -52,7 +52,8 @@
     back: '<svg viewBox="0 0 18 18" width="18" height="18" aria-hidden="true"><path d="M11 4.5L6.5 9l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>'
   };
 
-  /* Les neuf étapes de la frise, communes à tous les sujets. */
+  /* Les neuf étapes possibles de la frise. Chaque sujet n'affiche que celles qu'il
+     contient, dans l'ordre où il les parcourt (voir calculerEtapes). */
   const ETAPES = [
     null,
     { l: "Prédicat", fin: "Tu as cerné le premier mot à définir." },
@@ -185,19 +186,32 @@
     });
     /* un bandeau de section appartient à l'étape qui le suit */
     s.etapes.forEach((e, i) => { if (e.section && s._et[i + 1]) s._et[i] = s._et[i + 1]; });
+    /* frise propre au sujet : les étapes présentes, numérotées dans l'ordre du parcours */
+    s._ordre = [];
+    s._et.forEach((x, i) => { if (!s.etapes[i].section && s._ordre.indexOf(x.s) < 0) s._ordre.push(x.s); });
+    s._rang = {};
+    s._ordre.forEach((c, k) => { s._rang[c] = k + 1; });
+    s._N = s._ordre.length;
+    s._et = s._et.map((x) => ({ s: s._rang[x.s] || 1, p: x.p }));
   }
+  /* nombre d'étapes de la frise, et étape (libellé, message de fin) de rang r */
+  function nbEtapes(s) { return (s || sujet)._N; }
+  function infoEtape(r, s) { return ETAPES[(s || sujet)._ordre[r - 1]]; }
+  /* passage du rang dans la frise du sujet à l'étape de la liste ETAPES, et inversement */
+  function canonDe(r, s) { return (s || sujet)._ordre[r - 1]; }
+  function rangDe(c) { return sujet._rang[c]; }
   function etapeDe(i) {
     if (!sujet) return { s: 1, p: 0 };
-    if (i >= sujet.etapes.length) return { s: 10, p: 0 };
+    if (i >= sujet.etapes.length) return { s: nbEtapes() + 1, p: 0 };
     return sujet._et[i];
   }
   function etapeCourante() {
-    if (etat.fini && !etat.reprise) return { s: 10, p: 0 };
+    if (etat.fini && !etat.reprise) return { s: nbEtapes() + 1, p: 0 };
     return etapeDe(etat.i);
   }
-  function libelleEtape(et) {
-    if (et.s > 9) return "Dissertation terminée";
-    return ETAPES[et.s].l + (et.s === 8 && et.p ? " · partie " + et.p + " sur 3" : "");
+  function libelleEtape(et, s) {
+    if (et.s > nbEtapes(s)) return "Dissertation terminée";
+    return infoEtape(et.s, s).l + (canonDe(et.s, s) === 8 && et.p ? " · partie " + et.p + " sur 3" : "");
   }
 
   /* ---------- le fil de la conversation ---------- */
@@ -265,9 +279,9 @@
     if (derB && (der.compareDocumentPosition(derB) & Node.DOCUMENT_POSITION_FOLLOWING)) return;
     der.classList.add("now");
     const et = etapeCourante();
-    if (et.s <= 9) {
+    if (et.s <= nbEtapes()) {
       const eb = el("div", "eyebrow-q");
-      eb.textContent = "Étape " + et.s + " · " + ETAPES[et.s].l + (et.s === 8 && et.p ? " · partie " + ROMAINS[et.p] : "");
+      eb.textContent = "Étape " + et.s + " · " + infoEtape(et.s).l + (canonDe(et.s) === 8 && et.p ? " · partie " + ROMAINS[et.p] : "");
       der.prepend(eb);
     }
   }
@@ -279,26 +293,27 @@
     if (n === cur.s) return "current";
     return "todo";
   }
-  function segments(cur) {
+  function segments(cur, s) {
     let h = "";
-    for (let n = 1; n <= 9; n++) h += '<span class="seg ' + etatSeg(n, cur) + '" data-n="' + n + '"></span>';
+    for (let n = 1; n <= nbEtapes(s); n++) h += '<span class="seg ' + etatSeg(n, cur) + '" data-n="' + n + '"></span>';
     return h;
   }
   function rendreFrise(pulse) {
     if (!sujet || vue === "accueil") { prog.hidden = true; return; }
     prog.hidden = false;
     const cur = etapeCourante();
-    const titre = cur.s > 9 ? "Étape 9 sur 9" : "Étape " + cur.s + " sur 9";
+    const N = nbEtapes();
+    const titre = "Étape " + Math.min(cur.s, N) + " sur " + N;
     let h = '<button type="button" class="ph" id="ph" aria-expanded="' + friseOuverte + '">' +
       '<span class="row"><span class="lbl">' + titre + '</span><span class="nm">' + esc(libelleEtape(cur)) + "</span>" + ICO.chev + "</span>" +
       '<span class="frise" aria-hidden="true">' + segments(cur) + "</span></button>";
     if (friseOuverte) {
       h += '<ul class="chips">';
-      for (let n = 1; n <= 9; n++) {
+      for (let n = 1; n <= N; n++) {
         const st = etatSeg(n, cur);
         h += '<li class="' + (st === "done" ? "d" : "") + '"><button type="button" class="chip ' + st + '" data-n="' + n + '"' +
           (st === "todo" ? ' tabindex="-1" aria-disabled="true"' : "") + ">" +
-          '<span class="mk">' + (st === "done" ? ICO.tick.replace("<svg", '<svg width="16" height="16"') : n) + '</span><span class="cl">' + ETAPES[n].l + "</span></button></li>";
+          '<span class="mk">' + (st === "done" ? ICO.tick.replace("<svg", '<svg width="16" height="16"') : n) + '</span><span class="cl">' + infoEtape(n).l + "</span></button></li>";
       }
       h += '</ul><p class="hint">Touche une étape terminée pour la relire.</p>';
     }
@@ -341,8 +356,8 @@
     } else {
       const apres = etapeDe(suiv);
       if (apres.s > avant.s) {
-        dire("etape", ["Étape " + avant.s + " terminée.", ETAPES[avant.s].fin]);
-      } else if (avant.s === 8 && apres.p > avant.p) {
+        dire("etape", ["Étape " + avant.s + " terminée.", infoEtape(avant.s).fin]);
+      } else if (canonDe(avant.s) === 8 && apres.p > avant.p) {
         dire("etape", ["Partie " + ROMAINS[avant.p] + " terminée.", "Tu as rédigé ta " + ORDINAUX[avant.p] + " partie."]);
       }
     }
@@ -652,7 +667,9 @@
               { cle: "red_p2", n: "II", red: "p2", p: 2 }, { cle: "t2", n: "→", l: "Transition" },
               { cle: "red_p3", n: "III", red: "p3", p: 3 }] });
     c.push({ k: "red_ccl", s: 9, t: "Conclusion", g: "Conclusion", red: "ccl", slots: [{ cle: "red_ccl" }] });
-    return c;
+    /* numéros de la frise du sujet ; les étapes absentes du sujet n'ont pas de carte */
+    return c.filter((x) => rangDe(x.s)).map((x) => Object.assign(x, { s: rangDe(x.s) }))
+      .sort((a, b) => a.s - b.s);
   }
   function carteDeCle(id) {
     if (!id) return null;
@@ -674,7 +691,7 @@
   }
   function etapesEcrites() {
     const cur = etapeCourante();
-    return Math.min(9, cur.s - 1);
+    return Math.min(nbEtapes(), cur.s - 1);
   }
   function etatCarte(c) {
     const cur = etapeCourante();
@@ -688,11 +705,11 @@
     side.hidden = false;
     dtab.hidden = false;
     const n = etapesEcrites();
-    $("dtab-n").textContent = n + (n > 1 ? " étapes" : " étape") + " sur 9";
+    $("dtab-n").textContent = n + (n > 1 ? " étapes" : " étape") + " sur " + nbEtapes();
     if (edition) return;   /* on ne redessine pas sous les doigts de l'élève */
     const notes = etat.notes || {};
     let h = '<span class="grip" aria-hidden="true"></span><div class="phd"><div class="tt"><h3>Ma dissertation</h3><p>' +
-      esc(sujet.titre) + " · " + n + (n > 1 ? " étapes" : " étape") + ' sur 9</p></div>' +
+      esc(sujet.titre) + " · " + n + (n > 1 ? " étapes" : " étape") + " sur " + nbEtapes() + "</p></div>" +
       '<button type="button" class="iconbtn fermer" id="fermer" aria-label="Fermer">' + ICO.close + "</button></div><div class=\"cards\">";
     let groupe = "";
     cartes().forEach((c) => {
@@ -834,7 +851,7 @@
       while (h.length > 3) h.shift();
       /* notes de cohérence : seules les étapes déjà écrites reçoivent la question */
       etat.notes = etat.notes || {};
-      (DEPEND[e.s] || []).forEach((d) => {
+      (DEPEND[canonDe(e.s)] || []).map(rangDe).filter((d) => d && d !== e.s).forEach((d) => {
         const c = cartes().find((x) => x.s === d && x.slots.some((sl) => lireCle(sl.cle).trim()));
         if (c) etat.notes[d] = e.s;
       });
@@ -847,7 +864,7 @@
   /* « Reprendre cette question avec Socratys » */
   function cibleReprise(c) {
     if (c.red) return sujet.etapes.findIndex((e) => e.redaction === c.red);
-    if (c.s <= 7 && c.k !== "plan") return sujet.etapes.findIndex((e, i) => !e.section && etapeDe(i).s === c.s);
+    if (canonDe(c.s) <= 7 && c.k !== "plan") return sujet.etapes.findIndex((e, i) => !e.section && etapeDe(i).s === c.s);
     if (c.k === "plan") return etapeIndex("plan");
     return -1;
   }
@@ -1088,10 +1105,10 @@
     const precDer = der && lire("sujet." + der.id);
     if (der && etatValide(precDer) && precDer.i > 0 && !precDer.fini) {
       calculerEtapes(der);
-      const et = precDer.i >= der.etapes.length ? { s: 10, p: 0 } : der._et[precDer.i];
+      const et = precDer.i >= der.etapes.length ? { s: der._N + 1, p: 0 } : der._et[precDer.i];
       h += '<button type="button" class="resume" id="reprendre"><span class="k">Reprendre</span><span class="s">' + esc(der.titre) + "</span>" +
-        '<span class="frise" aria-hidden="true">' + segments(et) + '</span><span class="m2"><span>Étape ' + Math.min(et.s, 9) + " sur 9 · " +
-        esc(libelleEtape(et)) + "</span><b>Continuer</b></span></button>";
+        '<span class="frise" aria-hidden="true">' + segments(et, der) + '</span><span class="m2"><span>Étape ' + Math.min(et.s, der._N) + " sur " + der._N + " · " +
+        esc(libelleEtape(et, der)) + "</span><b>Continuer</b></span></button>";
     }
     h += '<p class="question homeq">Quel sujet veux-tu traiter ?</p><ul class="bank" id="bank"></ul>' +
       '<p class="confid">Tes réponses restent enregistrées dans ce navigateur, sur cet appareil : rien n\'est envoyé sur Internet. ' +
