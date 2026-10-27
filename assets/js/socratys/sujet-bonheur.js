@@ -370,12 +370,9 @@
         ]
       },
       {
-        dit: ["Faut-il alors renoncer au bonheur ?"],
-        reponse: "Ta réponse", id: "renoncer"
-      },
-      {
-        dit: ["Rédige maintenant ta transition en complétant cette amorce. Ne retiens que ce qui concerne le bonheur."],
+        dit: ["Rédige maintenant ta transition en complétant cette amorce."],
         amorce: "Si le bonheur n'est une affaire de raison ni au sens ___, ni au sens ___, faut-il pour autant ___ ?",
+        relances: ["Si la raison ne nous donne le bonheur ni par le savoir, ni par l'action, faut-il pour autant y renoncer ?"],
         id: "t2"
       },
 
