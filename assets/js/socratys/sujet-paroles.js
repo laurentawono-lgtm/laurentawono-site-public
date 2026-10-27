@@ -9,10 +9,10 @@
   /* introduction assemblée à partir des réponses de l'élève, qu'il réécrit ensuite */
   const INTRO =
     "{amorce} Avons-nous la maîtrise de nos paroles ? La parole peut s'entendre en deux sens, que distingue le couple {couple}. Du point de vue subjectif, la parole se définit comme {defs2.0|defs.0} ; on l'oppose alors à {defs.1}. " +
-    "Du point de vue objectif, elle se définit comme {defs2.1|defs.3} ; on l'oppose alors à {defs.4}.\n\n" +
+    "Du point de vue objectif, elle se définit comme {defs2.1|defs.2} ; on l'oppose alors à {defs.3}.\n\n" +
     "Se demander si nous avons la maîtrise de nos paroles, revient à se demander si nous avons la maîtrise de la parole comme {reform.0}, ou comme {reform.1}. " +
-    "Si nous avons la maîtrise de nos paroles au sens subjectif, alors {probl.0}. Or {probl.1}. " +
-    "Si nous avons la maîtrise de nos paroles au sens objectif, alors {probl.2}. Or {probl.3}.\n\n" +
+    "Si nous avons la maîtrise de nos paroles au sens subjectif, alors {probl.0}. Or {problemes.0}. " +
+    "Si nous avons la maîtrise de nos paroles au sens objectif, alors {probl.1}. Or {problemes.1}.\n\n" +
     "Dans une première partie, nous nous demanderons ce qu'implique {plan.0}. Dans une deuxième partie, nous nous demanderons ce que suppose {plan.1}. " +
     "Et dans une troisième partie, nous nous demanderons {plan.2}.";
 
@@ -51,17 +51,17 @@
 
     fiche: [
       ["Amorce", "{amorce}"],
-      ["Sujet grammatical", "{sujetGram}"],
+      ["Sujet grammatical", "la maîtrise"],
       ["Prédicat", "la parole"],
-      ["Première définition de la parole", "{predicat}"],
       ["Couple philosophique", "{couple}"],
       ["Sens subjectif", "{defs2.0|defs.0}"],
-      ["Sens objectif", "{defs2.1|defs.3}"],
+      ["Sens objectif", "{defs2.1|defs.2}"],
       ["Reformulation", "Se demander si nous avons la maîtrise de nos paroles, revient à se demander si nous avons la maîtrise de la parole comme {reform.0}, ou comme {reform.1}."],
-      ["Première hypothèse", "Si nous avons la maîtrise de nos paroles au sens subjectif, alors {probl.0} Or {probl.1}"],
-      ["Seconde hypothèse", "Si nous avons la maîtrise de nos paroles au sens objectif, alors {probl.2} Or {probl.3}"],
+      ["Première hypothèse", "Si nous avons la maîtrise de nos paroles au sens subjectif, alors {probl.0}"],
+      ["Seconde hypothèse", "Si nous avons la maîtrise de nos paroles au sens objectif, alors {probl.1}"],
+      ["Problèmes", "Or {problemes.0} — Or {problemes.1}"],
       ["Plan", "I. {plan.0} — II. {plan.1} — III. {plan.2}"],
-      ["Couple de la partie III", "{couple3}"]
+      ["Couple de la partie III", "naturel / artificiel"]
     ],
 
     etapes: [
@@ -80,22 +80,8 @@
 
       { section: "Introduction · le sujet" },
       {
-        bon: B.sujet,
-        dit: ["Comment peux-tu définir la parole ?"],
-        reponse: "Ta définition", id: "predicat",
-        relances: ["Dans ce sujet, c'est la parole qui joue le rôle de prédicat : c'est le premier mot que tu vas définir. Dans ton introduction, tu n'écriras pas « le prédicat est… », tu définiras directement la parole.",
-                   "Que fait-on quand on parle ? Qu'est-ce qui distingue une parole d'un simple cri ?"]
-      },
-      {
-        dit: ["Et quel est le sujet grammatical de cette question ?"],
-        reponse: "Ta réponse", id: "sujetGram",
-        motsCles: ["maitrise"],
-        relances: [window.SOCRATYS.AIDE_SUJETGRAM, "Que se demande-t-on si nous l'avons, sur nos paroles ?"]
-      },
-      {
         bon: B.couple,
-        dit: ["Pour bien cerner la parole, il faut la définir à partir d'un couple philosophique.",
-              "Avec quel couple philosophique peux-tu le définir ?"],
+        dit: ["Avec quel couple philosophique peux-tu t'aider pour définir la parole ?"],
         choix: [{ l: "subjectif / objectif", bon: true }, { l: "individuel / collectif" }, { l: "particulier / général" }],
         id: "couple",
         relances: [
@@ -108,9 +94,9 @@
       { section: "Introduction · définir et problématiser" },
       {
         dit: ["Définis maintenant la parole à partir de ce couple."],
-        champs: ["Du point de vue subjectif, la parole peut se définir comme…", "On l'oppose alors à…", "Peux-tu donner un exemple ?",
-                 "Du point de vue objectif, la parole peut se définir comme…", "On l'oppose alors à…", "Peux-tu donner un exemple ?"],
-        id: "defs", requis: [0, 1, 3, 4]
+        champs: ["Du point de vue subjectif, la parole peut se définir comme…", "On l'oppose alors à…",
+                 "Du point de vue objectif, la parole peut se définir comme…", "On l'oppose alors à…"],
+        id: "defs"
       },
       {
         bon: B.distinctes,
@@ -119,46 +105,52 @@
         id: "distinctes"
       },
       {
-        dit: ["Repars du sens général de chaque terme du couple, indépendamment de la parole : que veut dire « subjectif » ? Que veut dire « objectif » ?",
-              "Réécris ensuite tes deux définitions."],
+        dit: ["Réécris tes deux définitions pour mieux les distinguer."],
+        relances: ["Pars du sens ordinaire de chaque terme du couple, indépendamment de la parole : dans la vie de tous les jours, que veut dire « subjectif » ? Que veut dire « objectif » ? Applique ensuite chacun de ces sens à la parole."],
         champs: ["Du point de vue subjectif, la parole peut se définir comme…", "Du point de vue objectif, la parole peut se définir comme…"],
         id: "defs2"
       },
       {
         ancre: "reformulation",
-        dit: ["Reformule maintenant le sujet : remplace le mot « parole » par les deux sens que tu as obtenus.",
+        bon: B.reformulation,
+        dit: ["Reformule maintenant le sujet à partir de tes deux définitions.",
               "Se demander si nous avons la maîtrise de nos paroles, revient à se demander si nous avons la maîtrise de la parole comme… ou comme…"],
         champs: ["…si nous avons la maîtrise de la parole comme", "…ou comme"],
         id: "reform"
       },
       {
         dit: ["Formulons maintenant deux hypothèses, à partir de ta reformulation."],
-        champs: ["Si nous avons la maîtrise de nos paroles au sens subjectif, alors…", "Or…",
-                 "Si nous avons la maîtrise de nos paroles au sens objectif, alors…", "Or…"],
+        champs: ["Si nous avons la maîtrise de nos paroles au sens subjectif, alors…",
+                 "Si nous avons la maîtrise de nos paroles au sens objectif, alors…"],
         id: "probl"
       },
-      { dit: [window.SOCRATYS.SYNTHESE_PROBLEMES] },
       {
-        bon: "Les deux hypothèses te fournissent déjà les deux premières parties. La troisième interrogera la maîtrise à partir d'un nouveau couple philosophique.",
+        bon: B.problematisation,
+        dit: ["Ces deux hypothèses soulèvent chacune un problème. Lequel ?"],
+        champs: ["Si nous avons la maîtrise de nos paroles au sens subjectif, alors {probl.0}. Or…",
+                 "Si nous avons la maîtrise de nos paroles au sens objectif, alors {probl.1}. Or…"],
+        id: "problemes"
+      },
+      {
+        bon: "Les deux hypothèses indiquent déjà le plan : le premier problème sera traité dans la première partie, et le deuxième problème sera traité dans la deuxième partie.",
         dit: ["Annonce maintenant ton plan."],
         champs: ["Dans une première partie, nous nous demanderons ce qu'implique…",
                  "Dans une deuxième partie, nous nous demanderons ce que suppose…",
                  "Et dans une troisième partie, nous nous demanderons…"],
-        id: "plan"
+        id: "plan",
+        relances: ["Si l'analyse du prédicat, la parole, te donne les deux premières parties, c'est celle du sujet grammatical, la maîtrise, qui te donne la troisième : on questionne alors la maîtrise à l'aide d'un autre couple philosophique. Tu peux par exemple questionner la maîtrise à partir du couple naturel / artificiel : la maîtrise de la parole est-elle naturelle, ou artificielle ?"]
       },
       {
         redaction: "intro", titre: "Ton introduction", modele: INTRO, consigne: C.reecrireIntro,
         notes: [
           ["Sujet", "Avons-nous la maîtrise de nos paroles ?"],
           ["Ton amorce", "{amorce}"],
-          ["Les deux termes du sujet", "la parole · {sujetGram}"],
-          ["Ta première définition de la parole", "{predicat}"],
           ["Couple", "{couple}"],
-          ["Sens subjectif", "{defs2.0|defs.0} (opposé à {defs.1}) — exemple : {defs.2}"],
-          ["Sens objectif", "{defs2.1|defs.3} (opposé à {defs.4}) — exemple : {defs.5}"],
+          ["Sens subjectif", "{defs2.0|defs.0} (opposé à {defs.1})"],
+          ["Sens objectif", "{defs2.1|defs.2} (opposé à {defs.3})"],
           ["Reformulation", "si nous avons la maîtrise de la parole comme {reform.0}, ou comme {reform.1}"],
-          ["Hypothèse 1", "Si nous avons la maîtrise de nos paroles au sens subjectif, alors {probl.0} Or {probl.1}"],
-          ["Hypothèse 2", "Si nous avons la maîtrise de nos paroles au sens objectif, alors {probl.2} Or {probl.3}"],
+          ["Hypothèse 1", "Si nous avons la maîtrise de nos paroles au sens subjectif, alors {probl.0} Or {problemes.0}"],
+          ["Hypothèse 2", "Si nous avons la maîtrise de nos paroles au sens objectif, alors {probl.1} Or {problemes.1}"],
           ["Plan", "I. {plan.0}<br>II. {plan.1}<br>III. {plan.2}"]
         ]
       },
@@ -166,29 +158,10 @@
       /* ============ PARTIE I ============ */
       { section: "Partie I · l'aspect subjectif de la parole" },
       {
-        dit: ["Reprends ce que tu as annoncé pour cette partie et pose-le sous la forme d'une question."],
-        reponse: "Ta question", id: "p1q",
-        motsCles: ["?"],
-        relances: ["Si la parole est l'expression de ce qui est en nous, que veut dire « avoir la maîtrise de ses paroles » ? Écris-le sous la forme d'une question."]
-      },
-      {
-        dit: ["Que signifie pour toi parler ? Par quel terme dis-tu ce qui est à l'intérieur de toi ?"],
-        reponse: "Un mot", id: "mot",
-        motsCles: ["exprim", "expression"],
-        relances: ["Quand tu fais passer une émotion ou une idée par des mots, que fais-tu ?",
-                   "On dit d'un visage, d'une voix ou d'un tableau qu'ils sont très… quoi ?"]
-      },
-      {
-        dit: ["Et quand tu ne parles pas, dans quel état es-tu ?"],
-        reponse: "Un mot", id: "silence",
-        motsCles: ["silence", "tai", "mutisme", "muet"],
-        relances: ["Comment appelle-t-on l'absence de parole ?"]
-      },
-      {
-        dit: ["Peux-tu reprendre toute la question en la reformulant avec le premier de ces mots ?"],
-        reponse: "Ta reformulation", id: "p1ref",
-        motsCles: ["exprim", "expression"],
-        relances: ["Remplace « nos paroles » par ce que font nos paroles quand elles disent ce qui est en nous."]
+        dit: ["Première partie : avons-nous la maîtrise de nos paroles au sens subjectif ?",
+              "Si nous avons la maîtrise de nos paroles au sens subjectif, qu'est-ce que cela veut dire ?"],
+        reponse: "Ta réponse", id: "p1q",
+        relances: ["Il faut trouver deux significations à cette hypothèse, en te basant sur le sens du mot « subjectif »."]
       },
 
       {
@@ -274,8 +247,8 @@
       {
         redaction: "p1", titre: "Ta première partie", brouillon: true, consigne: C.reecrire,
         notes: [
-          ["Question de la partie", "{p1q}"],
-          ["Parler, se taire", "{mot} / {silence}<br>reformulation : {p1ref}"],
+          ["Question de la partie", "Avons-nous la maîtrise de nos paroles au sens subjectif ?", true],
+          ["Ce que veut dire l'hypothèse", "{p1q}"],
           ["La maîtrise du silence", "{maitrise1}<br>argument : {arg1}<br>le théâtre : {theatre}<br>le témoin : {temoin}"],
           ["La parole qui dissimule", "{traitresse}<br>exemple : {exFigure}<br>{dissim}"],
           ["Descartes", "thèse : {descThese}<br>les bêtes : {betes}<br>fous et perroquets : {fous}<br>pour notre question : {descPont}"],
@@ -284,42 +257,20 @@
         ]
       },
       {
-        dit: ["Si nos paroles ne disent pas toujours ce qui est en nous, que peuvent-elles dire d'autre ?"],
-        reponse: "Ta réponse", id: "trans1",
-        motsCles: ["chose", "objet", "monde", "realit", "nomm", "objecti"],
-        relances: ["Quel était le second sens de la parole, dans ton introduction ?"]
-      },
-      {
         dit: ["Rédige maintenant ta transition en complétant cette amorce."],
         amorce: "Nous avons vu que la parole, en tant qu'expression de notre intériorité, ___. Qu'en est-il lorsque nos paroles ne disent plus ce qui est en nous, mais ___ ?",
+        relances: ["Si nos paroles ne disent pas toujours ce qui est en nous, que peuvent-elles dire d'autre ? Quel était le second sens de la parole, dans ton introduction ?"],
         id: "t1"
       },
 
       /* ============ PARTIE II ============ */
       { section: "Partie II · le caractère objectif de la parole" },
       {
-        dit: ["Reprends ce que tu as annoncé pour ta deuxième partie et pose-le sous la forme d'une question."],
-        reponse: "Ta question", id: "p2q",
-        motsCles: ["?"],
-        relances: ["Si la parole consiste à nommer les choses, que veut dire « avoir la maîtrise de ses paroles » ? Écris-le sous la forme d'une question."]
-      },
-      {
-        dit: ["Au sens objectif, comment peux-tu définir la parole ? Que signifie « objectif » ?"],
-        reponse: "Ta réponse", id: "obj1"
-      },
-      {
-        dit: ["Explique pourquoi ce deuxième sens renvoie à un objet, ou à une chose."],
-        reponse: "Ta réponse", id: "obj2"
-      },
-      {
-        dit: ["Quand dit-on de quelqu'un qu'il parle objectivement ?"],
-        reponse: "Ta réponse", id: "obj3",
-        motsCles: ["fait", "tel", "realit", "chose", "neutre", "verit", "sans", "vrai"],
-        relances: ["Celui qui parle objectivement parle-t-il de ce qu'il ressent, ou de ce qui est ?"]
-      },
-      {
-        dit: ["Avec ce sens, peux-tu reformuler toute la question ?"],
-        reponse: "Ta reformulation", id: "p2ref"
+        dit: ["Deuxième partie : avons-nous la maîtrise de nos paroles au sens objectif ?",
+              "Si nous avons la maîtrise de nos paroles au sens objectif, qu'est-ce que cela veut dire ?"],
+        reponse: "Ta réponse", id: "p2q",
+        relances: ["Concentre-toi sur le mot « objectif » : à quoi renvoie ce qui est objectif ?",
+                   "Quand dit-on de quelqu'un qu'il parle objectivement ? Parle-t-il de ce qu'il ressent, ou de ce qui est ?"]
       },
       {
         dit: ["Nommons-nous les choses parce que nous les connaissons, ou les connaissons-nous parce que nous les nommons ?"],
@@ -429,9 +380,9 @@
       {
         redaction: "p2", titre: "Ta deuxième partie", brouillon: true, consigne: C.reecrire,
         notes: [
-          ["Question de la partie", "{p2q}"],
-          ["Le sens objectif", "{obj1}<br>{obj2}<br>parler objectivement : {obj3}"],
-          ["Reformulation", "{p2ref}<br>nommer et connaître : {nommer}<br>{implic}"],
+          ["Question de la partie", "Avons-nous la maîtrise de nos paroles au sens objectif ?", true],
+          ["Ce que veut dire l'hypothèse", "{p2q}"],
+          ["Nommer et connaître", "{nommer}<br>{implic}"],
           ["Aristote", "les formes vraies : {assoVrai.0} ; {assoVrai.1}<br>dire vrai : {aristVrai}"],
           ["Mensonge et illusion", "{assoDef.0} ; {assoDef.1}<br>{posture}"],
           ["Le menteur (Swift, cité par Nietzsche)", "{menteur}"],
@@ -441,37 +392,24 @@
         ]
       },
       {
-        dit: ["Si nos paroles ne sont maîtrisées ni quand elles expriment ce qui est en nous, ni quand elles nomment les choses, quelle maîtrise celui qui parle peut-il encore avoir ? D'où pourrait-elle lui venir ?"],
-        reponse: "Ta réponse", id: "trans2"
-      },
-      {
         dit: ["Rédige maintenant ta transition en complétant cette amorce."],
         amorce: "Si, du point de vue subjectif, la parole ___, et si, du point de vue objectif, le mot ___, quelle maîtrise avons-nous alors de nos paroles ?",
+        relances: ["Si nos paroles ne sont maîtrisées ni quand elles expriment ce qui est en nous, ni quand elles nomment les choses, quelle maîtrise celui qui parle peut-il encore avoir ? D'où pourrait-elle lui venir ?"],
         id: "t2"
       },
 
       /* ============ PARTIE III ============ */
       { section: "Partie III · une maîtrise naturelle ou artificielle ?" },
       {
-        dit: ["Reviens au sujet grammatical que tu avais identifié en introduction.",
-              "Cette maîtrise, peut-on l'obtenir naturellement, ou faut-il l'apprendre ?"],
-        reponse: "Ta réponse", id: "p3q"
-      },
-      {
-        dit: ["Avec quel couple philosophique peux-tu définir la maîtrise ?"],
-        choix: [{ l: "naturel / artificiel", bon: true }, { l: "inné / acquis" }, { l: "subjectif / objectif" }],
-        id: "couple3",
-        relances: [
-          "Applique ce couple à la maîtrise : une maîtrise « {couple3} »… est-ce que cela éclaire ce que sait faire celui qui parle bien ?",
-          "Quand dit-on de quelqu'un qu'il parle bien, qu'il sait manier les mots ? Qu'est-ce que cela révèle : un don, ou un art qu'il a travaillé ?",
-          "Dans quel domaine use-t-on de la persuasion pour faire agir ou mobiliser des personnes ? La maîtrise qu'on y déploie est-elle donnée par la nature, ou fabriquée ?"
-        ]
+        dit: ["Troisième partie : la maîtrise de nos paroles est-elle naturelle, ou artificielle ?",
+              "Avoir la maîtrise de nos paroles peut signifier soit que cette maîtrise est naturelle, soit qu'elle est artificielle."]
       },
       {
         dit: ["Définis maintenant la maîtrise de la parole à partir de ce couple."],
-        champs: ["Au sens naturel, la maîtrise de la parole serait…", "Peux-tu donner un exemple ?",
-                 "Au sens artificiel, la maîtrise de la parole serait…", "Peux-tu donner un exemple ?"],
-        id: "defs3", requis: [0, 2]
+        champs: ["Au sens naturel, la maîtrise de la parole serait…",
+                 "Au sens artificiel, la maîtrise de la parole serait…"],
+        relances: ["Quand dit-on de quelqu'un qu'il parle bien, qu'il sait manier les mots ? Qu'est-ce que cela révèle : un don, ou un art qu'il a travaillé ?"],
+        id: "defs3"
       },
       {
         repere: ["Première hypothèse", "La maîtrise de la parole serait naturelle."],
@@ -549,8 +487,9 @@
       {
         redaction: "p3", titre: "Ta troisième partie", brouillon: true, consigne: C.reecrire,
         notes: [
-          ["La question de la maîtrise", "{p3q}"],
-          ["Couple", "{couple3}<br>naturel : {defs3.0} (exemple : {defs3.1})<br>artificiel : {defs3.2} (exemple : {defs3.3})"],
+          ["Question de la partie", "La maîtrise de nos paroles est-elle naturelle, ou artificielle ?", true],
+          ["Les deux significations", "Avoir la maîtrise de nos paroles peut signifier soit que cette maîtrise est naturelle, soit qu'elle est artificielle.", true],
+          ["Couple naturel / artificiel", "naturel : {defs3.0}<br>artificiel : {defs3.1}"],
           ["Hypothèse du naturel", "Descartes : {argNat}<br>le nouveau-né : {nouveauNe}"],
           ["Hypothèse de l'artifice", "{deduire}<br>{implArt}"],
           ["Platon", "thèse : {platonThese}<br>l'orateur : {orateur}<br>toute âme : {touteAme}"],
