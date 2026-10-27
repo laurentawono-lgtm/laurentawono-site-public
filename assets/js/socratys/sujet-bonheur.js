@@ -397,21 +397,7 @@
         relances: ["Reviens à ta première partie : qu'as-tu établi sur la raison théorique ?",
                    "Et sur la raison pratique, dans ta deuxième partie ?"]
       },
-      {
-        bon: "Un acte peut être qualifié de bon à partir des effets bénéfiques qu'il cause — les plaisirs — ou des effets nuisibles qu'il éloigne. Cette idée, qu'on appelle l'utilitarisme, soutient que les bonnes actions peuvent être évaluées selon le degré de plaisir qu'elles apportent et selon le nombre de personnes qui en profitent. C'est la thèse du philosophe Jeremy Bentham, dans son <em>Introduction aux principes de la morale et de la législation</em>.",
-        dit: ["Comment qualifierais-tu une telle raison, qui calculerait les plaisirs à rechercher et les peines à éviter ?"],
-        reponse: "Ta réponse", id: "calcul",
-        relances: ["Que fait cette raison, exactement ? Elle connaît ? Elle décide ? Ou elle compte ?",
-                   "Est-ce encore la raison théorique, qui cherche le vrai ? La raison pratique, qui cherche le bien ? Ou une troisième chose ?"]
-      },
-      {
-        dit: ["Quelles seraient les limites d'une telle raison, et d'une telle conception du bonheur ?"],
-        reponse: "Ta réponse", id: "limites",
-        motsCles: ["minorit", "autres", "sacrifi", "detriment", "exclu", "nombre", "dixieme", "certains"],
-        relances: ["Si l'on compte le nombre de personnes qui profitent d'un acte, que deviennent celles qui n'en profitent pas ?",
-                   "Un acte qui rend heureux neuf personnes sur dix est-il un bon acte ? Et pour la dixième ?"]
-      },
-      { repere: ["Ce que tu as établi sur la première hypothèse", "{necess}<br>Les limites du calcul : {limites}"] },
+      { repere: ["Ce que tu as établi sur la première hypothèse", "{necess}<br>{ecarter}"] },
       {
         repere: ["Seconde hypothèse", "Le bonheur serait un effet contingent de la raison."],
         dit: ["En quel sens peut-on dire du bonheur qu'il est un effet de la raison ?"],
@@ -461,7 +447,6 @@
           ["Question de la partie", "Le bonheur est-il une conséquence de la raison, ou un effet ?", true],
           ["Les deux significations", "Que le bonheur soit une affaire de raison peut signifier soit que le bonheur est une conséquence de la raison, soit qu'il est un effet de la raison.", true],
           ["Conséquence nécessaire", "{necess}<br>arguments pour l'écarter : {ecarter}"],
-          ["Le calcul des plaisirs (Bentham)", "{calcul}<br>limites : {limites}"],
           ["Effet contingent", "{effet}"],
           ["Descartes", "thèse : {these}<br>usage de la raison : {usage}<br>la sortie de la forêt : {foret}<br>forme de raison : {formeraison}"],
           ["Conclusion", "{ccl3}"]
