@@ -251,15 +251,10 @@
         ]
       },
       {
-        dit: ["Si le bonheur n'est pas une affaire de raison au sens théorique, en quel autre sens peut-il l'être ?"],
-        reponse: "Ta réponse", id: "trans1",
-        motsCles: ["pratique", "action", "agir"],
-        relances: ["Combien de sens avais-tu donnés à la raison au début de ton devoir ?",
-                   "Tu as examiné l'un des deux. Lequel n'as-tu pas encore examiné ?"]
-      },
-      {
         dit: ["Rédige maintenant ta transition en complétant cette amorce."],
         amorce: "Si le bonheur n'est pas une affaire de raison au sens ___, puisque ___, l'est-il alors au sens ___ ?",
+        relances: ["Combien de sens avais-tu donnés à la raison au début de ton devoir ?",
+                   "Tu as examiné l'un des deux. Lequel n'as-tu pas encore examiné ?"],
         id: "t1"
       },
 
