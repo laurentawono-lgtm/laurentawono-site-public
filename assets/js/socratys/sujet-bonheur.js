@@ -182,7 +182,13 @@
         motsCles: ["apparence", "signe", "illusion", "tromp", "suffi", "pas le bonheur", "n'est pas", "ne prouve"],
         relances: ["Les enfants se trompent sur ce qui est précieux, et les hommes de pouvoir sur ce qui rend heureux : que peut-on en conclure sur le plaisir ?"]
       },
-      { repere: ["Ta première réfutation", "{ccl1}"] },
+      {
+        dit: ["Reviens maintenant à la première signification : « nous savons quand nous sommes heureux ». Que devient-elle après la lecture d'Aristote ?",
+              "Formule toi-même la réfutation."],
+        reponse: "Ta réfutation", id: "refut1",
+        relances: ["Si ressentir du plaisir, ce n'est pas forcément être heureux, le plaisir que je ressens me permet-il de savoir que je suis heureux ?"]
+      },
+      { repere: ["Ta première réfutation", "{refut1}"] },
 
       {
         repere: ["Seconde signification", "Nous savons ce qui nous rend heureux : je connais mes désirs, donc je sais ce qui me rendra heureux."],
@@ -221,7 +227,7 @@
       },
       {
         repere: ["Le chemin parcouru",
-          "Première signification : nous savons quand nous sommes heureux. Ta réfutation : {ccl1}<br>Seconde signification : nous savons ce qui nous rend heureux. Ta réfutation : {refut2}"],
+          "Première signification : nous savons quand nous sommes heureux. Ta réfutation : {refut1}<br>Seconde signification : nous savons ce qui nous rend heureux. Ta réfutation : {refut2}"],
         dit: ["Formule maintenant la conclusion de ta première partie : au terme de l'examen de ces deux significations, que peut-on dire du bonheur, si on le considère comme une affaire de raison au sens théorique ?"],
         reponse: "Ta conclusion", id: "cclP1",
         motsCles: ["indetermin", "ignor", "sait pas", "savons pas", "inconnu", "ne peut pas savoir", "incertain"],
@@ -234,7 +240,7 @@
           ["Ce que veut dire l'hypothèse", "{p1q}"],
           ["Significations", "soit que nous savons {implic.0} ; soit que nous savons {implic.1}"],
           ["Première signification", "argument : {arg1}"],
-          ["Aristote", "thèse : {aristThese}<br>les enfants et les hommes faits : {arist}<br>réfutation : {ccl1}"],
+          ["Aristote", "thèse : {aristThese}<br>les enfants et les hommes faits : {arist}<br>sur le plaisir : {ccl1}<br>réfutation : {refut1}"],
           ["Seconde signification", "argument : {arg2} — exemple : {ex2}"],
           ["Kant", "thèse : {kantThese}<br>ton exemple : {kantEx}<br>réfutation : {refut2}"],
           ["Conclusion", "{cclP1}"]
