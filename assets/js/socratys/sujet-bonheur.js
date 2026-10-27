@@ -135,10 +135,9 @@
       /* ============ PARTIE I ============ */
       { section: "Partie I · la raison au sens théorique" },
       {
-        dit: ["Reprends ce que tu as annoncé pour cette partie et pose-le sous la forme d'une question."],
-        reponse: "Ta question", id: "p1q",
-        motsCles: ["?"],
-        relances: ["Si le bonheur est une affaire de raison au sens théorique, qu'est-ce que cela veut dire ? Donne deux significations à cette hypothèse."]
+        dit: ["Si le bonheur est une affaire de raison au sens théorique, qu'est-ce que cela veut dire ?"],
+        reponse: "Ta réponse", id: "p1q",
+        relances: ["Il faut trouver deux significations à cette hypothèse, en te basant sur le sens du mot « théorique »."]
       },
       {
         dit: ["Reviens à la définition que tu as donnée de la raison théorique. Si tu devais la résumer en un seul mot, lequel choisirais-tu ?"],
@@ -247,7 +246,7 @@
       {
         redaction: "p1", titre: "Ta première partie", brouillon: true, consigne: C.reecrire,
         notes: [
-          ["Question de la partie", "{p1q}"],
+          ["Ce que veut dire l'hypothèse", "{p1q}"],
           ["Reformulation", "{p1ref}"],
           ["Implications", "soit que nous savons {implic.0} ; soit que nous savons {implic.1}"],
           ["Première implication", "argument : {arg1}"],
