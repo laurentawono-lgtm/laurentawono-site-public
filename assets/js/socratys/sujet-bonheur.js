@@ -329,6 +329,10 @@
                    "Quelle différence ces mobiles effacent-ils, selon lui ?"]
       },
       {
+        dit: ["Si la bonne action n'est pas l'action efficace, quel sens peut-elle avoir ? Relis le texte de Kant pour t'en inspirer."],
+        reponse: "Ta réponse", id: "kant2Pont"
+      },
+      {
         dit: ["Avant de passer à la seconde signification, marque le passage de l'une à l'autre. Complète cette transition."],
         amorce: "Si le bonheur n'est pas une affaire de bonne action au sens de ce qui est bien fait, puisque ___, l'est-il au sens de ___ ?",
         relances: ["La première signification jugeait l'action à son efficacité. À quoi la seconde la juge-t-elle ?"],
@@ -336,10 +340,6 @@
       },
       {
         repere: ["Seconde signification", "La bonne action est ce qui fait le bien : la raison pratique est alors une raison morale."]
-      },
-      {
-        dit: ["Que nous apprend cette distinction sur notre question : le bonheur peut-il être une affaire de bonne action ?"],
-        reponse: "Ta réponse", id: "kant2Pont"
       },
       {
         bon: "Un nouveau couple philosophique t'est utile ici : moyen / fin. Un moyen sert à obtenir autre chose ; une fin vaut pour elle-même.",
@@ -372,8 +372,8 @@
           ["La bonne action", "soit ce qui {bonneAction.0} ; soit ce qui {bonneAction.1}"],
           ["Première signification", "argument : {argInst}<br>les moyens sont-ils forcément bons : {moyensBons}<br>exemple : {exMoyen}<br>la fin recherchée : {finBonheur}<br>réfutation : {refutInst}"],
           ["Kant", "thèse : {kant2These}<br>bonheur et moralité : {kant2}"],
+          ["Le sens de la bonne action", "{kant2Pont}"],
           ["Transition", "{tIM}"],
-          ["Seconde signification", "{kant2Pont}"],
           ["Moyen / fin", "moyen : {moyenfin.0}<br>fin : {moyenfin.1}"],
           ["Conclusion", "{cclP2}"]
         ]
