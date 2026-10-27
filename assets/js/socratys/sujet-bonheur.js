@@ -196,10 +196,6 @@
         reponse: "Ton argument", id: "arg2"
       },
       {
-        dit: ["Donne un exemple : quel désir, selon toi, pourrait te rendre heureux ?"],
-        reponse: "Ton exemple", id: "ex2"
-      },
-      {
         dit: ["Lis maintenant ce texte de Kant."],
         texte: {
           corps: ["Le concept de bonheur est un concept si indéterminé, que, malgré le désir qu'a tout homme d'arriver à être heureux, personne ne peut jamais dire en termes précis et cohérents ce que véritablement il désire et il veut. La raison en est que tous les éléments qui font partie du concept de bonheur sont dans leur ensemble empiriques, c'est-à-dire qu'ils doivent être empruntés à l'expérience, et que cependant, pour l'idée du bonheur, un absolu, un maximum de bien-être dans mon état présent et dans toute ma condition future est nécessaire. Or il est impossible qu'un être fini, si clairvoyant et en même temps si puissant qu'on le suppose, se fasse un concept déterminé de ce qu'il veut ici véritablement.",
@@ -216,7 +212,7 @@
                    "Que faudrait-il posséder, selon la dernière phrase, pour savoir ce qui nous rendrait heureux ?"]
       },
       {
-        dit: ["Reprends l'exemple que tu as donné tout à l'heure : {ex2}. Qu'en dirait Kant ?"],
+        dit: ["Prends un exemple de désir qui, selon toi, pourrait te rendre heureux. Qu'en dirait Kant ?"],
         reponse: "Ta réponse", id: "kantEx",
         relances: ["Ce désir, une fois satisfait, pourrait-il t'attirer des soucis que tu n'avais pas prévus ?"]
       },
@@ -241,7 +237,7 @@
           ["Significations", "soit que nous savons {implic.0} ; soit que nous savons {implic.1}"],
           ["Première signification", "argument : {arg1}"],
           ["Aristote", "thèse : {aristThese}<br>les enfants et les hommes faits : {arist}<br>sur le plaisir : {ccl1}<br>réfutation : {refut1}"],
-          ["Seconde signification", "argument : {arg2} — exemple : {ex2}"],
+          ["Seconde signification", "argument : {arg2}"],
           ["Kant", "thèse : {kantThese}<br>ton exemple : {kantEx}<br>réfutation : {refut2}"],
           ["Conclusion", "{cclP1}"]
         ]
