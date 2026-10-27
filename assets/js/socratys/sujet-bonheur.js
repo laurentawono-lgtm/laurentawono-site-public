@@ -391,10 +391,10 @@
         relances: ["Si le bonheur découlait nécessairement de la raison, que suffirait-il de faire pour être heureux ? Et cela vaudrait-il pour tout le monde ?"]
       },
       {
-        dit: ["Pourquoi ne peut-on affirmer que le bonheur soit une conséquence nécessaire de la raison ?"],
+        dit: ["Si le bonheur est une conséquence de la raison, qu'est-ce que cela implique ?"],
         reponse: "Ta réponse", id: "necess",
-        relances: ["Pour qu'un lien soit nécessaire, combien de cas doit-il couvrir ?",
-                   "Un seul contre-exemple suffirait-il à ruiner cette nécessité ? En connais-tu un dans ce que tu as déjà établi ?"]
+        relances: ["Reviens à ta deuxième partie : y as-tu établi que certaines actions mènent nécessairement au bonheur ?",
+                   "Relis la réfutation que tu as formulée à la fin de ta deuxième partie : « {refutMor} ». Que t'apprend-elle sur cette hypothèse ?"]
       },
       {
         dit: ["Quels sont les arguments qui permettent d'écarter cette hypothèse ?"],
