@@ -223,9 +223,10 @@
         relances: ["Ce désir, une fois satisfait, pourrait-il t'attirer des soucis que tu n'avais pas prévus ?"]
       },
       {
-        dit: ["Reviens maintenant à ton hypothèse. Si le bonheur est un concept indéterminé, connaître son désir suffit-il à connaître son bonheur ?",
+        dit: ["Reviens maintenant à la seconde signification : « nous savons ce qui nous rend heureux ». Que devient-elle après la lecture de Kant ?",
               "Formule toi-même la réfutation."],
-        reponse: "Ta réfutation", id: "refut2"
+        reponse: "Ta réfutation", id: "refut2",
+        relances: ["Si le bonheur est un concept indéterminé, connaître son désir suffit-il à connaître son bonheur ?"]
       },
       {
         repere: ["Le chemin parcouru",
