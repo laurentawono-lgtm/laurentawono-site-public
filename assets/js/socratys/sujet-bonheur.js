@@ -277,6 +277,31 @@
                    "Dans le premier cas, on juge l'action à son efficacité : elle est bien faite. Dans le second, on la juge moralement : que fait-elle ?"],
         id: "bonneAction"
       },
+
+      {
+        repere: ["Première signification", "La bonne action est ce qui est bien fait : la raison pratique est alors celle dont on se sert comme d'un moyen, qui calcule les gains et les pertes."],
+        bon: B.instrumentale,
+        dit: ["Pourquoi peut-on soutenir que le bonheur est une affaire de raison en ce sens ?"],
+        reponse: "Ton argument", id: "argInst",
+        relances: ["Si je sais calculer ce que me rapporte et ce que me coûte chacune de mes actions, que puis-je espérer atteindre plus sûrement ?"]
+      },
+      {
+        dit: ["Reviens maintenant à ce que tu as établi dans ta première partie. Une raison qui calcule les moyens d'être heureux peut-elle atteindre son but ?",
+              "Formule toi-même la réfutation."],
+        reponse: "Ta réfutation", id: "refutInst",
+        relances: ["Pour calculer les moyens d'atteindre une fin, il faut connaître cette fin. D'après ta première partie, savons-nous ce qui nous rendrait heureux ?",
+                   "Une action bien faite peut servir n'importe quelle fin, bonne ou mauvaise : suffit-elle à rendre heureux ?"]
+      },
+      { repere: ["Ta première réfutation", "{refutInst}"] },
+      {
+        dit: ["Avant de passer à la seconde signification, marque le passage de l'une à l'autre. Complète cette transition."],
+        amorce: "Si le bonheur n'est pas une affaire de bonne action au sens de ce qui est bien fait, puisque ___, l'est-il au sens de ___ ?",
+        relances: ["La première signification jugeait l'action à son efficacité. À quoi la seconde la juge-t-elle ?"],
+        id: "tIM"
+      },
+      {
+        repere: ["Seconde signification", "La bonne action est ce qui fait le bien : la raison pratique est alors une raison morale."]
+      },
       {
         dit: ["Lis ce texte de Kant."],
         texte: {
@@ -331,6 +356,8 @@
           ["Question de la partie", "Le bonheur est-il une affaire de raison au sens pratique ?", true],
           ["Ce que veut dire l'hypothèse", "{p2q}"],
           ["La bonne action", "soit ce qui {bonneAction.0} ; soit ce qui {bonneAction.1}"],
+          ["Première signification", "argument : {argInst}<br>réfutation : {refutInst}"],
+          ["Transition", "{tIM}"],
           ["Kant", "thèse : {kant2These}<br>bonheur et moralité : {kant2}<br>pour notre question : {kant2Pont}"],
           ["Moyen / fin", "moyen : {moyenfin.0}<br>fin : {moyenfin.1}"],
           ["Conclusion", "{cclP2}"]
