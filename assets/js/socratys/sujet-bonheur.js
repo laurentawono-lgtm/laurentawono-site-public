@@ -10,8 +10,8 @@
     "{amorce} Le bonheur est-il une affaire de raison ? La raison peut s'entendre en deux sens, que distingue le couple {couple}. Du point de vue théorique, la raison se définit comme {defs2.0|defs.0} ; on l'oppose alors à {defs.1}. " +
     "Du point de vue pratique, elle se définit comme {defs2.1|defs.2} ; on l'oppose alors à {defs.3}.\n\n" +
     "Se demander si le bonheur est une affaire de raison, revient à se demander s'il est une affaire de {reform.0}, ou une affaire de {reform.1}. " +
-    "Si le bonheur est une affaire de {reform.0}, alors {probl.0}. Or {probl.1}. " +
-    "Si le bonheur est une affaire de {reform.1}, alors {probl.2}. Or {probl.3}.\n\n" +
+    "Si le bonheur est une affaire de {reform.0}, alors {probl.0}. Or {problemes.0}. " +
+    "Si le bonheur est une affaire de {reform.1}, alors {probl.1}. Or {problemes.1}.\n\n" +
     "Dans une première partie, nous nous demanderons ce qu'implique {plan.0}. Dans une deuxième partie, nous nous demanderons ce que suppose {plan.1}. " +
     "Et dans une troisième partie, nous nous demanderons {plan.2}.";
 
@@ -37,8 +37,9 @@
       ["Sens théorique", "{defs2.0|defs.0}"],
       ["Sens pratique", "{defs2.1|defs.2}"],
       ["Reformulation", "Se demander si le bonheur est une affaire de raison, revient à se demander s'il est une affaire de {reform.0}, ou une affaire de {reform.1}."],
-      ["Première hypothèse", "Si le bonheur est une affaire de {reform.0}, alors {probl.0} Or {probl.1}"],
-      ["Seconde hypothèse", "Si le bonheur est une affaire de {reform.1}, alors {probl.2} Or {probl.3}"],
+      ["Première hypothèse", "Si le bonheur est une affaire de {reform.0}, alors {probl.0}"],
+      ["Seconde hypothèse", "Si le bonheur est une affaire de {reform.1}, alors {probl.1}"],
+      ["Problèmes", "Or {problemes.0} — Or {problemes.1}"],
       ["Plan", "I. {plan.0} — II. {plan.1} — III. {plan.2}"]
     ],
 
@@ -98,10 +99,14 @@
       },
       {
         dit: ["Formulons maintenant deux hypothèses, à partir de ta reformulation."],
-        champs: ["Si le bonheur est une affaire de {reform.0}, alors…", "Or…", "Si le bonheur est une affaire de {reform.1}, alors…", "Or…"],
+        champs: ["Si le bonheur est une affaire de {reform.0}, alors…", "Si le bonheur est une affaire de {reform.1}, alors…"],
         id: "probl"
       },
-      { dit: [window.SOCRATYS.SYNTHESE_PROBLEMES] },
+      {
+        dit: ["Ces deux hypothèses soulèvent chacune un problème. Lequel ?"],
+        champs: ["Si le bonheur est une affaire de {reform.0}, alors {probl.0}. Or…", "Si le bonheur est une affaire de {reform.1}, alors {probl.1}. Or…"],
+        id: "problemes"
+      },
       {
         bon: "Les deux hypothèses te fournissent déjà les deux premières parties. La troisième interrogera le bonheur à partir d'un nouveau couple philosophique.",
         dit: ["Annonce maintenant ton plan."],
@@ -120,8 +125,8 @@
           ["Sens théorique", "{defs2.0|defs.0} (opposé à {defs.1})"],
           ["Sens pratique", "{defs2.1|defs.2} (opposé à {defs.3})"],
           ["Reformulation", "s'il est une affaire de {reform.0}, ou une affaire de {reform.1}"],
-          ["Hypothèse 1", "Si le bonheur est une affaire de {reform.0}, alors {probl.0} Or {probl.1}"],
-          ["Hypothèse 2", "Si le bonheur est une affaire de {reform.1}, alors {probl.2} Or {probl.3}"],
+          ["Hypothèse 1", "Si le bonheur est une affaire de {reform.0}, alors {probl.0} Or {problemes.0}"],
+          ["Hypothèse 2", "Si le bonheur est une affaire de {reform.1}, alors {probl.1} Or {problemes.1}"],
           ["Plan", "I. {plan.0}<br>II. {plan.1}<br>III. {plan.2}"]
         ]
       },

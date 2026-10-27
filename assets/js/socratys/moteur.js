@@ -68,7 +68,7 @@
   ];
   const ROMAINS = ["", "I", "II", "III"];
   const ORDINAUX = ["", "première", "deuxième", "troisième"];
-  const ID_ETAPE = { amorce: 0, predicat: 1, sujetGram: 2, couple: 3, defs: 4, distinctes: 4, defs2: 4, reform: 5, probl: 6, plan: 7 };
+  const ID_ETAPE = { amorce: 0, predicat: 1, sujetGram: 2, couple: 3, defs: 4, distinctes: 4, defs2: 4, reform: 5, probl: 6, problemes: 6, plan: 7 };
   /* Notes de cohérence : étape modifiée → étapes qui reçoivent la question. */
   const DEPEND = { 1: [3, 4, 5], 2: [3, 4, 5], 3: [4, 5, 6], 4: [5, 6], 5: [6, 7], 6: [7, 8], 7: [8, 9], 8: [9] };
 
@@ -665,7 +665,8 @@
     c.push({ k: "reform", s: 5, t: "Reformulation", g: "Introduction",
       slots: libellesChamps("reform").map((l, k) => ({ cle: "reform." + k, l: l })) });
     c.push({ k: "probl", s: 6, t: "Hypothèses", g: "Introduction",
-      slots: libellesChamps("probl").map((l, k) => ({ cle: "probl." + k, l: l })) });
+      slots: libellesChamps("probl").map((l, k) => ({ cle: "probl." + k, l: l }))
+        .concat(libellesChamps("problemes").map((l, k) => ({ cle: "problemes." + k, l: l }))) });
     c.push({ k: "red_intro", s: 7, t: "Introduction rédigée", g: "Introduction", red: "intro", slots: [{ cle: "red_intro" }] });
     c.push({ k: "plan", s: 7, t: "Plan", g: "Plan", rows: true,
       slots: [0, 1, 2].map((k) => ({ cle: "plan." + k, n: ROMAINS[k + 1] })) });
