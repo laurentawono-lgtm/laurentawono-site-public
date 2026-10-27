@@ -270,8 +270,12 @@
                    "Quand dit-on de quelqu'un qu'il est raisonnable dans sa conduite ? Que fait-il ?"]
       },
       {
-        dit: ["Si le bonheur est une affaire de bonne action, qu'implique la bonne action ? Elle est bonne pour qui — celui qui l'accomplit, ou celui à qui elle s'adresse ?"],
-        reponse: "Ta réponse", id: "pourqui"
+        dit: ["Si le bonheur est une affaire de bonne action, qu'implique la bonne action ? Une action peut être dite bonne en deux sens. Complète :"],
+        champs: ["Si le bonheur est une affaire de bonne action, la bonne action peut être soit ce qui…",
+                 "…soit ce qui…"],
+        relances: ["Pense aux deux façons de dire qu'une action est « bonne » : on le dit d'un travail réussi, et on le dit d'un geste envers autrui.",
+                   "Dans le premier cas, on juge l'action à son efficacité : elle est bien faite. Dans le second, on la juge moralement : que fait-elle ?"],
+        id: "bonneAction"
       },
       {
         dit: ["Lis ce texte de Kant."],
@@ -326,7 +330,7 @@
         notes: [
           ["Question de la partie", "Le bonheur est-il une affaire de raison au sens pratique ?", true],
           ["Ce que veut dire l'hypothèse", "{p2q}"],
-          ["La bonne action", "bonne pour qui : {pourqui}"],
+          ["La bonne action", "soit ce qui {bonneAction.0} ; soit ce qui {bonneAction.1}"],
           ["Kant", "thèse : {kant2These}<br>bonheur et moralité : {kant2}<br>pour notre question : {kant2Pont}"],
           ["Moyen / fin", "moyen : {moyenfin.0}<br>fin : {moyenfin.1}"],
           ["Conclusion", "{cclP2}"]
