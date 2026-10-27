@@ -274,17 +274,6 @@
         reponse: "Ta réponse", id: "pourqui"
       },
       {
-        dit: ["Qu'est-ce qu'un mobile ? Qu'est-ce qu'un motif ? Quelle est leur différence ?"],
-        reponse: "Ta réponse", id: "mobile",
-        motsCles: ["interet", "pousse", "principe", "raison qu", "interieur", "desir"],
-        relances: ["Peut-on faire une bonne chose pour une mauvaise raison ?",
-                   "Ce qui me pousse de l'intérieur, et la raison que je me donne : est-ce la même chose ?"]
-      },
-      {
-        dit: ["Si une bonne action a un mobile, qu'est-ce qui la pousse ? Et si elle a un motif rationnel, sur quoi repose-t-elle ?"],
-        reponse: "Ta réponse", id: "mobile2"
-      },
-      {
         dit: ["Lis ce texte de Kant."],
         texte: {
           corps: ["Cependant le principe du bonheur personnel est le plus condamnable, non pas seulement parce qu'il est faux et que l'expérience contredit la supposition que le bien-être se règle toujours sur le bien-faire, non pas même seulement parce qu'il ne contribue pas le moins du monde à fonder la moralité, car c'est tout autre chose de rendre un homme heureux que de le rendre bon, de le rendre prudent et perspicace pour son intérêt que de le rendre vertueux ; mais parce qu'il suppose sous la moralité des mobiles qui plutôt la minent et en ruinent toute la grandeur ; ils comprennent en effet dans une même classe les motifs qui poussent à la vertu et ceux qui poussent au vice ; ils enseignent seulement à mieux calculer ; mais ils effacent absolument la différence spécifique qu'il y a entre les deux."],
@@ -338,7 +327,6 @@
           ["Question de la partie", "Le bonheur est-il une affaire de raison au sens pratique ?", true],
           ["Ce que veut dire l'hypothèse", "{p2q}"],
           ["La bonne action", "bonne pour qui : {pourqui}"],
-          ["Mobile et motif", "{mobile}<br>{mobile2}"],
           ["Kant", "thèse : {kant2These}<br>bonheur et moralité : {kant2}<br>pour notre question : {kant2Pont}"],
           ["Moyen / fin", "moyen : {moyenfin.0}<br>fin : {moyenfin.1}"],
           ["Conclusion", "{cclP2}"]
