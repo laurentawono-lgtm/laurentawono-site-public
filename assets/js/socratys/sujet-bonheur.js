@@ -266,31 +266,11 @@
         dit: ["Deuxième partie : le bonheur est-il une affaire de raison au sens pratique ?",
               "Si le bonheur est une affaire de raison au sens pratique, qu'est-ce que cela veut dire ?"],
         reponse: "Ta réponse", id: "p2q",
-        relances: ["Il faut trouver ce que signifie cette hypothèse, en te basant sur le sens du mot « pratique »."]
+        relances: ["Concentre-toi sur le mot « pratique » : à quoi renvoie la pratique ?",
+                   "Quand dit-on de quelqu'un qu'il est raisonnable dans sa conduite ? Que fait-il ?"]
       },
       {
-        dit: ["Qu'est-ce que la raison pratique ?"],
-        reponse: "Ta réponse", id: "p2def"
-      },
-      {
-        dit: ["Quand dit-on de quelqu'un qu'il est raisonnable ?"],
-        reponse: "Ta réponse", id: "raisonnable",
-        motsCles: ["agi", "conduit", "comport", "bien", "sage", "fait ce qu", "prudent"],
-        relances: ["Dit-on d'un savant qu'il est raisonnable, ou d'un homme qui se conduit bien ?",
-                   "Reprocher à quelqu'un d'être déraisonnable, est-ce lui reprocher de mal penser ou de mal agir ?"]
-      },
-      {
-        dit: ["Avec ce sens de la raison pratique, peux-tu reformuler toute la question ?"],
-        reponse: "Ta reformulation", id: "p2ref",
-        motsCles: ["action", "agir", "conduite", "bien", "bonne"],
-        relances: ["Remplace « raison pratique » par ce que fait quelqu'un de raisonnable."]
-      },
-      {
-        dit: ["Si le bonheur est une affaire de raison au sens de la bonne action, qu'est-ce que cela signifie ?"],
-        reponse: "Ta réponse", id: "p2sens"
-      },
-      {
-        dit: ["Qu'implique la bonne action ? Elle est bonne pour qui — celui qui l'accomplit, ou celui à qui elle s'adresse ?"],
+        dit: ["Si le bonheur est une affaire de bonne action, qu'implique la bonne action ? Elle est bonne pour qui — celui qui l'accomplit, ou celui à qui elle s'adresse ?"],
         reponse: "Ta réponse", id: "pourqui"
       },
       {
@@ -357,9 +337,7 @@
         notes: [
           ["Question de la partie", "Le bonheur est-il une affaire de raison au sens pratique ?", true],
           ["Ce que veut dire l'hypothèse", "{p2q}"],
-          ["La raison pratique", "{p2def}<br>être raisonnable : {raisonnable}"],
-          ["Reformulation", "{p2ref}"],
-          ["La bonne action", "{p2sens}<br>bonne pour qui : {pourqui}"],
+          ["La bonne action", "bonne pour qui : {pourqui}"],
           ["Mobile et motif", "{mobile}<br>{mobile2}"],
           ["Kant", "thèse : {kant2These}<br>bonheur et moralité : {kant2}<br>pour notre question : {kant2Pont}"],
           ["Moyen / fin", "moyen : {moyenfin.0}<br>fin : {moyenfin.1}"],
