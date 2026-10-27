@@ -8,7 +8,7 @@
 
   /* introduction assemblée à partir des réponses de l'élève, qu'il réécrit ensuite */
   const INTRO =
-    "Avons-nous la maîtrise de nos paroles ? La parole peut s'entendre en deux sens, que distingue le couple {couple}. Du point de vue subjectif, la parole se définit comme {defs2.0|defs.0} ; on l'oppose alors à {defs.1}. " +
+    "{amorce} Avons-nous la maîtrise de nos paroles ? La parole peut s'entendre en deux sens, que distingue le couple {couple}. Du point de vue subjectif, la parole se définit comme {defs2.0|defs.0} ; on l'oppose alors à {defs.1}. " +
     "Du point de vue objectif, elle se définit comme {defs2.1|defs.3} ; on l'oppose alors à {defs.4}.\n\n" +
     "Se demander si nous avons la maîtrise de nos paroles, revient à se demander si nous avons la maîtrise de la parole comme {reform.0}, ou comme {reform.1}. " +
     "Si nous avons la maîtrise de nos paroles au sens subjectif, alors {probl.0}. Or {probl.1}. " +
@@ -50,6 +50,7 @@
     ],
 
     fiche: [
+      ["Amorce", "{amorce}"],
       ["Sujet grammatical", "{sujetGram}"],
       ["Prédicat", "la parole"],
       ["Première définition de la parole", "{predicat}"],
@@ -65,6 +66,18 @@
 
     etapes: [
       /* ============ INTRODUCTION ============ */
+      { section: "Introduction · l'amorce" },
+      {
+        bon: B.amorce,
+        dit: ["Commençons par l'amorce de ton introduction.",
+              "Ce sujet associe la maîtrise (le sujet grammatical) et nos paroles (le prédicat). Rédige une amorce qui les dissocie, en donnant un exemple qui montre le caractère volatil ou éphémère des paroles."],
+        reponse: "Ton amorce", id: "amorce",
+        relances: [
+          "Une parole, une fois prononcée, peut-on la rattraper ? Pense à une parole qui t'a échappé, ou qui a été oubliée aussitôt dite.",
+          "Pense au proverbe « Les paroles s'envolent, les écrits restent » : que dit-il de notre pouvoir sur ce que nous disons ?"
+        ]
+      },
+
       { section: "Introduction · le sujet" },
       {
         bon: B.sujet,
@@ -137,6 +150,7 @@
         redaction: "intro", titre: "Ton introduction", modele: INTRO, consigne: C.reecrireIntro,
         notes: [
           ["Sujet", "Avons-nous la maîtrise de nos paroles ?"],
+          ["Ton amorce", "{amorce}"],
           ["Les deux termes du sujet", "la parole · {sujetGram}"],
           ["Ta première définition de la parole", "{predicat}"],
           ["Couple", "{couple}"],
