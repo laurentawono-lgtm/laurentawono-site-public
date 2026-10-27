@@ -16,7 +16,7 @@
    puis au plus une interaction :
      reponse   libellé d'un champ de réponse libre   (+ id, motsCles, relances)
      choix     [{l, bon, vers}]      boutons            (+ id, relances)
-     champs    [libellés]            plusieurs champs   (+ id, requis)
+     champs    [libellés]            plusieurs champs   (+ id, requis, relances)
      amorce    "phrase avec ___"     phrase à compléter (+ id, consigne)
      association {gauche, droite, solution}           (+ id, relances)
      redaction clé du paragraphe à rédiger             (+ titre, consigne, notes,
@@ -513,6 +513,12 @@
         .filter(Boolean).join("\n"), n.id);
       avance();
     };
+    /* une aide redessine les champs : on garde ce que l'élève a déjà écrit */
+    brancherAide(n, (m) => {
+      const v = n.champs.map((_, k) => $("m" + k).value);
+      champs(m);
+      v.forEach((x, k) => { $("m" + k).value = x; });
+    });
     focaliser($("m0"));
   }
 

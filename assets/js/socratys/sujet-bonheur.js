@@ -83,8 +83,8 @@
         id: "distinctes"
       },
       {
-        dit: ["Repars du sens général de chaque terme du couple, indépendamment de la raison : que veut dire « théorique » ? Que veut dire « pratique » ?",
-              "Réécris ensuite tes deux définitions."],
+        dit: ["Réécris tes deux définitions pour mieux les distinguer."],
+        relances: ["Pars du sens ordinaire de chaque terme du couple, indépendamment de la raison : dans la vie de tous les jours, que veut dire « théorique » ? Que veut dire « pratique » ? Applique ensuite chacun de ces sens à la raison."],
         champs: ["Du point de vue théorique, la raison peut se définir comme…", "Du point de vue pratique, la raison peut se définir comme…"],
         id: "defs2"
       },
