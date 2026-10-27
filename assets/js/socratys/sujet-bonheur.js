@@ -138,7 +138,7 @@
         dit: ["Reprends ce que tu as annoncé pour cette partie et pose-le sous la forme d'une question."],
         reponse: "Ta question", id: "p1q",
         motsCles: ["?"],
-        relances: ["Si le bonheur est une affaire de raison au sens théorique, qu'est-ce que cela veut dire ? Écris-le sous la forme d'une question."]
+        relances: ["Si le bonheur est une affaire de raison au sens théorique, qu'est-ce que cela veut dire ? Donne deux significations à cette hypothèse."]
       },
       {
         dit: ["Reviens à la définition que tu as donnée de la raison théorique. Si tu devais la résumer en un seul mot, lequel choisirais-tu ?"],
