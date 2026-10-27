@@ -8,7 +8,7 @@
 
   /* introduction assemblée à partir des réponses de l'élève, qu'il peut ensuite modifier */
   const INTRO =
-    "Est-ce à l'État de faire la justice ? La justice peut s'entendre en deux sens, que distingue le couple {couple}. Au sens de la légalité, la justice se définit comme {defs2.0|defs.0} ; on l'oppose alors à {defs.1}. " +
+    "{amorce} Est-ce à l'État de faire la justice ? La justice peut s'entendre en deux sens, que distingue le couple {couple}. Au sens de la légalité, la justice se définit comme {defs2.0|defs.0} ; on l'oppose alors à {defs.1}. " +
     "Au sens de l'égalité, elle se définit comme {defs2.1|defs.3} ; on l'oppose alors à {defs.4}.\n\n" +
     "Se demander si c'est à l'État de faire la justice, revient à se demander s'il doit la faire comme {reform.0}, ou comme {reform.1}. " +
     "Si c'est à l'État de faire la justice au sens de la légalité, alors {probl.0}, toutefois {probl.1}. " +
@@ -75,6 +75,7 @@
     ],
 
     fiche: [
+      ["Amorce", "{amorce}"],
       ["Sujet grammatical", "{sujetGram}"],
       ["Prédicat", "faire la justice"],
       ["Première définition de « faire la justice »", "{predicat}"],
@@ -90,6 +91,19 @@
 
     etapes: [
       /* ============ INTRODUCTION ============ */
+      { section: "Introduction · l'amorce" },
+      {
+        bon: B.amorce,
+        dit: ["Commençons par l'amorce de ton introduction.",
+              "Ce sujet associe l'État (le sujet grammatical) et la justice (le prédicat). Rédige une amorce qui les dissocie : montre que la justice est d'abord un sentiment, alors que l'État est une institution conventionnelle.",
+              "Tu peux partir d'un exemple : l'enfant qui trouve injuste de recevoir une plus petite part du gâteau."],
+        reponse: "Ton amorce", id: "amorce",
+        relances: [
+          "L'enfant a-t-il besoin d'une loi ou d'un tribunal pour trouver cela injuste ? Que t'apprend cet exemple sur la justice ?",
+          "L'État, lui, n'existe pas par nature : les hommes l'ont institué par convention. Comment peux-tu opposer ce sentiment de justice et cette institution ?"
+        ]
+      },
+
       { section: "Introduction · le sujet" },
       {
         bon: B.sujet,
