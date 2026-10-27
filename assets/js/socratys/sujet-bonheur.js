@@ -286,11 +286,25 @@
         relances: ["Si je sais calculer ce que me rapporte et ce que me coûte chacune de mes actions, que puis-je espérer atteindre plus sûrement ?"]
       },
       {
-        dit: ["Reviens maintenant à ce que tu as établi dans ta première partie. Une raison qui calcule les moyens d'être heureux peut-elle atteindre son but ?",
+        dit: ["Si la raison pratique n'est qu'un moyen pour atteindre nos fins, les moyens qu'elle choisit sont-ils forcément bons ?"],
+        reponse: "Ta réponse", id: "moyensBons",
+        relances: ["Peut-on choisir avec soin un moyen qui, finalement, ne mène pas là où l'on voulait aller ?"]
+      },
+      {
+        dit: ["Donne un exemple : un moyen bien calculé, qui ne conduit pourtant pas à la fin recherchée."],
+        reponse: "Ton exemple", id: "exMoyen",
+        relances: ["Pense à quelqu'un qui travaille sans relâche pour gagner beaucoup d'argent, afin d'être heureux."]
+      },
+      {
+        dit: ["Dans notre sujet, quelle est la fin recherchée ? Les moyens que calcule la raison y correspondent-ils nécessairement ?"],
+        reponse: "Ta réponse", id: "finBonheur",
+        relances: ["Souviens-toi de ta première partie : savons-nous ce qui nous rendrait heureux ?"]
+      },
+      {
+        dit: ["Reviens maintenant à la première signification : « la bonne action est ce qui est bien fait ». Que devient-elle ?",
               "Formule toi-même la réfutation."],
         reponse: "Ta réfutation", id: "refutInst",
-        relances: ["Pour calculer les moyens d'atteindre une fin, il faut connaître cette fin. D'après ta première partie, savons-nous ce qui nous rendrait heureux ?",
-                   "Une action bien faite peut servir n'importe quelle fin, bonne ou mauvaise : suffit-elle à rendre heureux ?"]
+        relances: ["Si les moyens peuvent ne pas correspondre à la fin recherchée, le bonheur peut-il être l'affaire d'une raison qui calcule les moyens ?"]
       },
       { repere: ["Ta première réfutation", "{refutInst}"] },
       {
@@ -356,7 +370,7 @@
           ["Question de la partie", "Le bonheur est-il une affaire de raison au sens pratique ?", true],
           ["Ce que veut dire l'hypothèse", "{p2q}"],
           ["La bonne action", "soit ce qui {bonneAction.0} ; soit ce qui {bonneAction.1}"],
-          ["Première signification", "argument : {argInst}<br>réfutation : {refutInst}"],
+          ["Première signification", "argument : {argInst}<br>les moyens sont-ils forcément bons : {moyensBons}<br>exemple : {exMoyen}<br>la fin recherchée : {finBonheur}<br>réfutation : {refutInst}"],
           ["Transition", "{tIM}"],
           ["Kant", "thèse : {kant2These}<br>bonheur et moralité : {kant2}<br>pour notre question : {kant2Pont}"],
           ["Moyen / fin", "moyen : {moyenfin.0}<br>fin : {moyenfin.1}"],
