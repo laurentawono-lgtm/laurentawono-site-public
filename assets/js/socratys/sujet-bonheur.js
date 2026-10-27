@@ -308,15 +308,6 @@
       },
       { repere: ["Ta première réfutation", "{refutInst}"] },
       {
-        dit: ["Avant de passer à la seconde signification, marque le passage de l'une à l'autre. Complète cette transition."],
-        amorce: "Si le bonheur n'est pas une affaire de bonne action au sens de ce qui est bien fait, puisque ___, l'est-il au sens de ___ ?",
-        relances: ["La première signification jugeait l'action à son efficacité. À quoi la seconde la juge-t-elle ?"],
-        id: "tIM"
-      },
-      {
-        repere: ["Seconde signification", "La bonne action est ce qui fait le bien : la raison pratique est alors une raison morale."]
-      },
-      {
         dit: ["Lis ce texte de Kant."],
         texte: {
           corps: ["Cependant le principe du bonheur personnel est le plus condamnable, non pas seulement parce qu'il est faux et que l'expérience contredit la supposition que le bien-être se règle toujours sur le bien-faire, non pas même seulement parce qu'il ne contribue pas le moins du monde à fonder la moralité, car c'est tout autre chose de rendre un homme heureux que de le rendre bon, de le rendre prudent et perspicace pour son intérêt que de le rendre vertueux ; mais parce qu'il suppose sous la moralité des mobiles qui plutôt la minent et en ruinent toute la grandeur ; ils comprennent en effet dans une même classe les motifs qui poussent à la vertu et ceux qui poussent au vice ; ils enseignent seulement à mieux calculer ; mais ils effacent absolument la différence spécifique qu'il y a entre les deux."],
@@ -336,6 +327,15 @@
         reponse: "Ta réponse", id: "kant2",
         relances: ["Que dit-il de l'expérience : le bien-être se règle-t-il toujours sur le bien-faire ?",
                    "Quelle différence ces mobiles effacent-ils, selon lui ?"]
+      },
+      {
+        dit: ["Avant de passer à la seconde signification, marque le passage de l'une à l'autre. Complète cette transition."],
+        amorce: "Si le bonheur n'est pas une affaire de bonne action au sens de ce qui est bien fait, puisque ___, l'est-il au sens de ___ ?",
+        relances: ["La première signification jugeait l'action à son efficacité. À quoi la seconde la juge-t-elle ?"],
+        id: "tIM"
+      },
+      {
+        repere: ["Seconde signification", "La bonne action est ce qui fait le bien : la raison pratique est alors une raison morale."]
       },
       {
         dit: ["Que nous apprend cette distinction sur notre question : le bonheur peut-il être une affaire de bonne action ?"],
@@ -371,8 +371,9 @@
           ["Ce que veut dire l'hypothèse", "{p2q}"],
           ["La bonne action", "soit ce qui {bonneAction.0} ; soit ce qui {bonneAction.1}"],
           ["Première signification", "argument : {argInst}<br>les moyens sont-ils forcément bons : {moyensBons}<br>exemple : {exMoyen}<br>la fin recherchée : {finBonheur}<br>réfutation : {refutInst}"],
+          ["Kant", "thèse : {kant2These}<br>bonheur et moralité : {kant2}"],
           ["Transition", "{tIM}"],
-          ["Kant", "thèse : {kant2These}<br>bonheur et moralité : {kant2}<br>pour notre question : {kant2Pont}"],
+          ["Seconde signification", "{kant2Pont}"],
           ["Moyen / fin", "moyen : {moyenfin.0}<br>fin : {moyenfin.1}"],
           ["Conclusion", "{cclP2}"]
         ]
