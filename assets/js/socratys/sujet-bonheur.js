@@ -426,7 +426,7 @@
                    "Que faut-il faire, selon lui, quand on n'a pas de certitude ?"]
       },
       {
-        dit: ["Que nous dit cette thèse de l'usage de la raison ?"],
+        dit: ["Que nous dit cette thèse du bonheur ?"],
         reponse: "Ta réponse", id: "usage"
       },
       {
@@ -454,7 +454,7 @@
           ["Question de la partie", "Le bonheur est-il une conséquence de la raison, ou un effet ?", true],
           ["Les deux significations", "Que le bonheur soit une affaire de raison peut signifier soit que le bonheur est une conséquence de la raison, soit qu'il est un effet de la raison.", true],
           ["Conséquence nécessaire", "ce que cela veut dire : {tradCons}<br>ce que cela implique : {necess}<br>validité : {validCons}<br>réfutation : {ecarter}"],
-          ["Descartes", "thèse : {these}<br>usage de la raison : {usage}<br>la sortie de la forêt : {foret}"],
+          ["Descartes", "thèse : {these}<br>ce qu'elle dit du bonheur : {usage}<br>la sortie de la forêt : {foret}"],
           ["Effet contingent", "ce que cela veut dire : {effet}"],
           ["Conclusion", "{ccl3}"]
         ]
