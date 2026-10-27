@@ -397,12 +397,19 @@
                    "Relis la réfutation que tu as formulée à la fin de ta deuxième partie : « {refutMor} ». Que t'apprend-elle sur cette hypothèse ?"]
       },
       {
-        dit: ["Quels sont les arguments qui permettent d'écarter cette hypothèse ?"],
-        reponse: "Tes arguments", id: "ecarter",
+        dit: ["Examinons la validité de cette hypothèse. Pour que le bonheur soit une conséquence nécessaire de la raison, que faudrait-il ? Cette condition est-elle remplie ?"],
+        reponse: "Ta réponse", id: "validCons",
+        relances: ["Un lien nécessaire vaut dans tous les cas, sans exception : faudrait-il alors que toute personne raisonnable soit heureuse ?",
+                   "Connais-tu des personnes raisonnables qui ne sont pas heureuses, ou des personnes heureuses sans être particulièrement raisonnables ?"]
+      },
+      {
+        dit: ["Reviens maintenant à la première hypothèse : « le bonheur serait une conséquence nécessaire de la raison ». Que devient-elle ?",
+              "Formule toi-même la réfutation."],
+        reponse: "Ta réfutation", id: "ecarter",
         relances: ["Reviens à ta première partie : qu'as-tu établi sur la raison théorique ?",
                    "Et sur la raison pratique, dans ta deuxième partie ?"]
       },
-      { repere: ["Ce que tu as établi sur la première hypothèse", "{necess}<br>{ecarter}"] },
+      { repere: ["Ta première réfutation", "{ecarter}"] },
       {
         repere: ["Seconde hypothèse", "Le bonheur serait un effet contingent de la raison."],
         dit: ["En quel sens peut-on dire du bonheur qu'il est un effet de la raison ?"],
@@ -451,7 +458,7 @@
         notes: [
           ["Question de la partie", "Le bonheur est-il une conséquence de la raison, ou un effet ?", true],
           ["Les deux significations", "Que le bonheur soit une affaire de raison peut signifier soit que le bonheur est une conséquence de la raison, soit qu'il est un effet de la raison.", true],
-          ["Conséquence nécessaire", "ce que cela veut dire : {tradCons}<br>{necess}<br>arguments pour l'écarter : {ecarter}"],
+          ["Conséquence nécessaire", "ce que cela veut dire : {tradCons}<br>ce que cela implique : {necess}<br>validité : {validCons}<br>réfutation : {ecarter}"],
           ["Effet contingent", "{effet}"],
           ["Descartes", "thèse : {these}<br>usage de la raison : {usage}<br>la sortie de la forêt : {foret}<br>forme de raison : {formeraison}"],
           ["Conclusion", "{ccl3}"]
