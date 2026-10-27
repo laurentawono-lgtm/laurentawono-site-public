@@ -165,7 +165,7 @@
       },
 
       {
-        repere: ["Première implication", "Avoir la maîtrise de ses paroles, ce serait maîtriser l'expression de ce qui est en nous."],
+        repere: ["Première signification", "Avoir la maîtrise de ses paroles, ce serait maîtriser l'expression de ce qui est en nous."],
         dit: ["Si la parole exprime ce qui est en toi, avoir la maîtrise de ses paroles, en quoi cela pourrait-il consister ?"],
         reponse: "Ta réponse", id: "maitrise1",
         motsCles: ["quand", "taire", "silence", "moment", "propos"],
@@ -188,8 +188,27 @@
                    "Un silence peut-il être une faute ?"]
       },
       {
-        repere: ["Seconde implication", "La parole peut aussi dissimuler ce qui est en nous."],
-        bon: "Les figures de style — l'euphémisme, la métaphore, la métonymie, le superlatif — permettent de dire les choses autrement qu'elles ne sont. Platon, dans le <em>Phèdre</em>, fait l'éloge ironique des rhéteurs, dont l'art donne aux petites choses l'apparence des grandes, et aux grandes l'apparence d'être petites.",
+        dit: ["Lis ce texte de Platon."],
+        texte: {
+          corps: ["Et Tisias, et Gorgias ? les laisserons-nous sommeiller, eux qui ont vu que la ressemblance méritait plus d'honneur que le vrai ? Par la force de leur discours, ils font paraître petites les grandes choses et grandes les petites, ils donnent à la nouveauté un ton archaïsant et à son contraire un ton nouveau. Et, pour traiter de n'importe quel sujet, ils ont découvert une méthode de concision aussi bien que d'amplification infinie."],
+          source: "Platon, <em>Phèdre</em>, 267a-b"
+        },
+        bon: B.these
+      },
+      {
+        dit: ["Quelle est la thèse de ce texte ?"],
+        reponse: "La thèse", id: "rheteursThese",
+        relances: ["Selon Platon, que préfèrent Tisias et Gorgias : la ressemblance, ou le vrai ?",
+                   "Que font-ils, par la force de leur discours, des grandes et des petites choses ?"]
+      },
+      {
+        dit: ["Que nous apprend ce texte sur la parole ? Exprime-t-elle toujours ce qui est en nous ?"],
+        reponse: "Ta réponse", id: "rheteursPont",
+        relances: ["Celui qui fait paraître grandes les petites choses dit-il ce qu'il pense, ou ce qu'il veut faire croire ?"]
+      },
+      {
+        repere: ["Seconde signification", "La parole peut aussi dissimuler ce qui est en nous."],
+        bon: "Les figures de style — l'euphémisme, la métaphore, la métonymie, le superlatif — permettent de dire les choses autrement qu'elles ne sont.",
         dit: ["La parole est-elle une traductrice de ta pensée, ou peut-elle en être une traîtresse ?"],
         reponse: "Ta réponse", id: "traitresse"
       },
@@ -210,7 +229,7 @@
       },
       {
         repere: ["Le chemin parcouru",
-          "La maîtrise du silence : {maitrise1}<br>Ce qui lui résiste : {theatre} / {temoin}<br>La parole qui dissimule : {traitresse}<br>Le porte-parole : {porteParole}"],
+          "La maîtrise du silence : {maitrise1}<br>Ce qui lui résiste : {theatre} / {temoin}<br>Les rhéteurs : {rheteursPont}<br>La parole qui dissimule : {traitresse}<br>Le porte-parole : {porteParole}"],
         dit: ["Formule maintenant la conclusion de ta première partie : au sens subjectif, avons-nous la maîtrise de nos paroles ?"],
         reponse: "Ta conclusion", id: "cclP1",
         relances: ["Nos paroles disent-elles toujours ce qui est en nous ?"]
@@ -221,6 +240,7 @@
           ["Question de la partie", "Avons-nous la maîtrise de nos paroles au sens subjectif ?", true],
           ["Ce que veut dire l'hypothèse", "{p1q}"],
           ["La maîtrise du silence", "{maitrise1}<br>argument : {arg1}<br>le théâtre : {theatre}<br>le témoin : {temoin}"],
+          ["Platon, les rhéteurs", "thèse : {rheteursThese}<br>ce qu'il apprend sur la parole : {rheteursPont}"],
           ["La parole qui dissimule", "{traitresse}<br>exemple : {exFigure}<br>{dissim}"],
           ["Le porte-parole", "{porteParole}"],
           ["Conclusion", "{cclP1}"]
