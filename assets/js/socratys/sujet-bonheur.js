@@ -70,7 +70,7 @@
       },
       {
         bon: B.sujet,
-        dit: ["Et quel est le sujet grammatical de cette question ?"],
+        dit: ["Quel est le sujet grammatical de cette question ?"],
         reponse: "Ta réponse", id: "sujetGram",
         motsCles: ["bonheur"],
         relances: [window.SOCRATYS.AIDE_SUJETGRAM, "De quoi se demande-t-on s'il est une affaire de raison ?"]
