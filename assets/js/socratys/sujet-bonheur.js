@@ -174,7 +174,6 @@
         reponse: "Ton explication", id: "arist",
         motsCles: ["tromp", "erreur", "croi", "confond", "plaisir", "corps", "precieux", "apparence", "enfant"],
         relances: ["Que prennent les enfants pour ce qu'il y a de plus précieux ?",
-                   "De quelle nature sont les plaisirs que recherchent les hommes de pouvoir, selon Aristote ?",
                    "Qu'est-ce que les enfants et les hommes de pouvoir ont en commun dans leur erreur ?"]
       },
       {
