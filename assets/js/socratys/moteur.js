@@ -1082,7 +1082,8 @@
     side.hidden = true;
     dtab.hidden = true;
     vide();
-    let h = '<div class="home"><p class="logo">Socratys</p><p class="pitch">' + esc(S.PRESENTATION) + "</p>";
+    let h = '<div class="home"><p class="logo">Socratys</p><p class="pitch">' + esc(S.PRESENTATION) + "</p>" +
+      (S.REVISION ? '<p class="pitch">' + esc(S.REVISION) + "</p>" : "");
     const der = SUJETS.find((s) => s.id === lire("dernier"));
     const precDer = der && lire("sujet." + der.id);
     if (der && etatValide(precDer) && precDer.i > 0 && !precDer.fini) {

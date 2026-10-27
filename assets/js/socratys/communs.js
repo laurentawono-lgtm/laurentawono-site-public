@@ -5,6 +5,10 @@ window.SOCRATYS = {
   PRESENTATION:
     "Bonjour, je suis Socratys. Je vais t'aider à rédiger ta dissertation en te posant des questions, pour t'aider à penser par toi-même, comme le faisait mon ancêtre athénien.",
 
+  /* accueil seulement : Socratys sert d'abord aux élèves qui ont suivi le cours */
+  REVISION:
+    "Si tu as suivi le cours, je t'aide aussi à le réviser : je reprends, étape par étape, la méthode vue en classe, pour que tu puisses t'y exercer en autonomie, à ton rythme.",
+
   BON: {
     sujet:
       "Le mot « sujet » a deux sens : c'est d'abord la question qui t'est posée, mais c'est aussi le sujet grammatical — le terme sur lequel porte la question. Le deuxième terme de la question, lui, s'appelle le prédicat.",
