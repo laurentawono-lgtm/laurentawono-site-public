@@ -178,11 +178,10 @@
                    "Qu'est-ce que les enfants et les hommes de pouvoir ont en commun dans leur erreur ?"]
       },
       {
-        dit: ["Si les enfants se trompent sur ce qui est précieux, et les hommes de pouvoir sur ce qui rend heureux, que peut-on en conclure sur le plaisir ?"],
+        dit: ["Que peut-on en conclure sur le plaisir ?"],
         reponse: "Ta conclusion", id: "ccl1",
         motsCles: ["apparence", "signe", "illusion", "tromp", "suffi", "pas le bonheur", "n'est pas", "ne prouve"],
-        relances: ["Éprouver du plaisir, est-ce la preuve qu'on est heureux ?",
-                   "Le plaisir est-il le bonheur lui-même, ou seulement ce qui y ressemble ?"]
+        relances: ["Les enfants se trompent sur ce qui est précieux, et les hommes de pouvoir sur ce qui rend heureux : que peut-on en conclure sur le plaisir ?"]
       },
       { repere: ["Ta première réfutation", "{ccl1}"] },
 
