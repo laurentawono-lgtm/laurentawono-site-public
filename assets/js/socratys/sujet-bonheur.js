@@ -187,9 +187,7 @@
       {
         repere: ["Seconde signification", "Nous savons ce qui nous rend heureux : je connais mes désirs, donc je sais ce qui me rendra heureux."],
         dit: ["Quel argument soutiendrait cette hypothèse ?"],
-        reponse: "Ton argument", id: "arg2",
-        relances: ["Peux-tu nommer ce que tu veux dans la vie ?",
-                   "Si tu peux le nommer, que sais-tu par là même ?"]
+        reponse: "Ton argument", id: "arg2"
       },
       {
         dit: ["Donne un exemple : quel désir, selon toi, pourrait te rendre heureux ?"],
