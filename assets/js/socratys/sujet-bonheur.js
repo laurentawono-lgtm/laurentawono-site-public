@@ -444,15 +444,17 @@
       },
       {
         repere: ["Seconde hypothèse", "Le bonheur serait un effet contingent de la raison."],
-        dit: ["En quel sens peut-on dire du bonheur qu'il est un effet de la raison ?"],
-        reponse: "Ta réponse", id: "effet"
+        dit: ["Que veut dire cette phrase : « le bonheur serait un effet contingent de la raison » ? Traduis-la avec tes propres mots."],
+        reponse: "Ta traduction", id: "effet",
+        relances: ["Comme le voyageur de Descartes, sait-on d'avance que l'on est sur le chemin du bonheur, ou ne le découvre-t-on qu'une fois arrivé ?"]
       },
       {
-        dit: ["Que peux-tu conclure de ce texte, pour ta troisième partie ?"],
+        repere: ["Le chemin parcouru",
+          "Première hypothèse : le bonheur serait une conséquence nécessaire de la raison. Ta réfutation : {ecarter}<br>Seconde hypothèse : le bonheur serait un effet contingent de la raison. Ce que cela veut dire : {effet}"],
+        dit: ["Formule maintenant la conclusion de ta troisième partie : au terme de l'examen de ces deux hypothèses, que peut-on dire du bonheur ?"],
         reponse: "Ta conclusion", id: "ccl3",
-        relances: ["Le bonheur est-il ici la conséquence certaine d'un savoir, ou l'effet espéré d'une conduite ferme ?"]
+        relances: ["Le bonheur est-il la conséquence certaine d'un savoir, ou l'effet espéré d'une conduite ferme ?"]
       },
-      { repere: ["Ta conclusion de la partie III", "{ccl3}"] },
       {
         redaction: "p3", titre: "Ta troisième partie", brouillon: true, consigne: C.reecrire,
         notes: [
@@ -460,7 +462,7 @@
           ["Les deux significations", "Que le bonheur soit une affaire de raison peut signifier soit que le bonheur est une conséquence de la raison, soit qu'il est un effet de la raison.", true],
           ["Conséquence nécessaire", "ce que cela veut dire : {tradCons}<br>ce que cela implique : {necess}<br>validité : {validCons}<br>réfutation : {ecarter}"],
           ["Descartes", "thèse : {these}<br>usage de la raison : {usage}<br>la sortie de la forêt : {foret}<br>forme de raison : {formeraison}"],
-          ["Effet contingent", "{effet}"],
+          ["Effet contingent", "ce que cela veut dire : {effet}"],
           ["Conclusion", "{ccl3}"]
         ]
       },
