@@ -31,7 +31,7 @@
 
     fiche: [
       ["Amorce", "{amorce}"],
-      ["Sujet grammatical", "{sujetGram}"],
+      ["Sujet grammatical", "le bonheur"],
       ["Prédicat", "la raison"],
       ["Couple philosophique", "{couple}"],
       ["Sens théorique", "{defs2.0|defs.0}"],
@@ -67,13 +67,6 @@
           "Dans la vie de tous les jours, quand on dit de quelqu'un qu'il « raisonne » avant d'agir, à quoi pense-t-on : à quelqu'un qui comprend, ou à quelqu'un qui se conduit bien ?",
           "Dans quels domaines parle-t-on de la raison ? Y en a-t-il un où elle connaît, et un autre où elle agit ?"
         ]
-      },
-      {
-        bon: B.sujet,
-        dit: ["Quel est le sujet grammatical de cette question ?"],
-        reponse: "Ta réponse", id: "sujetGram",
-        motsCles: ["bonheur"],
-        relances: [window.SOCRATYS.AIDE_SUJETGRAM, "De quoi se demande-t-on s'il est une affaire de raison ?"]
       },
 
       { section: "Introduction · définir et problématiser" },
@@ -121,7 +114,7 @@
         notes: [
           ["Sujet", "Le bonheur est-il une affaire de raison ?"],
           ["Ton amorce", "{amorce}"],
-          ["Les deux termes du sujet", "la raison · {sujetGram}"],
+          ["Les deux termes du sujet", "la raison · le bonheur"],
           ["Couple", "{couple}"],
           ["Sens théorique", "{defs2.0|defs.0} (opposé à {defs.1}) — exemple : {defs.2}"],
           ["Sens pratique", "{defs2.1|defs.3} (opposé à {defs.4}) — exemple : {defs.5}"],
