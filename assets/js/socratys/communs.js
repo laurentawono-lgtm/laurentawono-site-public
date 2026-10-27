@@ -11,7 +11,7 @@ window.SOCRATYS = {
 
   BON: {
     amorce:
-      "L'amorce introduit la question en jouant sur un effet de contraste. Si le sujet associe le sujet grammatical et le prédicat, l'amorce les dissocie. Si le sujet les dissocie, l'amorce les associe.",
+      "L'amorce est la première phrase de ton introduction : elle amène la question posée, à partir d'une opinion courante, d'une situation ou d'un exemple. Elle joue sur un effet de contraste : si le sujet associe les deux termes de la question, l'amorce doit les dissocier ; si le sujet les dissocie, l'amorce doit les associer.",
     sujet:
       "Le mot « sujet » a deux sens : c'est d'abord la question qui t'est posée, mais c'est aussi le sujet grammatical — le terme sur lequel porte la question. Le deuxième terme de la question, lui, s'appelle le prédicat.",
     couple:
