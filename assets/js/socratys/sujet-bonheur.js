@@ -114,7 +114,8 @@
         champs: ["Dans une première partie, nous nous demanderons ce qu'implique…",
                  "Dans une deuxième partie, nous nous demanderons ce que suppose…",
                  "Et dans une troisième partie, nous nous demanderons…"],
-        id: "plan"
+        id: "plan",
+        relances: ["Si l'analyse du prédicat, la raison, te donne les deux premières parties, c'est celle du sujet grammatical, le bonheur, qui te donne la troisième : on questionne alors le bonheur à l'aide d'un autre couple philosophique."]
       },
       {
         redaction: "intro", titre: "Ton introduction", modele: INTRO, consigne: C.reecrireIntro,
