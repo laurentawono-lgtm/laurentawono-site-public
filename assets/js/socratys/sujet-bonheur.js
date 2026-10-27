@@ -411,11 +411,6 @@
       },
       { repere: ["Ta première réfutation", "{ecarter}"] },
       {
-        repere: ["Seconde hypothèse", "Le bonheur serait un effet contingent de la raison."],
-        dit: ["En quel sens peut-on dire du bonheur qu'il est un effet de la raison ?"],
-        reponse: "Ta réponse", id: "effet"
-      },
-      {
         dit: ["Lis ce texte de Descartes."],
         texte: {
           corps: ["Ma seconde maxime était d'être le plus ferme et le plus résolu en mes actions que je pourrais, et de ne suivre pas moins constamment les opinions les plus douteuses, lorsque je m'y serais une fois déterminé, que si elles eussent été très assurées. Imitant en ceci les voyageurs qui, se trouvant égarés en quelque forêt, ne doivent pas errer en tournoyant tantôt d'un côté tantôt d'un autre, ni encore moins s'arrêter en une place, mais marcher toujours le plus droit qu'ils peuvent vers un même côté, et ne le changer point pour de faibles raisons, encore que ce n'ait peut-être été au commencement que le hasard seul qui les ait déterminés à le choisir : car, par ce moyen, s'ils ne vont justement où ils désirent, ils arriveront au moins à la fin quelque part où vraisemblablement ils seront mieux que dans le milieu d'une forêt. Et ainsi, les actions de la vie ne souffrant souvent aucun délai, c'est une vérité très certaine que, lorsqu'il n'est pas en notre pouvoir de discerner les plus vraies opinions, nous devons suivre les plus probables."],
@@ -437,7 +432,7 @@
       {
         dit: ["Que symbolise la sortie de la forêt ?"],
         reponse: "Ta réponse", id: "foret",
-        relances: ["Le voyageur sait-il où il arrivera ?",
+        relances: ["Le voyageur sait-il qu'il est sur le bon chemin ? Peut-il pourtant sortir de la forêt ?",
                    "Y arrive-t-il par la connaissance du chemin, ou par la constance ?"]
       },
       {
@@ -446,6 +441,11 @@
         motsCles: ["pratique", "prudence", "prudent", "decid", "agir", "action"],
         relances: ["Le voyageur cherche-t-il à savoir quel est le bon chemin, ou à en suivre un ?",
                    "Descartes recommande-t-il de connaître, ou de se déterminer ?"]
+      },
+      {
+        repere: ["Seconde hypothèse", "Le bonheur serait un effet contingent de la raison."],
+        dit: ["En quel sens peut-on dire du bonheur qu'il est un effet de la raison ?"],
+        reponse: "Ta réponse", id: "effet"
       },
       {
         dit: ["Que peux-tu conclure de ce texte, pour ta troisième partie ?"],
@@ -459,8 +459,8 @@
           ["Question de la partie", "Le bonheur est-il une conséquence de la raison, ou un effet ?", true],
           ["Les deux significations", "Que le bonheur soit une affaire de raison peut signifier soit que le bonheur est une conséquence de la raison, soit qu'il est un effet de la raison.", true],
           ["Conséquence nécessaire", "ce que cela veut dire : {tradCons}<br>ce que cela implique : {necess}<br>validité : {validCons}<br>réfutation : {ecarter}"],
-          ["Effet contingent", "{effet}"],
           ["Descartes", "thèse : {these}<br>usage de la raison : {usage}<br>la sortie de la forêt : {foret}<br>forme de raison : {formeraison}"],
+          ["Effet contingent", "{effet}"],
           ["Conclusion", "{ccl3}"]
         ]
       },
