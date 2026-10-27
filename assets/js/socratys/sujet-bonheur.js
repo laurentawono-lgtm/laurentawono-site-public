@@ -59,9 +59,9 @@
       { section: "Introduction · le sujet" },
       {
         bon: B.couple,
-        dit: ["Avec quel couple philosophique peux-tu t'aider pour définir la raison : théorie / pratique, individuel / collectif, particulier / général ?"],
-        reponse: "Ta réponse", id: "couple",
-        motsCles: ["theori", "pratiq"],
+        dit: ["Avec quel couple philosophique peux-tu t'aider pour définir la raison ?"],
+        choix: [{ l: "théorie / pratique", bon: true }, { l: "individuel / collectif" }, { l: "particulier / général" }],
+        id: "couple",
         relances: [
           "Essaie d'appliquer ce couple au prédicat : une raison « {couple} »… est-ce que cela éclaire vraiment ce dont parle le sujet ?",
           "Dans la vie de tous les jours, quand on dit de quelqu'un qu'il « raisonne » avant d'agir, à quoi pense-t-on : à quelqu'un qui comprend, ou à quelqu'un qui se conduit bien ?",

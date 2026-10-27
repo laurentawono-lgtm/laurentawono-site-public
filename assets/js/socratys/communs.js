@@ -15,7 +15,7 @@ window.SOCRATYS = {
     sujet:
       "Le mot « sujet » a deux sens : c'est d'abord la question qui t'est posée, mais c'est aussi le sujet grammatical — le terme sur lequel porte la question. Le deuxième terme de la question, lui, s'appelle le prédicat.",
     couple:
-      "Un couple philosophique, ce sont les deux termes dont on se sert pour dissocier une notion.",
+      "Un couple philosophique, ce sont les deux termes dont on se sert pour dissocier une notion : il sert à donner deux sens du mot à définir.",
     distinctes:
       "Ces deux définitions doivent être suffisamment distinctes pour ne pas les confondre, et c'est leur distinction qui fera la clarté de ton propos tout au long de ta rédaction.",
     these:
