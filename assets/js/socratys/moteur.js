@@ -17,7 +17,7 @@
      reponse   libellé d'un champ de réponse libre   (+ id, motsCles, relances)
      choix     [{l, bon, vers}]      boutons            (+ id, relances)
      champs    [libellés]            plusieurs champs   (+ id, requis, relances)
-     amorce    "phrase avec ___"     phrase à compléter (+ id, consigne)
+     amorce    "phrase avec ___"     phrase à compléter (+ id, consigne, relances)
      association {gauche, droite, solution}           (+ id, relances)
      redaction clé du paragraphe à rédiger             (+ titre, consigne, notes,
                modele : texte pré-rempli à partir des réponses, que l'élève peut modifier,
@@ -550,6 +550,12 @@
     };
     blancs.forEach((b) => entreeEnvoie(b, go));
     $("go").onclick = go;
+    /* une aide redessine la phrase : on garde ce que l'élève a déjà écrit */
+    brancherAide(n, (m) => {
+      const v = blancs.map((b) => b.value);
+      amorce(m);
+      v.forEach((x, k) => { $("a" + k).value = x; });
+    });
     focaliser(blancs[0]);
   }
 

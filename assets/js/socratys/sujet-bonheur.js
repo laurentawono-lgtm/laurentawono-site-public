@@ -189,6 +189,12 @@
         relances: ["Si ressentir du plaisir, ce n'est pas forcément être heureux, le plaisir que je ressens me permet-il de savoir que je suis heureux ?"]
       },
       { repere: ["Ta première réfutation", "{refut1}"] },
+      {
+        dit: ["Avant de passer à la seconde signification, marque le passage de l'une à l'autre. Complète cette transition."],
+        amorce: "Si nous ne savons pas quand nous sommes heureux, puisque ___, savons-nous du moins ___ ?",
+        relances: ["La première signification portait sur le moment où nous sommes heureux ; la seconde porte sur ce qui nous rendrait heureux. Si le plaisir ne suffit pas, qu'est-ce que nous croyons connaître de nous-mêmes, qui pourrait nous guider vers le bonheur ?"],
+        id: "tAK"
+      },
 
       {
         repere: ["Seconde signification", "Nous savons ce qui nous rend heureux : je connais mes désirs, donc je sais ce qui me rendra heureux."],
@@ -237,6 +243,7 @@
           ["Significations", "soit que nous savons {implic.0} ; soit que nous savons {implic.1}"],
           ["Première signification", "argument : {arg1}"],
           ["Aristote", "thèse : {aristThese}<br>les enfants et les hommes faits : {arist}<br>sur le plaisir : {ccl1}<br>réfutation : {refut1}"],
+          ["Transition", "{tAK}"],
           ["Seconde signification", "argument : {arg2}"],
           ["Kant", "thèse : {kantThese}<br>ton exemple : {kantEx}<br>réfutation : {refut2}"],
           ["Conclusion", "{cclP1}"]
