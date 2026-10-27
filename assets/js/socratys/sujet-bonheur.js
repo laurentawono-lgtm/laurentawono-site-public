@@ -432,8 +432,8 @@
       {
         dit: ["Que symbolise la sortie de la forêt ?"],
         reponse: "Ta réponse", id: "foret",
-        relances: ["Le voyageur sait-il qu'il est sur le bon chemin ? Peut-il pourtant sortir de la forêt ?",
-                   "Y arrive-t-il par la connaissance du chemin, ou par la constance ?"]
+        relances: ["Le voyageur sait-il, en marchant, qu'il est sur le bon chemin ? Qu'est-ce qui, finalement, le lui prouve ?",
+                   "Est-il sorti de la forêt parce qu'il savait être sur le bon chemin, ou découvre-t-il que c'était le bon chemin parce qu'il en est sorti ?"]
       },
       {
         dit: ["Quelle forme de raison est en usage ici ?"],
