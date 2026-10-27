@@ -379,14 +379,12 @@
       /* ============ PARTIE III ============ */
       { section: "Partie III · conséquence ou effet" },
       {
-        dit: ["Reviens au sujet grammatical que tu avais identifié en introduction.",
-              "Le sujet ne demande pas si le bonheur est la raison, mais s'il est « une affaire de » raison. Quel lien cette expression établit-elle entre le bonheur et la raison ? Est-il sûr, ou seulement possible ?"],
-        reponse: "Ta réponse", id: "p3q"
+        bon: "Une conséquence est nécessairement liée à sa cause : elle en découle. Un effet, lui, est contingent — il peut se produire, ou non, sans lien nécessaire avec ce qui l'a précédé.",
+        dit: ["Troisième partie : le bonheur est-il une conséquence de la raison, ou un effet ?",
+              "Que le bonheur soit une affaire de raison peut signifier soit que le bonheur est une conséquence de la raison, soit qu'il est un effet de la raison."]
       },
       {
-        bon: "Une conséquence est nécessairement liée à sa cause : elle en découle. Un effet, lui, est contingent — il peut se produire, ou non, sans lien nécessaire avec ce qui l'a précédé.",
-        dit: ["Deux hypothèses s'offrent ici. Le bonheur est-il une affaire de raison en tant qu'il en est une conséquence nécessaire — il résulterait alors de la raison ? Ou l'est-il en tant qu'effet contingent — la raison pourrait y conduire, sans que rien ne le garantisse ?",
-              "De ces deux hypothèses, quelle est la plus fragile ? Pourquoi ?"],
+        dit: ["De ces deux hypothèses, quelle est la plus fragile ? Pourquoi ?"],
         reponse: "Ta réponse", id: "fragile",
         motsCles: ["consequence", "necessaire"],
         relances: ["Laquelle des deux promet le plus ? Celle qui promet le plus est-elle la plus facile à tenir ?",
@@ -467,7 +465,8 @@
       {
         redaction: "p3", titre: "Ta troisième partie", brouillon: true, consigne: C.reecrire,
         notes: [
-          ["Le lien entre bonheur et raison", "{p3q}"],
+          ["Question de la partie", "Le bonheur est-il une conséquence de la raison, ou un effet ?", true],
+          ["Les deux significations", "Que le bonheur soit une affaire de raison peut signifier soit que le bonheur est une conséquence de la raison, soit qu'il est un effet de la raison.", true],
           ["L'hypothèse la plus fragile", "{fragile}"],
           ["Conséquence nécessaire", "{necess}<br>arguments pour l'écarter : {ecarter}"],
           ["Le calcul des plaisirs (Bentham)", "{calcul}<br>limites : {limites}"],
