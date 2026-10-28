@@ -436,8 +436,22 @@
         dit: ["Si la maîtrise de la parole est naturelle, qu'est-ce que cela implique ?"],
         reponse: "Ta réponse", id: "argNat",
         relances: ["Si tous les hommes avaient naturellement la maîtrise de leurs paroles, notre question se poserait-elle encore ?",
-                   "Or elle se pose. Tous les hommes ont la parole : en font-ils tous le même usage ?",
-                   "Souviens-toi de ta deuxième partie : le rhéteur qui fait paraître les choses autrement qu'elles ne sont, celui qui ment… ont-ils la maîtrise de leurs paroles ?"]
+                   "Or elle se pose. Tous les hommes ont la parole : en font-ils tous le même usage ?"]
+      },
+      {
+        dit: ["Le sophiste du texte de Platon, lu en deuxième partie, a-t-il la maîtrise de sa parole ?"],
+        reponse: "Ta réponse", id: "sophiste",
+        relances: ["Fait-il paraître les choses comme elles sont, ou comme il veut qu'on les voie ? Est-ce là bien user de la parole ?"]
+      },
+      {
+        dit: ["Le menteur a-t-il la maîtrise de sa parole ? Peux-tu justifier ta réponse ?"],
+        reponse: "Ta réponse", id: "menteurP3",
+        relances: ["Le menteur choisit ses mots : est-ce suffisant pour dire qu'il maîtrise sa parole ? Que fait-il de la vérité ?"]
+      },
+      {
+        dit: ["Que peux-tu en conclure ?"],
+        reponse: "Ta conclusion", id: "conclNat",
+        relances: ["Tous les hommes ont la parole : en font-ils tous un bon usage ? La maîtrise de la parole est-elle alors donnée à tous ?"]
       },
       {
         dit: ["Cette disposition naturelle suffit-elle à en avoir la maîtrise ? Un nouveau-né a-t-il, comme tout homme, la faculté de parler ? En a-t-il pour autant la maîtrise ?"],
@@ -505,7 +519,7 @@
           ["Question de la partie", "La maîtrise de nos paroles est-elle naturelle, ou artificielle ?", true],
           ["Les deux significations", "Avoir la maîtrise de nos paroles peut signifier soit que cette maîtrise est naturelle, soit qu'elle est artificielle.", true],
           ["Couple naturel / artificiel", "une maîtrise naturelle : {matNat}<br>une maîtrise artificielle : {matArt}"],
-          ["Hypothèse du naturel", "ce que cela implique : {argNat}<br>le nouveau-né : {nouveauNe}"],
+          ["Hypothèse du naturel", "ce que cela implique : {argNat}<br>le sophiste : {sophiste}<br>le menteur : {menteurP3}<br>ce que l'on peut en conclure : {conclNat}<br>le nouveau-né : {nouveauNe}"],
           ["Platon", "thèse : {platonThese}<br>l'orateur : {orateur}<br>toute âme : {touteAme}"],
           ["Hypothèse de l'art", "{implArt}"],
           ["L'agriculteur", "{metaphore}<br>bien semé : {seme}<br>fécondité : {fecondite}"],
