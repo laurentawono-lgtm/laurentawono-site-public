@@ -499,27 +499,22 @@
       },
       {
         bon: "Platon compare ailleurs le discours à une graine, et les âmes à des sols dans lesquels on la sème. Comme un bon cultivateur choisit un sol adapté à sa semence, l'orateur doit discerner la nature de l'âme à laquelle il s'adresse.",
-        dit: ["Explique cette métaphore de l'agriculteur et du discours."],
-        reponse: "Ton explication", id: "metaphore"
+        dit: ["Que nous apprend la métaphore de l'agriculteur sur la maîtrise de la parole ?"],
+        reponse: "Ta réponse", id: "metaphore",
+        relances: ["Le cultivateur sème-t-il au hasard ? Que doit-il connaître pour que la graine lève ?"]
       },
       {
-        dit: ["À quoi reconnaît-on qu'un discours a été bien semé ?"],
+        dit: ["À quoi reconnaît-on qu'une parole a été maîtrisée ?"],
         reponse: "Ta réponse", id: "seme",
-        motsCles: ["fecond", "pouss", "germ", "fruit", "racine", "grandi", "pens", "reprend"],
-        relances: ["À quoi reconnaît-on qu'une graine a été semée dans un bon sol ?"]
+        relances: ["À quoi reconnaît-on qu'une graine a été semée dans un bon sol ? Que produit une parole bien semée chez celui qui la reçoit ?"]
       },
       {
-        dit: ["Que signifie cette fécondité ? Comment peux-tu faire usage de cette image dans le cadre du discours ?"],
-        reponse: "Ta réponse", id: "fecondite",
-        relances: ["Un discours fécond est-il seulement répété par celui qui l'a reçu ?",
-                   "Que devient capable de faire celui qui a bien reçu un discours ?"]
-      },
-      {
-        dit: ["Que peux-tu conclure, pour ta troisième partie ?"],
+        repere: ["Le chemin parcouru",
+          "Première hypothèse, une maîtrise naturelle. Ta réfutation : {refutP3a}<br>Seconde hypothèse, une maîtrise qui relève d'un art : {implArt}"],
+        dit: ["Formule maintenant la conclusion de ta troisième partie : au terme de l'examen de ces deux hypothèses, la maîtrise de nos paroles est-elle naturelle, ou artificielle ?"],
         reponse: "Ta conclusion", id: "ccl3",
-        relances: ["La fécondité d'un discours dépend-elle seulement de celui qui parle ?"]
+        relances: ["Avoir la parole suffit-il à la maîtriser ? Comment cette maîtrise s'acquiert-elle ?"]
       },
-      { repere: ["Ta conclusion de la partie III", "{ccl3}"] },
       {
         redaction: "p3", titre: "Ta troisième partie", brouillon: true, consigne: C.reecrire,
         notes: [
@@ -530,7 +525,7 @@
           ["Platon", "thèse : {platonThese}<br>ce qu'il faut savoir faire : {orateur}<br>une maîtrise qui relève d'un art : {touteAme}<br>réfutation : {refutP3a}"],
           ["Transition", "{tP3}"],
           ["Hypothèse de l'art", "{implArt}"],
-          ["L'agriculteur", "{metaphore}<br>bien semé : {seme}<br>fécondité : {fecondite}"],
+          ["L'agriculteur", "{metaphore}<br>une parole maîtrisée : {seme}"],
           ["Conclusion", "{ccl3}"]
         ]
       },
