@@ -405,10 +405,10 @@
         ]
       },
       {
-        dit: ["Rédige maintenant ta transition en complétant cette amorce."],
-        amorce: "Si, du point de vue subjectif, la parole ___, et si, du point de vue objectif, le mot ___, quelle maîtrise avons-nous alors de nos paroles ?",
-        relances: ["Si nos paroles ne sont maîtrisées ni quand elles expriment ce qui est en nous, ni quand elles nomment les choses, quelle maîtrise celui qui parle peut-il encore avoir ? D'où pourrait-elle lui venir ?"],
-        id: "t2"
+        dit: ["Rédige maintenant ta transition vers la troisième partie."],
+        reponse: "Ta transition", id: "t2",
+        relances: ["S'il est difficile de dire son idée d'une chose, est-il facile de dire vrai ?",
+                   "Si l'on ne peut être sûr de dire vrai, a-t-on la maîtrise de ses paroles ? Ta transition doit alors annoncer que la troisième partie examinera cette maîtrise elle-même."]
       },
 
       /* ============ PARTIE III ============ */
