@@ -163,7 +163,16 @@
         dit: ["Première partie : avons-nous la maîtrise de nos paroles au sens subjectif ?",
               "Si nous avons la maîtrise de nos paroles au sens subjectif, qu'est-ce que cela veut dire ?"],
         reponse: "Ta réponse", id: "p1q",
-        relances: ["Il faut trouver deux significations à cette hypothèse, en te basant sur le sens du mot « subjectif »."]
+        relances: ["Il faut trouver deux significations à cette hypothèse, en te basant sur le sens du mot « subjectif ».",
+                   "Qu'y a-t-il en nous, que la parole peut faire passer au-dehors ?"]
+      },
+      {
+        dit: ["Concentre-toi maintenant sur les deux significations que tu viens de trouver. Complète :"],
+        champs: ["Si nous avons la maîtrise de nos paroles au sens subjectif, cela peut signifier deux choses : soit que nous disons…",
+                 "…soit que nous disons…"],
+        relances: ["Quand tu parles de toi, que fais-tu passer : ce que tu éprouves, ou ce que tu penses ?",
+                   "Pense à celui qui dit sa joie ou sa colère, et à celui qui expose une idée ou un raisonnement : expriment-ils la même chose ?"],
+        id: "signifP1"
       },
 
       {
@@ -241,6 +250,7 @@
         notes: [
           ["Question de la partie", "Avons-nous la maîtrise de nos paroles au sens subjectif ?", true],
           ["Ce que veut dire l'hypothèse", "{p1q}"],
+          ["Significations", "soit que nous disons {signifP1.0} ; soit que nous disons {signifP1.1}"],
           ["La maîtrise du silence", "{maitrise1}<br>argument : {arg1}<br>le théâtre : {theatre}<br>le témoin : {temoin}"],
           ["Platon, les rhéteurs", "thèse : {rheteursThese}<br>ce qu'il apprend sur la parole : {rheteursPont}"],
           ["La parole qui dissimule", "{traitresse}<br>exemple : {exFigure}<br>{dissim}"],
