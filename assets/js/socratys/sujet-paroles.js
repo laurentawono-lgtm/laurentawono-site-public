@@ -309,6 +309,63 @@
                    "Dire une chose telle qu'elle est, et la dire telle qu'elle nous apparaît : est-ce la même chose ?"],
         id: "signifP2"
       },
+
+      {
+        repere: ["Première signification", "Avoir la maîtrise de nos paroles, ce serait dire les choses comme elles nous apparaissent."],
+        dit: ["Pourquoi peut-on soutenir que nous disons les choses comme elles nous apparaissent ?"],
+        reponse: "Ton argument", id: "argApp",
+        relances: ["Pour parler d'une chose, de quoi partons-nous d'abord : de ce que nous en voyons, ou de ce qu'elle est ?"]
+      },
+      {
+        dit: ["Examinons la validité de cette hypothèse. Le bâton plongé dans l'eau nous apparaît brisé : l'est-il vraiment ? Que nous apprend cet exemple ?"],
+        reponse: "Ta réponse", id: "baton",
+        relances: ["Si l'on retire le bâton de l'eau, que constate-t-on ?",
+                   "Dire « le bâton est brisé », est-ce dire ce qu'il est, ou seulement ce qu'il paraît ?"]
+      },
+      {
+        dit: ["Reviens maintenant à la première signification : « avoir la maîtrise de nos paroles, ce serait dire les choses comme elles nous apparaissent ». Que devient-elle ?",
+              "Formule toi-même la réfutation."],
+        reponse: "Ta réfutation", id: "refutP2a",
+        relances: ["Les choses sont-elles toujours comme elles nous apparaissent ? Si elles sont autrement, que vaut une parole qui s'arrête à l'apparence ?"]
+      },
+      { repere: ["Ta première réfutation", "{refutP2a}"] },
+      {
+        dit: ["Lis ce texte de Platon."],
+        texte: {
+          corps: ["Et Tisias, et Gorgias ? les laisserons-nous sommeiller, eux qui ont vu que la ressemblance méritait plus d'honneur que le vrai ? Par la force de leur discours, ils font paraître petites les grandes choses et grandes les petites, ils donnent à la nouveauté un ton archaïsant et à son contraire un ton nouveau. Et, pour traiter de n'importe quel sujet, ils ont découvert une méthode de concision aussi bien que d'amplification infinie."],
+          source: "Platon, <em>Phèdre</em>, 267a-b"
+        },
+        bon: B.these
+      },
+      {
+        dit: ["Quelle est la thèse de ce texte ?"],
+        reponse: "La thèse", id: "rheteursThese",
+        relances: ["Selon Platon, que préfèrent Tisias et Gorgias : la ressemblance, ou le vrai ?",
+                   "Que font-ils, par la force de leur discours, des grandes et des petites choses ?"]
+      },
+      {
+        dit: ["Quel pouvoir de la parole les rhéteurs mettent-ils en œuvre ?"],
+        reponse: "Ta réponse", id: "rheteursPont",
+        relances: ["Disent-ils les choses comme elles sont, ou comme ils veulent qu'elles paraissent ?"]
+      },
+      {
+        bon: "Les figures de style — l'euphémisme, la métaphore, la métonymie, le superlatif — permettent de dire les choses autrement qu'elles ne sont.",
+        dit: ["Donne un exemple de parole qui dit les choses autrement qu'elles ne sont."],
+        reponse: "Ton exemple", id: "exFigure"
+      },
+      {
+        dit: ["Si la parole peut dissimuler, faut-il la définir comme une dissimulatrice ? Celui qui parle cherche-t-il d'abord à tromper, ou à se faire comprendre ?"],
+        reponse: "Ta réponse", id: "dissim"
+      },
+      {
+        dit: ["Avant de passer à la seconde signification, marque le passage de l'une à l'autre. Complète cette transition."],
+        amorce: "Si la parole peut dire les choses autrement qu'elles ne sont, puisque ___, peut-elle aussi les dire ___ ?",
+        relances: ["Si les choses ne sont pas comme elles nous apparaissent, comment sont-elles ? Quelle était la seconde signification ?"],
+        id: "tP2"
+      },
+      {
+        repere: ["Seconde signification", "Avoir la maîtrise de nos paroles, ce serait dire les choses comme elles sont."]
+      },
       {
         dit: ["Nommons-nous les choses parce que nous les connaissons, ou les connaissons-nous parce que nous les nommons ?"],
         reponse: "Ta réponse", id: "nommer"
@@ -408,11 +465,18 @@
                    "Celui qui parle maîtrise-t-il l'idée que l'autre mettra sous ses mots ?"]
       },
       {
+        dit: ["Reviens maintenant à la seconde signification : « avoir la maîtrise de nos paroles, ce serait dire les choses comme elles sont ». Que devient-elle après la lecture de Locke ?",
+              "Formule toi-même la réfutation."],
+        reponse: "Ta réfutation", id: "refutP2b",
+        relances: ["Même celui qui dit vrai, met-il sous ses mots la même idée que celui qui l'écoute ?"]
+      },
+      { repere: ["Ta seconde réfutation", "{refutP2b}"] },
+      {
         repere: ["Le chemin parcouru",
-          "Dire vrai : {aristVrai}<br>Le menteur : {menteur}<br>L'illusion : {illusion}<br>Locke : {lockePont}"],
-        dit: ["Formule maintenant la conclusion de ta deuxième partie : au sens objectif, avons-nous la maîtrise de nos paroles ?"],
+          "Première signification, dire les choses comme elles nous apparaissent. Ta réfutation : {refutP2a}<br>Seconde signification, dire les choses comme elles sont. Ta réfutation : {refutP2b}"],
+        dit: ["Formule maintenant la conclusion de ta deuxième partie : au terme de l'examen de ces deux significations, avons-nous la maîtrise de nos paroles au sens objectif ?"],
         reponse: "Ta conclusion", id: "cclP2",
-        relances: ["Même sans mentir ni se tromper, deux personnes mettent-elles toujours la même idée sous le même mot ?"]
+        relances: ["Nos paroles disent-elles les choses comme elles sont, ou seulement comme elles nous apparaissent ? Et deux personnes mettent-elles toujours la même idée sous le même mot ?"]
       },
       {
         redaction: "p2", titre: "Ta deuxième partie", brouillon: true, consigne: C.reecrire,
@@ -420,12 +484,15 @@
           ["Question de la partie", "Avons-nous la maîtrise de nos paroles au sens objectif ?", true],
           ["Ce que veut dire l'hypothèse", "{p2q}"],
           ["Significations", "soit que nous disons les choses {signifP2.0} ; soit que nous les disons {signifP2.1}"],
-          ["Nommer et connaître", "{nommer}<br>{implic}"],
+          ["Première signification : dire les choses comme elles nous apparaissent", "argument : {argApp}<br>le bâton dans l'eau : {baton}<br>réfutation : {refutP2a}"],
+          ["Platon, les rhéteurs", "thèse : {rheteursThese}<br>le pouvoir de la parole : {rheteursPont}<br>exemple : {exFigure}<br>{dissim}"],
+          ["Transition", "{tP2}"],
+          ["Seconde signification : dire les choses comme elles sont", "nommer et connaître : {nommer}<br>{implic}"],
           ["Aristote", "les formes vraies : {assoVrai.0} ; {assoVrai.1}<br>dire vrai : {aristVrai}"],
           ["Mensonge et illusion", "{assoDef.0} ; {assoDef.1}<br>{posture}"],
           ["Le menteur (Swift, cité par Nietzsche)", "{menteur}"],
           ["L'illusion", "{illusion}"],
-          ["Locke", "thèse : {lockeThese}<br>l'enfant et l'or : {enfantOr}<br>pour notre question : {lockePont}"],
+          ["Locke", "thèse : {lockeThese}<br>l'enfant et l'or : {enfantOr}<br>pour notre question : {lockePont}<br>réfutation : {refutP2b}"],
           ["Conclusion", "{cclP2}"]
         ]
       },
