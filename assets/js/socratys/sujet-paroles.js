@@ -194,11 +194,17 @@
                    "Un silence peut-il en dire autant qu'une parole ?"]
       },
       {
-        dit: ["Reviens maintenant à la première signification : « avoir la maîtrise de ses paroles, ce serait dire ce que nous ressentons ». Que devient-elle, au regard du silence ?",
+        dit: ["La parole est-elle toujours la traductrice fidèle de ce que tu ressens, ou peut-elle en être une traîtresse ? Peut-on dire « je vais bien » quand on souffre ?"],
+        reponse: "Ta réponse", id: "traitresse",
+        relances: ["Celui qui ment sur ce qu'il éprouve dit-il ce qu'il ressent ?"]
+      },
+      {
+        dit: ["Reviens maintenant à la première signification : « avoir la maîtrise de ses paroles, ce serait dire ce que nous ressentons ». Que devient-elle, au regard du silence et du mensonge ?",
               "Formule toi-même la réfutation."],
         reponse: "Ta réfutation", id: "refutP1a",
         relances: ["Si le silence peut, lui aussi, exprimer ce que nous ressentons, la parole est-elle nécessaire pour l'exprimer ?",
-                   "Et maîtrisons-nous ce que notre silence laisse paraître ?"]
+                   "Et maîtrisons-nous ce que notre silence laisse paraître ?",
+                   "Et si nous pouvons mentir sur ce que nous éprouvons, la parole dit-elle toujours ce que nous ressentons ?"]
       },
       { repere: ["Ta première réfutation", "{refutP1a}"] },
       {
@@ -243,19 +249,6 @@
                    "Le fou, même s'il ne suit pas la raison, reste un homme : qu'a-t-il que le perroquet n'a pas ?"]
       },
       {
-        bon: "Les figures de style — l'euphémisme, la métaphore, la métonymie, le superlatif — permettent de dire les choses autrement qu'elles ne sont.",
-        dit: ["La parole est-elle une traductrice de ta pensée, ou peut-elle en être une traîtresse ?"],
-        reponse: "Ta réponse", id: "traitresse"
-      },
-      {
-        dit: ["Donne un exemple de parole qui dit les choses autrement qu'elles ne sont."],
-        reponse: "Ton exemple", id: "exFigure"
-      },
-      {
-        dit: ["Si la parole peut dissimuler, faut-il la définir comme une dissimulatrice ? Celui qui parle cherche-t-il d'abord à tromper, ou à se faire comprendre ?"],
-        reponse: "Ta réponse", id: "dissim"
-      },
-      {
         dit: ["Si la parole dit ce que nous pensons, que fait celui qui lit un discours lors d'une cérémonie : le prêtre, le maire, ou celui qui prend la parole lors d'un enterrement ?"],
         reponse: "Ta réponse", id: "porteParole",
         relances: ["Au nom de qui parle le maire quand il célèbre un mariage ? Choisit-il ses mots ?",
@@ -285,10 +278,9 @@
           ["Question de la partie", "Avons-nous la maîtrise de nos paroles au sens subjectif ?", true],
           ["Ce que veut dire l'hypothèse", "{p1q}"],
           ["Significations", "soit que nous disons {signifP1.0} ; soit que nous disons {signifP1.1}"],
-          ["Première signification : dire ce que nous ressentons", "argument : {arg1}<br>le théâtre : {theatre}<br>le témoin : {temoin}<br>réfutation : {refutP1a}"],
+          ["Première signification : dire ce que nous ressentons", "argument : {arg1}<br>le théâtre : {theatre}<br>le témoin : {temoin}<br>la parole traîtresse : {traitresse}<br>réfutation : {refutP1a}"],
           ["Transition", "{tP1}"],
           ["Descartes", "thèse : {descThese}<br>les bêtes et les hommes : {betes}<br>ce qu'exprime la parole : {parolePensee}<br>fous et perroquets : {fous}"],
-          ["La parole qui dissimule", "{traitresse}<br>exemple : {exFigure}<br>{dissim}"],
           ["Le porte-parole", "{porteParole}<br>ce que l'on peut en conclure : {conclPorte}<br>réfutation : {refutP1b}"],
           ["Conclusion", "{cclP1}"]
         ]
