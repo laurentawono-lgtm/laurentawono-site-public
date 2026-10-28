@@ -377,7 +377,7 @@
       },
 
       /* ============ PARTIE III ============ */
-      { section: "Partie III · le bonheur, une affaire de raison comme conséquence ou comme effet ?" },
+      { section: "Partie III · le bonheur, conséquence ou effet de la raison ?" },
       {
         bon: "Une conséquence est nécessairement liée à sa cause : elle en découle. Un effet, lui, est contingent — il peut se produire, ou non, sans lien nécessaire avec ce qui l'a précédé.",
         dit: ["Troisième partie : le bonheur est-il une conséquence de la raison, ou un effet ?",
