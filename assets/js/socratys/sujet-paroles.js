@@ -340,10 +340,6 @@
         relances: ["Disent-ils les choses comme elles sont, ou comme ils veulent qu'elles paraissent ?"]
       },
       {
-        dit: ["Si la parole peut dissimuler, faut-il la définir comme une dissimulatrice ? Celui qui parle cherche-t-il d'abord à tromper, ou à se faire comprendre ?"],
-        reponse: "Ta réponse", id: "dissim"
-      },
-      {
         dit: ["Avant de passer à la seconde signification, marque le passage de l'une à l'autre. Complète cette transition."],
         amorce: "Si la parole peut dire les choses autrement qu'elles ne sont, puisque ___, peut-elle aussi les dire ___ ?",
         relances: ["Si les choses ne sont pas comme elles nous apparaissent, comment sont-elles ? Quelle était la seconde signification ?"],
@@ -413,7 +409,7 @@
           ["Ce que veut dire l'hypothèse", "{p2q}"],
           ["Significations", "soit que nous disons les choses {signifP2.0} ; soit que nous les disons {signifP2.1}"],
           ["Première signification : dire les choses comme elles nous apparaissent", "argument : {argApp}<br>le bâton dans l'eau : {baton}<br>réfutation : {refutP2a}"],
-          ["Platon, les rhéteurs", "thèse : {rheteursThese}<br>le pouvoir de la parole : {rheteursPont}<br>{dissim}"],
+          ["Platon, les rhéteurs", "thèse : {rheteursThese}<br>le pouvoir de la parole : {rheteursPont}"],
           ["Transition", "{tP2}"],
           ["Seconde signification : dire les choses comme elles sont", "la vérité selon Aristote : {veriteArist}"],
           ["Locke", "thèse : {lockeThese}<br>l'enfant et l'or : {enfantOr}<br>les idées de l'or : {ideesOr}<br>la difficulté de maîtriser sa parole : {lockePont}<br>réfutation : {refutP2b}"],
