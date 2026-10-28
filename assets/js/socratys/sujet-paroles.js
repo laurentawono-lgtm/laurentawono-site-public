@@ -219,11 +219,11 @@
         relances: ["Quand l'homme parle « à propos des sujets qui se présentent », que fait-il connaître de lui ?"]
       },
       {
-        dit: ["Pourquoi Descartes inclut-il la parole des fous, et exclut-il celle des perroquets ?"],
+        dit: ["Pourquoi Descartes attribue-t-il la parole aux fous, et pas aux perroquets ? Qu'est-ce que cela exprime ?"],
         reponse: "Ta réponse", id: "fous",
-        motsCles: ["propos", "repet", "pens", "sens", "situation"],
-        relances: ["Le perroquet choisit-il ses mots en fonction de la situation ?",
-                   "Le fou parle-t-il « à propos des sujets qui se présentent » ?"]
+        motsCles: ["idee", "pens", "homme", "esprit"],
+        relances: ["Le perroquet répète des mots : a-t-il pour autant des idées ?",
+                   "Le fou, même s'il ne suit pas la raison, reste un homme : qu'a-t-il que le perroquet n'a pas ?"]
       },
       {
         dit: ["Reviens maintenant à la première signification : « avoir la maîtrise de ses paroles, ce serait dire ce que nous ressentons ». Que devient-elle, au regard du silence et du texte de Descartes ?",
