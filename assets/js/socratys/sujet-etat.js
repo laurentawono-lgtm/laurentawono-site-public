@@ -11,8 +11,8 @@
     "{amorce} Est-ce à l'État de faire la justice ? La justice peut s'entendre en deux sens, que distingue le couple {couple}. Au sens de la légalité, la justice se définit comme {defs2.0|defs.0} ; on l'oppose alors à {defs.1}. " +
     "Au sens de l'égalité, elle se définit comme {defs2.1|defs.2} ; on l'oppose alors à {defs.3}.\n\n" +
     "Se demander si c'est à l'État de faire la justice, revient à se demander s'il doit la faire comme {reform.0}, ou comme {reform.1}. " +
-    "Si c'est à l'État de faire la justice au sens de la légalité, alors {probl.0}, toutefois {problemes.0}. " +
-    "Si c'est à l'État de faire la justice au sens de l'égalité, alors {probl.1}, toutefois {problemes.1}.\n\n" +
+    "Si c'est à l'État de faire la justice au sens de la légalité, alors {probl.0}. Or {problemes.0}. " +
+    "Si c'est à l'État de faire la justice au sens de l'égalité, alors {probl.1}. Or {problemes.1}.\n\n" +
     "Dans une première partie, nous nous demanderons ce qu'implique {plan.0}. Dans une deuxième partie, nous nous demanderons ce que suppose {plan.1}. " +
     "Et dans une troisième partie, nous nous demanderons {plan.2}.";
 
@@ -84,7 +84,7 @@
       ["Reformulation", "Se demander si c'est à l'État de faire la justice, revient à se demander s'il doit la faire comme {reform.0}, ou comme {reform.1}."],
       ["Première hypothèse", "Si c'est à l'État de faire la justice au sens de la légalité, alors {probl.0}"],
       ["Seconde hypothèse", "Si c'est à l'État de faire la justice au sens de l'égalité, alors {probl.1}"],
-      ["Problèmes", "toutefois {problemes.0} — toutefois {problemes.1}"],
+      ["Problèmes", "Or {problemes.0} — Or {problemes.1}"],
       ["Plan", "I. {plan.0} — II. {plan.1} — III. {plan.2}"],
       ["Couple de la partie III", "{couple3}"]
     ],
@@ -154,8 +154,8 @@
       {
         bon: B.problematisation,
         dit: ["Ces deux hypothèses soulèvent chacune un problème. Lequel ?"],
-        champs: ["Si c'est à l'État de faire la justice au sens de la légalité, alors {probl.0}, toutefois…",
-                 "Si c'est à l'État de faire la justice au sens de l'égalité, alors {probl.1}, toutefois…"],
+        champs: ["Si c'est à l'État de faire la justice au sens de la légalité, alors {probl.0}. Or…",
+                 "Si c'est à l'État de faire la justice au sens de l'égalité, alors {probl.1}. Or…"],
         relances: ["Toute loi est-elle juste ? Et l'État peut-il rendre les hommes égaux sans porter atteinte à leur liberté ?"],
         id: "problemes"
       },
