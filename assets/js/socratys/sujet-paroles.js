@@ -176,28 +176,31 @@
       },
 
       {
-        repere: ["Première signification", "Avoir la maîtrise de ses paroles, ce serait maîtriser l'expression de ce qui est en nous."],
-        dit: ["Si la parole exprime ce qui est en toi, avoir la maîtrise de ses paroles, en quoi cela pourrait-il consister ?"],
-        reponse: "Ta réponse", id: "maitrise1",
-        motsCles: ["quand", "taire", "silence", "moment", "propos"],
-        relances: ["Une parole qu'on regrette d'avoir dite, qu'a-t-elle manqué ?",
-                   "Maîtriser sa parole, est-ce seulement savoir parler ? Qu'est-ce qu'il faut aussi savoir faire ?"]
+        repere: ["Première signification", "Avoir la maîtrise de ses paroles, ce serait dire ce que nous ressentons : la parole serait l'expression de nos sensations et de nos émotions."],
+        dit: ["Pourquoi peut-on soutenir que la parole exprime ce que nous ressentons ?"],
+        reponse: "Ton argument", id: "arg1",
+        relances: ["Quand tu dis « j'ai mal » ou « je suis heureux », que fais-tu passer au-dehors ?"]
       },
       {
-        dit: ["Pourquoi peut-on soutenir que savoir se taire, c'est déjà maîtriser sa parole ?"],
-        reponse: "Ton argument", id: "arg1"
+        dit: ["Examinons la validité de cette hypothèse. Faut-il parler pour exprimer ce que l'on ressent ? Pense au théâtre : le public perçoit souvent ce que l'acteur n'a pas dit. Que lui fait-il comprendre par son silence ?"],
+        reponse: "Ta réponse", id: "theatre",
+        relances: ["Un regard, une pause, un silence peuvent-ils dire une émotion aussi bien qu'une phrase ?"]
       },
       {
-        dit: ["Pense au théâtre : le public perçoit souvent ce que l'acteur n'a pas dit. L'acteur peut-il avoir la maîtrise de ce que le public entend dans son silence ?"],
-        reponse: "Ta réponse", id: "theatre"
-      },
-      {
-        dit: ["Et le témoin qui se tait devant le juge : pourquoi est-il accusé de complicité ? Tous les silences se valent-ils ?"],
+        dit: ["Et le témoin qui se tait devant le juge : pourquoi est-il accusé de complicité ? Que révèle son silence ?"],
         reponse: "Ta réponse", id: "temoin",
-        motsCles: ["complic", "cache", "dissimul", "non", "pas tous", "condamn", "faute"],
+        motsCles: ["complic", "cache", "dissimul", "sait", "revel", "condamn", "faute"],
         relances: ["Que cache le silence du témoin ?",
-                   "Un silence peut-il être une faute ?"]
+                   "Un silence peut-il en dire autant qu'une parole ?"]
       },
+      {
+        dit: ["Reviens maintenant à la première signification : « avoir la maîtrise de ses paroles, ce serait dire ce que nous ressentons ». Que devient-elle, au regard du silence ?",
+              "Formule toi-même la réfutation."],
+        reponse: "Ta réfutation", id: "refutP1a",
+        relances: ["Si le silence peut, lui aussi, exprimer ce que nous ressentons, la parole est-elle nécessaire pour l'exprimer ?",
+                   "Et maîtrisons-nous ce que notre silence laisse paraître ?"]
+      },
+      { repere: ["Ta première réfutation", "{refutP1a}"] },
       {
         dit: ["Lis ce texte de Platon."],
         texte: {
@@ -240,7 +243,7 @@
       },
       {
         repere: ["Le chemin parcouru",
-          "La maîtrise du silence : {maitrise1}<br>Ce qui lui résiste : {theatre} / {temoin}<br>Les rhéteurs : {rheteursPont}<br>La parole qui dissimule : {traitresse}<br>Le porte-parole : {porteParole}"],
+          "Première signification, dire ce que nous ressentons. Ta réfutation : {refutP1a}<br>Les rhéteurs : {rheteursPont}<br>La parole qui dissimule : {traitresse}<br>Le porte-parole : {porteParole}"],
         dit: ["Formule maintenant la conclusion de ta première partie : au sens subjectif, avons-nous la maîtrise de nos paroles ?"],
         reponse: "Ta conclusion", id: "cclP1",
         relances: ["Nos paroles disent-elles toujours ce qui est en nous ?"]
@@ -251,7 +254,7 @@
           ["Question de la partie", "Avons-nous la maîtrise de nos paroles au sens subjectif ?", true],
           ["Ce que veut dire l'hypothèse", "{p1q}"],
           ["Significations", "soit que nous disons {signifP1.0} ; soit que nous disons {signifP1.1}"],
-          ["La maîtrise du silence", "{maitrise1}<br>argument : {arg1}<br>le théâtre : {theatre}<br>le témoin : {temoin}"],
+          ["Première signification : dire ce que nous ressentons", "argument : {arg1}<br>le théâtre : {theatre}<br>le témoin : {temoin}<br>réfutation : {refutP1a}"],
           ["Platon, les rhéteurs", "thèse : {rheteursThese}<br>ce qu'il apprend sur la parole : {rheteursPont}"],
           ["La parole qui dissimule", "{traitresse}<br>exemple : {exFigure}<br>{dissim}"],
           ["Le porte-parole", "{porteParole}"],
