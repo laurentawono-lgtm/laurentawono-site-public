@@ -374,23 +374,28 @@
         relances: ["Selon Locke, que signifient les mots dans la bouche de chaque homme ?"]
       },
       {
-        dit: ["Pourquoi l'enfant appelle-t-il « or » la couleur de la queue d'un paon ?"],
+        dit: ["Pourquoi l'enfant appelle-t-il « or » la couleur de la queue d'un paon ? Son idée de l'or est-elle complète ?"],
         reponse: "Ta réponse", id: "enfantOr",
-        motsCles: ["couleur", "jaune", "idee", "seulement"],
+        motsCles: ["couleur", "jaune", "idee", "seulement", "incomplet", "partiel"],
         relances: ["Qu'a-t-il remarqué, lui, dans ce métal ?"]
       },
       {
-        dit: ["Pour Aristote, dire vrai, c'est dire ce qui est. Mais selon Locke, quand nous nommons une chose, que disons-nous en réalité : la chose elle-même, ou autre chose ?"],
+        dit: ["Dans le texte, plusieurs personnes emploient le même mot « or ». Ont-elles la même idée ? Que nous apprend cette différence ?"],
+        reponse: "Ta réponse", id: "ideesOr",
+        relances: ["Relis le texte : qu'ajoute chacun, l'un après l'autre, à l'idée de l'or ?",
+                   "Celui qui connaît la couleur, le poids, la fusibilité et la malléabilité a-t-il, lui, une idée complète de l'or ?"]
+      },
+      {
+        dit: ["Pour Aristote, dire vrai, c'est dire ce qui est. Mais si, selon Locke, nous ne disons jamais que l'idée que nous avons d'une chose, quelle difficulté rencontrons-nous quand nous voulons dire vrai ?"],
         reponse: "Ta réponse", id: "lockePont",
-        motsCles: ["idee", "esprit", "represent"],
-        relances: ["Le mot « or » désigne-t-il le métal lui-même, ou l'idée que chacun en a dans l'esprit ?",
-                   "Dire vrai, est-ce alors dire la chose, ou dire l'idée que nous avons de la chose ?"]
+        relances: ["Notre idée d'une chose est-elle toujours complète ? Pouvons-nous être sûrs de dire tout ce qu'elle est ?",
+                   "Si chacun met sous le même mot une idée différente, celui qui parle peut-il être sûr d'être compris ?"]
       },
       {
         dit: ["Reviens maintenant à la seconde signification : « avoir la maîtrise de nos paroles, ce serait dire les choses comme elles sont ». Que devient-elle après la lecture de Locke ?",
               "Formule toi-même la réfutation."],
         reponse: "Ta réfutation", id: "refutP2b",
-        relances: ["Si dire vrai, c'est dire l'idée que nous avons d'une chose, disons-nous encore la chose comme elle est ?",
+        relances: ["Si notre idée d'une chose est toujours partielle, pouvons-nous dire la chose comme elle est ?",
                    "Et celui qui nous écoute met-il sous nos mots la même idée que nous ?"]
       },
       { repere: ["Ta seconde réfutation", "{refutP2b}"] },
@@ -411,7 +416,7 @@
           ["Platon, les rhéteurs", "thèse : {rheteursThese}<br>le pouvoir de la parole : {rheteursPont}<br>{dissim}"],
           ["Transition", "{tP2}"],
           ["Seconde signification : dire les choses comme elles sont", "la vérité selon Aristote : {veriteArist}"],
-          ["Locke", "thèse : {lockeThese}<br>l'enfant et l'or : {enfantOr}<br>dire vrai, c'est dire l'idée d'une chose : {lockePont}<br>réfutation : {refutP2b}"],
+          ["Locke", "thèse : {lockeThese}<br>l'enfant et l'or : {enfantOr}<br>les idées de l'or : {ideesOr}<br>la difficulté de dire vrai : {lockePont}<br>réfutation : {refutP2b}"],
           ["Conclusion", "{cclP2}"]
         ]
       },
