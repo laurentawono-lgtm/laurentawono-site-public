@@ -206,11 +206,17 @@
                    "Qu'est-ce que la parole révèle chez celui qui parle ?"]
       },
       {
-        dit: ["Pourquoi les bêtes ne parlent-elles pas comme nous ?"],
+        dit: ["Quelle différence Descartes fait-il entre les bêtes et les hommes ?"],
         reponse: "Ta réponse", id: "betes",
-        motsCles: ["pens", "organe", "passion"],
+        motsCles: ["pens", "organe"],
         relances: ["Selon Descartes, est-ce une question d'organes ?",
-                   "Les bêtes n'expriment-elles pas, elles aussi, leurs passions ? Que leur manque-t-il ?"]
+                   "Relis la dernière phrase du texte : qu'est-ce qui manque aux bêtes, pour parler comme nous ?"]
+      },
+      {
+        dit: ["Qu'exprime la parole chez l'homme, que la bête n'a pas ?"],
+        reponse: "Ta réponse", id: "parolePensee",
+        motsCles: ["pens", "idee", "esprit"],
+        relances: ["Quand l'homme parle « à propos des sujets qui se présentent », que fait-il connaître de lui ?"]
       },
       {
         dit: ["Pourquoi Descartes inclut-il la parole des fous, et exclut-il celle des perroquets ?"],
@@ -224,13 +230,13 @@
               "Formule toi-même la réfutation."],
         reponse: "Ta réfutation", id: "refutP1a",
         relances: ["Si le silence peut, lui aussi, exprimer ce que nous ressentons, la parole est-elle nécessaire pour l'exprimer ?",
-                   "Selon Descartes, les bêtes expriment leurs passions sans parler : qu'est-ce que la parole humaine exprime de plus ?"]
+                   "Selon Descartes, qu'est-ce que la parole exprime chez l'homme ?"]
       },
       { repere: ["Ta première réfutation", "{refutP1a}"] },
       {
         dit: ["Avant de passer à la seconde signification, marque le passage de l'une à l'autre. Complète cette transition."],
         amorce: "Si la parole ne se réduit pas à dire ce que nous ressentons, puisque ___, n'est-elle pas d'abord l'expression de ___ ?",
-        relances: ["Selon Descartes, qu'est-ce que la parole révèle chez celui qui parle, et qui la distingue du cri de l'animal ?"],
+        relances: ["Selon Descartes, qu'est-ce que la parole révèle chez celui qui parle ?"],
         id: "tP1"
       },
       {
@@ -289,7 +295,7 @@
           ["Ce que veut dire l'hypothèse", "{p1q}"],
           ["Significations", "soit que nous disons {signifP1.0} ; soit que nous disons {signifP1.1}"],
           ["Première signification : dire ce que nous ressentons", "argument : {arg1}<br>le théâtre : {theatre}<br>le témoin : {temoin}"],
-          ["Descartes", "thèse : {descThese}<br>les bêtes : {betes}<br>fous et perroquets : {fous}<br>réfutation : {refutP1a}"],
+          ["Descartes", "thèse : {descThese}<br>les bêtes et les hommes : {betes}<br>ce qu'exprime la parole : {parolePensee}<br>fous et perroquets : {fous}<br>réfutation : {refutP1a}"],
           ["Transition", "{tP1}"],
           ["Platon, les rhéteurs", "thèse : {rheteursThese}<br>ce qu'il apprend sur la parole : {rheteursPont}"],
           ["La parole qui dissimule", "{traitresse}<br>exemple : {exFigure}<br>{dissim}"],
