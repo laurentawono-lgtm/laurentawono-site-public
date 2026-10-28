@@ -386,10 +386,10 @@
                    "Celui qui connaît la couleur, le poids, la fusibilité et la malléabilité a-t-il, lui, une idée complète de l'or ?"]
       },
       {
-        dit: ["Pour Aristote, dire vrai, c'est dire ce qui est. Mais si, selon Locke, nous ne disons jamais que l'idée que nous avons d'une chose, quelle difficulté rencontrons-nous quand nous voulons dire vrai ?"],
+        dit: ["En quoi le texte de Locke montre-t-il qu'il est difficile de maîtriser sa parole ? Justifie ta réponse en restant sur le texte."],
         reponse: "Ta réponse", id: "lockePont",
-        relances: ["Notre idée d'une chose est-elle toujours complète ? Pouvons-nous être sûrs de dire tout ce qu'elle est ?",
-                   "Si chacun met sous le même mot une idée différente, celui qui parle peut-il être sûr d'être compris ?"]
+        relances: ["Relis la dernière phrase : chacun peut-il appliquer le mot « or » à une autre idée que la sienne ?",
+                   "L'enfant, puis ceux qui ajoutent la pesanteur, la fusibilité, la malléabilité : leur idée de l'or est-elle la même ? Celui qui dit « or » sait-il ce que l'autre entendra ?"]
       },
       {
         dit: ["Reviens maintenant à la seconde signification : « avoir la maîtrise de nos paroles, ce serait dire les choses comme elles sont ». Que devient-elle après la lecture de Locke ?",
@@ -416,7 +416,7 @@
           ["Platon, les rhéteurs", "thèse : {rheteursThese}<br>le pouvoir de la parole : {rheteursPont}<br>{dissim}"],
           ["Transition", "{tP2}"],
           ["Seconde signification : dire les choses comme elles sont", "la vérité selon Aristote : {veriteArist}"],
-          ["Locke", "thèse : {lockeThese}<br>l'enfant et l'or : {enfantOr}<br>les idées de l'or : {ideesOr}<br>la difficulté de dire vrai : {lockePont}<br>réfutation : {refutP2b}"],
+          ["Locke", "thèse : {lockeThese}<br>l'enfant et l'or : {enfantOr}<br>les idées de l'or : {ideesOr}<br>la difficulté de maîtriser sa parole : {lockePont}<br>réfutation : {refutP2b}"],
           ["Conclusion", "{cclP2}"]
         ]
       },
