@@ -108,7 +108,7 @@
       {
         bon: B.couple,
         dit: ["Avec quel couple philosophique peux-tu t'aider pour définir la justice ?"],
-        choix: [{ l: "légalité / égalité", bon: true }, { l: "subjectif / objectif" }, { l: "individuel / collectif" }],
+        choix: [{ l: "légalité / égalité", bon: true }, { l: "nature / culture" }, { l: "particulier / général" }],
         id: "couple",
         relances: [
           "Essaie d'appliquer ce couple à la justice : une justice « {couple} »… est-ce vraiment là ce qui distingue deux manières de faire la justice ?",
