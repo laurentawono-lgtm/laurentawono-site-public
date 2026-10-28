@@ -122,6 +122,7 @@
         dit: ["Formulons maintenant deux hypothèses, à partir de ta reformulation."],
         champs: ["Si nous avons la maîtrise de nos paroles au sens subjectif, alors…",
                  "Si nous avons la maîtrise de nos paroles au sens objectif, alors…"],
+        relances: ["Si la parole exprime ce qui est en nous, que faudrait-il pour la maîtriser ? Et si elle nomme les choses, que faudrait-il ?"],
         id: "probl"
       },
       {
@@ -129,6 +130,7 @@
         dit: ["Ces deux hypothèses soulèvent chacune un problème. Lequel ?"],
         champs: ["Si nous avons la maîtrise de nos paroles au sens subjectif, alors {probl.0}. Or…",
                  "Si nous avons la maîtrise de nos paroles au sens objectif, alors {probl.1}. Or…"],
+        relances: ["Une parole qui exprime ce que nous ressentons peut-elle trahir notre pensée ? Et deux personnes mettent-elles toujours la même idée sous le même mot ?"],
         id: "problemes"
       },
       {
