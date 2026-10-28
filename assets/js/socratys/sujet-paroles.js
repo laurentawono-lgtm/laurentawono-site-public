@@ -275,15 +275,25 @@
         reponse: "Ta réponse", id: "dissim"
       },
       {
-        dit: ["Mais toute parole véhicule-t-elle une pensée ? Le juge qui prononce une condamnation, le prêtre qui dit la messe, l'homme politique qui lit un discours : parlent-ils en leur nom propre ?"],
+        dit: ["Si la parole dit ce que nous pensons, que fait celui qui lit un discours lors d'une cérémonie : le prêtre, le maire, ou celui qui prend la parole lors d'un enterrement ?"],
         reponse: "Ta réponse", id: "porteParole",
-        motsCles: ["non", "porte", "au nom", "institution", "fonction", "communaut", "circonstance", "role"],
-        relances: ["Au nom de qui parle le juge quand il condamne ?",
-                   "Ces paroles expriment-elles ce qu'ils pensent, ou ce que la situation exige ?"]
+        relances: ["Au nom de qui parle le maire quand il célèbre un mariage ? Choisit-il ses mots ?",
+                   "Ces paroles expriment-elles ce qu'ils pensent, ou ce que la circonstance exige ?"]
       },
       {
+        dit: ["Que peux-tu en conclure ?"],
+        reponse: "Ta conclusion", id: "conclPorte",
+        relances: ["Toute parole exprime-t-elle la pensée propre de celui qui la prononce ?"]
+      },
+      {
+        dit: ["Peux-tu rédiger une réfutation de l'hypothèse selon laquelle la parole exprime la pensée ?"],
+        reponse: "Ta réfutation", id: "refutP1b",
+        relances: ["Reprends ce que t'ont appris les rhéteurs de Platon et celui qui lit un discours lors d'une cérémonie : la parole dit-elle toujours ce que nous pensons ?"]
+      },
+      { repere: ["Ta seconde réfutation", "{refutP1b}"] },
+      {
         repere: ["Le chemin parcouru",
-          "Première signification, dire ce que nous ressentons. Ta réfutation : {refutP1a}<br>Seconde signification, dire ce que nous pensons.<br>Les rhéteurs : {rheteursPont}<br>La parole qui dissimule : {traitresse}<br>Le porte-parole : {porteParole}"],
+          "Première signification, dire ce que nous ressentons. Ta réfutation : {refutP1a}<br>Seconde signification, dire ce que nous pensons. Ta réfutation : {refutP1b}"],
         dit: ["Formule maintenant la conclusion de ta première partie : au sens subjectif, avons-nous la maîtrise de nos paroles ?"],
         reponse: "Ta conclusion", id: "cclP1",
         relances: ["Nos paroles disent-elles toujours ce qui est en nous ?"]
@@ -299,7 +309,7 @@
           ["Transition", "{tP1}"],
           ["Platon, les rhéteurs", "thèse : {rheteursThese}<br>ce qu'il apprend sur la parole : {rheteursPont}"],
           ["La parole qui dissimule", "{traitresse}<br>exemple : {exFigure}<br>{dissim}"],
-          ["Le porte-parole", "{porteParole}"],
+          ["Le porte-parole", "{porteParole}<br>ce que l'on peut en conclure : {conclPorte}<br>réfutation : {refutP1b}"],
           ["Conclusion", "{cclP1}"]
         ]
       },
