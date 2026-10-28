@@ -194,13 +194,48 @@
                    "Un silence peut-il en dire autant qu'une parole ?"]
       },
       {
-        dit: ["Reviens maintenant à la première signification : « avoir la maîtrise de ses paroles, ce serait dire ce que nous ressentons ». Que devient-elle, au regard du silence ?",
+        dit: ["Lis ce texte de Descartes."],
+        texte: DESCARTES,
+        bon: B.these
+      },
+      {
+        dit: ["Quelle est la thèse de ce texte ?"],
+        reponse: "La thèse", id: "descThese",
+        motsCles: ["homme seul", "seul", "pensee", "pense", "bete", "animal"],
+        relances: ["À qui seul, selon Descartes, la parole convient-elle ?",
+                   "Qu'est-ce que la parole révèle chez celui qui parle ?"]
+      },
+      {
+        dit: ["Pourquoi les bêtes ne parlent-elles pas comme nous ?"],
+        reponse: "Ta réponse", id: "betes",
+        motsCles: ["pens", "organe", "passion"],
+        relances: ["Selon Descartes, est-ce une question d'organes ?",
+                   "Les bêtes n'expriment-elles pas, elles aussi, leurs passions ? Que leur manque-t-il ?"]
+      },
+      {
+        dit: ["Pourquoi Descartes inclut-il la parole des fous, et exclut-il celle des perroquets ?"],
+        reponse: "Ta réponse", id: "fous",
+        motsCles: ["propos", "repet", "pens", "sens", "situation"],
+        relances: ["Le perroquet choisit-il ses mots en fonction de la situation ?",
+                   "Le fou parle-t-il « à propos des sujets qui se présentent » ?"]
+      },
+      {
+        dit: ["Reviens maintenant à la première signification : « avoir la maîtrise de ses paroles, ce serait dire ce que nous ressentons ». Que devient-elle, au regard du silence et du texte de Descartes ?",
               "Formule toi-même la réfutation."],
         reponse: "Ta réfutation", id: "refutP1a",
         relances: ["Si le silence peut, lui aussi, exprimer ce que nous ressentons, la parole est-elle nécessaire pour l'exprimer ?",
-                   "Et maîtrisons-nous ce que notre silence laisse paraître ?"]
+                   "Selon Descartes, les bêtes expriment leurs passions sans parler : qu'est-ce que la parole humaine exprime de plus ?"]
       },
       { repere: ["Ta première réfutation", "{refutP1a}"] },
+      {
+        dit: ["Avant de passer à la seconde signification, marque le passage de l'une à l'autre. Complète cette transition."],
+        amorce: "Si la parole ne se réduit pas à dire ce que nous ressentons, puisque ___, n'est-elle pas d'abord l'expression de ___ ?",
+        relances: ["Selon Descartes, qu'est-ce que la parole révèle chez celui qui parle, et qui la distingue du cri de l'animal ?"],
+        id: "tP1"
+      },
+      {
+        repere: ["Seconde signification", "Avoir la maîtrise de ses paroles, ce serait dire ce que nous pensons : la parole serait l'expression de nos idées."]
+      },
       {
         dit: ["Lis ce texte de Platon."],
         texte: {
@@ -216,12 +251,11 @@
                    "Que font-ils, par la force de leur discours, des grandes et des petites choses ?"]
       },
       {
-        dit: ["Que nous apprend ce texte sur la parole ? Exprime-t-elle toujours ce qui est en nous ?"],
+        dit: ["Que nous apprend ce texte sur la parole ? Dit-elle toujours ce que nous pensons ?"],
         reponse: "Ta réponse", id: "rheteursPont",
         relances: ["Celui qui fait paraître grandes les petites choses dit-il ce qu'il pense, ou ce qu'il veut faire croire ?"]
       },
       {
-        repere: ["Seconde signification", "La parole peut aussi dissimuler ce qui est en nous."],
         bon: "Les figures de style — l'euphémisme, la métaphore, la métonymie, le superlatif — permettent de dire les choses autrement qu'elles ne sont.",
         dit: ["La parole est-elle une traductrice de ta pensée, ou peut-elle en être une traîtresse ?"],
         reponse: "Ta réponse", id: "traitresse"
@@ -243,7 +277,7 @@
       },
       {
         repere: ["Le chemin parcouru",
-          "Première signification, dire ce que nous ressentons. Ta réfutation : {refutP1a}<br>Les rhéteurs : {rheteursPont}<br>La parole qui dissimule : {traitresse}<br>Le porte-parole : {porteParole}"],
+          "Première signification, dire ce que nous ressentons. Ta réfutation : {refutP1a}<br>Seconde signification, dire ce que nous pensons.<br>Les rhéteurs : {rheteursPont}<br>La parole qui dissimule : {traitresse}<br>Le porte-parole : {porteParole}"],
         dit: ["Formule maintenant la conclusion de ta première partie : au sens subjectif, avons-nous la maîtrise de nos paroles ?"],
         reponse: "Ta conclusion", id: "cclP1",
         relances: ["Nos paroles disent-elles toujours ce qui est en nous ?"]
@@ -254,7 +288,9 @@
           ["Question de la partie", "Avons-nous la maîtrise de nos paroles au sens subjectif ?", true],
           ["Ce que veut dire l'hypothèse", "{p1q}"],
           ["Significations", "soit que nous disons {signifP1.0} ; soit que nous disons {signifP1.1}"],
-          ["Première signification : dire ce que nous ressentons", "argument : {arg1}<br>le théâtre : {theatre}<br>le témoin : {temoin}<br>réfutation : {refutP1a}"],
+          ["Première signification : dire ce que nous ressentons", "argument : {arg1}<br>le théâtre : {theatre}<br>le témoin : {temoin}"],
+          ["Descartes", "thèse : {descThese}<br>les bêtes : {betes}<br>fous et perroquets : {fous}<br>réfutation : {refutP1a}"],
+          ["Transition", "{tP1}"],
           ["Platon, les rhéteurs", "thèse : {rheteursThese}<br>ce qu'il apprend sur la parole : {rheteursPont}"],
           ["La parole qui dissimule", "{traitresse}<br>exemple : {exFigure}<br>{dissim}"],
           ["Le porte-parole", "{porteParole}"],
@@ -418,32 +454,7 @@
       },
       {
         repere: ["Première hypothèse", "La maîtrise de la parole serait naturelle."],
-        dit: ["Lis ce texte de Descartes."],
-        texte: DESCARTES,
-        bon: B.these
-      },
-      {
-        dit: ["Quelle est la thèse de ce texte ?"],
-        reponse: "La thèse", id: "descThese",
-        motsCles: ["homme seul", "seul", "pensee", "pense", "bete", "animal"],
-        relances: ["À qui seul, selon Descartes, la parole convient-elle ?",
-                   "Qu'est-ce que la parole révèle chez celui qui parle ?"]
-      },
-      {
-        dit: ["Pourquoi les bêtes ne parlent-elles pas comme nous ?"],
-        reponse: "Ta réponse", id: "betes",
-        motsCles: ["pens", "organe"],
-        relances: ["Selon Descartes, est-ce une question d'organes ?"]
-      },
-      {
-        dit: ["Pourquoi Descartes inclut-il la parole des fous, et exclut-il celle des perroquets ?"],
-        reponse: "Ta réponse", id: "fous",
-        motsCles: ["propos", "repet", "pens", "sens", "situation"],
-        relances: ["Le perroquet choisit-il ses mots en fonction de la situation ?",
-                   "Le fou parle-t-il « à propos des sujets qui se présentent » ?"]
-      },
-      {
-        dit: ["Quel argument ce texte fournit-il à l'hypothèse d'une maîtrise naturelle de la parole ?"],
+        dit: ["Si la maîtrise de la parole est naturelle, quel argument peux-tu tirer du texte de Descartes, que tu as lu en première partie ?"],
         reponse: "Ton argument", id: "argNat",
         motsCles: ["homme seul", "seul", "pens", "nature", "animal", "bete", "propre"],
         relances: ["Selon Descartes, la parole est-elle propre à tous les hommes, même au plus imparfait ?"]
@@ -514,7 +525,7 @@
           ["Question de la partie", "La maîtrise de nos paroles est-elle naturelle, ou artificielle ?", true],
           ["Les deux significations", "Avoir la maîtrise de nos paroles peut signifier soit que cette maîtrise est naturelle, soit qu'elle est artificielle.", true],
           ["Couple naturel / artificiel", "naturel : {defs3.0}<br>artificiel : {defs3.1}"],
-          ["Hypothèse du naturel", "Descartes, thèse : {descThese}<br>les bêtes : {betes}<br>fous et perroquets : {fous}<br>argument : {argNat}<br>le nouveau-né : {nouveauNe}"],
+          ["Hypothèse du naturel", "argument tiré de Descartes : {argNat}<br>le nouveau-né : {nouveauNe}"],
           ["Platon", "thèse : {platonThese}<br>l'orateur : {orateur}<br>toute âme : {touteAme}"],
           ["Hypothèse de l'art", "{implArt}"],
           ["L'agriculteur", "{metaphore}<br>bien semé : {seme}<br>fécondité : {fecondite}"],
