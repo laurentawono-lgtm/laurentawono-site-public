@@ -761,12 +761,13 @@
       }
       h += "</section>";
     });
-    h += '<div class="panel-actions"><button type="button" class="btn primary" id="voir-brouillon">Voir mon brouillon complet</button>' +
-      '<button type="button" class="btn" id="changer">Changer de sujet</button>' +
-      '<button type="button" class="btn" id="effacer" aria-expanded="false" aria-controls="effacer-conf">Effacer mes réponses</button>' +
+    /* les actions restent visibles en bas du tiroir, sous les cartes qui défilent */
+    h += '</div><div class="panel-actions"><button type="button" class="btn small primary" id="voir-brouillon">Voir mon brouillon complet</button>' +
+      '<button type="button" class="btn small" id="changer">Changer de sujet</button>' +
+      '<button type="button" class="btn small" id="effacer" aria-expanded="false" aria-controls="effacer-conf">Effacer mes réponses</button>' +
       '<div class="confirmer" id="effacer-conf" hidden><p>Effacer toutes tes réponses pour ce sujet ? Cette action est définitive.</p>' +
       '<div class="sa"><button type="button" class="btn small primary" id="effacer-oui">Oui, tout effacer</button>' +
-      '<button type="button" class="btn small" id="effacer-non">Annuler</button></div></div></div></div>';
+      '<button type="button" class="btn small" id="effacer-non">Annuler</button></div></div></div>';
     side.innerHTML = h;
     $("fermer").onclick = fermerTiroir;
     $("voir-brouillon").onclick = () => { fermerTiroir(); synthese(false); };

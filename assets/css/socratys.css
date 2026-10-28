@@ -205,7 +205,9 @@ textarea.edit { margin-top: 6px; min-height: 88px; background: var(--paper-raise
 .stale .qm { flex: none; width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid var(--line-control); display: grid; place-items: center; font-family: var(--font-serif); font-weight: 600; font-size: 14px; color: var(--ink-muted); }
 .stale p { margin: 0; }
 .stale .sa { display: flex; gap: 14px; margin-top: 2px; flex-wrap: wrap; }
-.panel-actions { display: grid; gap: var(--space-2); margin-top: 22px; }
+.panel-actions { flex: none; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2); padding: var(--space-3) var(--space-4) calc(var(--space-3) + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--line); background: var(--paper-raised); }
+.panel-actions #voir-brouillon, .panel-actions .confirmer { grid-column: 1 / -1; }
+.panel-actions .btn.small { padding: 0 10px; }
 .confirmer { background: var(--paper-sunk); border-radius: var(--radius-md); padding: var(--space-3); font-size: 15px; line-height: 22px; }
 .confirmer p { margin: 0 0 var(--space-2); }
 .confirmer .sa { display: flex; gap: var(--space-2); flex-wrap: wrap; }
