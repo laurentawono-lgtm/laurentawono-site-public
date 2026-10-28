@@ -268,9 +268,9 @@
       {
         repere: ["Le chemin parcouru",
           "Première signification, dire ce que nous ressentons. Ta réfutation : {refutP1a}<br>Seconde signification, dire ce que nous pensons. Ta réfutation : {refutP1b}"],
-        dit: ["Formule maintenant la conclusion de ta première partie : au sens subjectif, avons-nous la maîtrise de nos paroles ?"],
+        dit: ["Formule maintenant la conclusion de ta première partie : au terme de l'examen de ces deux significations, avons-nous la maîtrise de nos paroles au sens subjectif ?"],
         reponse: "Ta conclusion", id: "cclP1",
-        relances: ["Nos paroles disent-elles toujours ce qui est en nous ?"]
+        relances: ["Disons-nous toujours ce que nous ressentons ? Et ce que nous pensons ?"]
       },
       {
         redaction: "p1", titre: "Ta première partie", brouillon: true, consigne: C.reecrire,
