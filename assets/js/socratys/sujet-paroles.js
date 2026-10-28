@@ -362,6 +362,12 @@
         repere: ["Seconde signification", "Avoir la maîtrise de nos paroles, ce serait dire les choses comme elles sont."]
       },
       {
+        bon: "Aristote définit ainsi la vérité : « Dire de ce qui est qu'il n'est pas, ou de ce qui n'est pas qu'il est, c'est le faux ; dire de ce qui est qu'il est, et de ce qui n'est pas qu'il n'est pas, c'est le vrai. » (<em>Métaphysique</em>, Γ, 7, 1011b)",
+        dit: ["Selon cette définition d'Aristote, que signifie dire vrai ? En quoi est-ce dire les choses comme elles sont ?"],
+        reponse: "Ta réponse", id: "veriteArist",
+        relances: ["Dire vrai, est-ce dire ce que l'on voit, ou dire de ce qui est qu'il est ?"]
+      },
+      {
         dit: ["Nommons-nous les choses parce que nous les connaissons, ou les connaissons-nous parce que nous les nommons ?"],
         reponse: "Ta réponse", id: "nommer"
       },
@@ -482,7 +488,7 @@
           ["Première signification : dire les choses comme elles nous apparaissent", "argument : {argApp}<br>le bâton dans l'eau : {baton}<br>réfutation : {refutP2a}"],
           ["Platon, les rhéteurs", "thèse : {rheteursThese}<br>le pouvoir de la parole : {rheteursPont}<br>{dissim}"],
           ["Transition", "{tP2}"],
-          ["Seconde signification : dire les choses comme elles sont", "nommer et connaître : {nommer}<br>{implic}"],
+          ["Seconde signification : dire les choses comme elles sont", "la vérité selon Aristote : {veriteArist}<br>nommer et connaître : {nommer}<br>{implic}"],
           ["Aristote", "les formes vraies : {assoVrai.0} ; {assoVrai.1}<br>dire vrai : {aristVrai}"],
           ["Mensonge et illusion", "{assoDef.0} ; {assoDef.1}<br>{posture}"],
           ["Le menteur (Swift, cité par Nietzsche)", "{menteur}"],
