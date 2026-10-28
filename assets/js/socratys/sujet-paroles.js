@@ -415,15 +415,21 @@
       /* ============ PARTIE III ============ */
       { section: "Partie III · une maîtrise naturelle ou artificielle de la parole ?" },
       {
+        bon: "Est naturel ce qui nous est donné, sans que nous ayons à l'acquérir. Est artificiel ce qui est produit par l'art, c'est-à-dire acquis par l'apprentissage et l'exercice.",
         dit: ["Troisième partie : la maîtrise de nos paroles est-elle naturelle, ou artificielle ?",
               "Avoir la maîtrise de nos paroles peut signifier soit que cette maîtrise est naturelle, soit qu'elle est artificielle."]
       },
       {
-        dit: ["Définis maintenant la maîtrise de la parole à partir de ce couple."],
-        champs: ["Au sens naturel, la maîtrise de la parole serait…",
-                 "Au sens artificiel, la maîtrise de la parole serait…"],
-        relances: ["Quand dit-on de quelqu'un qu'il parle bien, qu'il sait manier les mots ? Qu'est-ce que cela révèle : un don, ou un art qu'il a travaillé ?"],
-        id: "defs3"
+        dit: ["Que veut dire une maîtrise naturelle de la parole ?"],
+        reponse: "Ta réponse", id: "matNat",
+        relances: ["Une maîtrise naturelle serait-elle donnée à tous, dès la naissance, sans effort ?",
+                   "Pense à quelqu'un dont on dit qu'il a « le don de la parole » : d'où lui viendrait ce don ?"]
+      },
+      {
+        dit: ["Et que veut dire une maîtrise artificielle de la parole ?"],
+        reponse: "Ta réponse", id: "matArt",
+        relances: ["Une maîtrise artificielle s'acquiert-elle ? Comment : par l'apprentissage, l'exercice, des règles ?",
+                   "Pense à l'avocat ou à l'orateur qui prépare et travaille son discours : sa maîtrise lui est-elle donnée ?"]
       },
       {
         repere: ["Première hypothèse", "La maîtrise de la parole serait naturelle."],
@@ -497,7 +503,7 @@
         notes: [
           ["Question de la partie", "La maîtrise de nos paroles est-elle naturelle, ou artificielle ?", true],
           ["Les deux significations", "Avoir la maîtrise de nos paroles peut signifier soit que cette maîtrise est naturelle, soit qu'elle est artificielle.", true],
-          ["Couple naturel / artificiel", "naturel : {defs3.0}<br>artificiel : {defs3.1}"],
+          ["Couple naturel / artificiel", "une maîtrise naturelle : {matNat}<br>une maîtrise artificielle : {matArt}"],
           ["Hypothèse du naturel", "argument tiré de Descartes : {argNat}<br>le nouveau-né : {nouveauNe}"],
           ["Platon", "thèse : {platonThese}<br>l'orateur : {orateur}<br>toute âme : {touteAme}"],
           ["Hypothèse de l'art", "{implArt}"],
