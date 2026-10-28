@@ -302,6 +302,14 @@
                    "Quand dit-on de quelqu'un qu'il parle objectivement ? Parle-t-il de ce qu'il ressent, ou de ce qui est ?"]
       },
       {
+        dit: ["Concentre-toi maintenant sur les deux significations que tu viens de trouver. Complète :"],
+        champs: ["Si nous avons la maîtrise de nos paroles au sens objectif, cela peut signifier deux choses : soit que nous disons les choses…",
+                 "…soit que nous les disons…"],
+        relances: ["Les choses sont-elles toujours telles qu'elles nous paraissent ? Le bâton plongé dans l'eau paraît brisé : l'est-il ?",
+                   "Dire une chose telle qu'elle est, et la dire telle qu'elle nous apparaît : est-ce la même chose ?"],
+        id: "signifP2"
+      },
+      {
         dit: ["Nommons-nous les choses parce que nous les connaissons, ou les connaissons-nous parce que nous les nommons ?"],
         reponse: "Ta réponse", id: "nommer"
       },
@@ -411,6 +419,7 @@
         notes: [
           ["Question de la partie", "Avons-nous la maîtrise de nos paroles au sens objectif ?", true],
           ["Ce que veut dire l'hypothèse", "{p2q}"],
+          ["Significations", "soit que nous disons les choses {signifP2.0} ; soit que nous les disons {signifP2.1}"],
           ["Nommer et connaître", "{nommer}<br>{implic}"],
           ["Aristote", "les formes vraies : {assoVrai.0} ; {assoVrai.1}<br>dire vrai : {aristVrai}"],
           ["Mensonge et illusion", "{assoDef.0} ; {assoDef.1}<br>{posture}"],
