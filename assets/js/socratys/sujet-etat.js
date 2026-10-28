@@ -5,6 +5,7 @@
    Rousseau ; extrait du Gorgias pour Calliclès ; Aristote et Rawls en bulles. */
 (function () {
   const B = window.SOCRATYS.BON;
+  const C = window.SOCRATYS.CONSIGNES;
 
   /* introduction assemblée à partir des réponses de l'élève, qu'il peut ensuite modifier */
   const INTRO =
@@ -169,8 +170,18 @@
         relances: ["Si l'analyse du prédicat, faire la justice, te donne les deux premières parties, c'est celle du sujet grammatical, l'État, qui te donne la troisième : on questionne alors l'État à l'aide d'un autre couple philosophique. Tu peux par exemple questionner l'État à partir du couple fait / droit, que l'on peut aussi nommer nature / civil : de quel État peut-on attendre la justice ?"]
       },
       {
-        redaction: "intro", titre: "Ton introduction", modele: INTRO,
-        consigne: "Voici ton introduction, rassemblée à partir de tes réponses. Ce n'est qu'un premier jet : la dissertation est d'abord un exercice d'écriture. Réécris-la avec tes propres phrases, affine-la et corrige-la."
+        redaction: "intro", titre: "Ton introduction", modele: INTRO, consigne: C.reecrireIntro,
+        notes: [
+          ["Sujet", "Est-ce à l'État de faire la justice ?"],
+          ["Ton amorce", "{amorce}"],
+          ["Couple", "{couple}"],
+          ["Sens de la légalité", "{defs2.0|defs.0} (opposé à {defs.1})"],
+          ["Sens de l'égalité", "{defs2.1|defs.2} (opposé à {defs.3})"],
+          ["Reformulation", "s'il doit la faire comme {reform.0}, ou comme {reform.1}"],
+          ["Hypothèse 1", "Si c'est à l'État de faire la justice au sens de la légalité, alors {probl.0} Or {problemes.0}"],
+          ["Hypothèse 2", "Si c'est à l'État de faire la justice au sens de l'égalité, alors {probl.1} Or {problemes.1}"],
+          ["Plan", "I. {plan.0}<br>II. {plan.1}<br>III. {plan.2}"]
+        ]
       },
 
       /* ============ PARTIE I ============ */
