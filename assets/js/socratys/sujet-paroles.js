@@ -405,8 +405,9 @@
         ]
       },
       {
-        dit: ["Rédige maintenant ta transition vers la troisième partie."],
-        reponse: "Ta transition", id: "t2",
+        dit: ["Rédige maintenant ta transition en complétant cette amorce."],
+        amorce: "S'il est difficile de dire son idée d'une chose, puisque ___, il est par conséquent difficile de ___, et donc de ___. Mais cette maîtrise, d'où pourrait-elle nous venir ?",
+        id: "t2",
         relances: ["S'il est difficile de dire son idée d'une chose, est-il facile de dire vrai ?",
                    "Si l'on ne peut être sûr de dire vrai, a-t-on la maîtrise de ses paroles ? Ta transition doit alors annoncer que la troisième partie examinera cette maîtrise elle-même."]
       },
