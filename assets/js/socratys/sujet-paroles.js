@@ -194,6 +194,23 @@
                    "Un silence peut-il en dire autant qu'une parole ?"]
       },
       {
+        dit: ["Reviens maintenant à la première signification : « avoir la maîtrise de ses paroles, ce serait dire ce que nous ressentons ». Que devient-elle, au regard du silence ?",
+              "Formule toi-même la réfutation."],
+        reponse: "Ta réfutation", id: "refutP1a",
+        relances: ["Si le silence peut, lui aussi, exprimer ce que nous ressentons, la parole est-elle nécessaire pour l'exprimer ?",
+                   "Et maîtrisons-nous ce que notre silence laisse paraître ?"]
+      },
+      { repere: ["Ta première réfutation", "{refutP1a}"] },
+      {
+        dit: ["Avant de passer à la seconde signification, marque le passage de l'une à l'autre. Complète cette transition."],
+        amorce: "Si la parole ne se réduit pas à dire ce que nous ressentons, puisque ___, n'est-elle pas d'abord l'expression de ___ ?",
+        relances: ["Si le silence peut, lui aussi, dire ce que nous ressentons, qu'est-ce que la parole peut exprimer de plus ?"],
+        id: "tP1"
+      },
+      {
+        repere: ["Seconde signification", "Avoir la maîtrise de ses paroles, ce serait dire ce que nous pensons : la parole serait l'expression de nos idées."]
+      },
+      {
         dit: ["Lis ce texte de Descartes."],
         texte: DESCARTES,
         bon: B.these
@@ -226,42 +243,6 @@
                    "Le fou, même s'il ne suit pas la raison, reste un homme : qu'a-t-il que le perroquet n'a pas ?"]
       },
       {
-        dit: ["Reviens maintenant à la première signification : « avoir la maîtrise de ses paroles, ce serait dire ce que nous ressentons ». Que devient-elle, au regard du silence et du texte de Descartes ?",
-              "Formule toi-même la réfutation."],
-        reponse: "Ta réfutation", id: "refutP1a",
-        relances: ["Si le silence peut, lui aussi, exprimer ce que nous ressentons, la parole est-elle nécessaire pour l'exprimer ?",
-                   "Selon Descartes, qu'est-ce que la parole exprime chez l'homme ?"]
-      },
-      { repere: ["Ta première réfutation", "{refutP1a}"] },
-      {
-        dit: ["Avant de passer à la seconde signification, marque le passage de l'une à l'autre. Complète cette transition."],
-        amorce: "Si la parole ne se réduit pas à dire ce que nous ressentons, puisque ___, n'est-elle pas d'abord l'expression de ___ ?",
-        relances: ["Selon Descartes, qu'est-ce que la parole révèle chez celui qui parle ?"],
-        id: "tP1"
-      },
-      {
-        repere: ["Seconde signification", "Avoir la maîtrise de ses paroles, ce serait dire ce que nous pensons : la parole serait l'expression de nos idées."]
-      },
-      {
-        dit: ["Lis ce texte de Platon."],
-        texte: {
-          corps: ["Et Tisias, et Gorgias ? les laisserons-nous sommeiller, eux qui ont vu que la ressemblance méritait plus d'honneur que le vrai ? Par la force de leur discours, ils font paraître petites les grandes choses et grandes les petites, ils donnent à la nouveauté un ton archaïsant et à son contraire un ton nouveau. Et, pour traiter de n'importe quel sujet, ils ont découvert une méthode de concision aussi bien que d'amplification infinie."],
-          source: "Platon, <em>Phèdre</em>, 267a-b"
-        },
-        bon: B.these
-      },
-      {
-        dit: ["Quelle est la thèse de ce texte ?"],
-        reponse: "La thèse", id: "rheteursThese",
-        relances: ["Selon Platon, que préfèrent Tisias et Gorgias : la ressemblance, ou le vrai ?",
-                   "Que font-ils, par la force de leur discours, des grandes et des petites choses ?"]
-      },
-      {
-        dit: ["Que nous apprend ce texte sur la parole ? Dit-elle toujours ce que nous pensons ?"],
-        reponse: "Ta réponse", id: "rheteursPont",
-        relances: ["Celui qui fait paraître grandes les petites choses dit-il ce qu'il pense, ou ce qu'il veut faire croire ?"]
-      },
-      {
         bon: "Les figures de style — l'euphémisme, la métaphore, la métonymie, le superlatif — permettent de dire les choses autrement qu'elles ne sont.",
         dit: ["La parole est-elle une traductrice de ta pensée, ou peut-elle en être une traîtresse ?"],
         reponse: "Ta réponse", id: "traitresse"
@@ -288,7 +269,7 @@
       {
         dit: ["Peux-tu rédiger une réfutation de l'hypothèse selon laquelle la parole exprime la pensée ?"],
         reponse: "Ta réfutation", id: "refutP1b",
-        relances: ["Reprends ce que t'ont appris les rhéteurs de Platon et celui qui lit un discours lors d'une cérémonie : la parole dit-elle toujours ce que nous pensons ?"]
+        relances: ["Reprends ce que t'a appris celui qui lit un discours lors d'une cérémonie : la parole dit-elle toujours ce que nous pensons ?"]
       },
       { repere: ["Ta seconde réfutation", "{refutP1b}"] },
       {
@@ -304,10 +285,9 @@
           ["Question de la partie", "Avons-nous la maîtrise de nos paroles au sens subjectif ?", true],
           ["Ce que veut dire l'hypothèse", "{p1q}"],
           ["Significations", "soit que nous disons {signifP1.0} ; soit que nous disons {signifP1.1}"],
-          ["Première signification : dire ce que nous ressentons", "argument : {arg1}<br>le théâtre : {theatre}<br>le témoin : {temoin}"],
-          ["Descartes", "thèse : {descThese}<br>les bêtes et les hommes : {betes}<br>ce qu'exprime la parole : {parolePensee}<br>fous et perroquets : {fous}<br>réfutation : {refutP1a}"],
+          ["Première signification : dire ce que nous ressentons", "argument : {arg1}<br>le théâtre : {theatre}<br>le témoin : {temoin}<br>réfutation : {refutP1a}"],
           ["Transition", "{tP1}"],
-          ["Platon, les rhéteurs", "thèse : {rheteursThese}<br>ce qu'il apprend sur la parole : {rheteursPont}"],
+          ["Descartes", "thèse : {descThese}<br>les bêtes et les hommes : {betes}<br>ce qu'exprime la parole : {parolePensee}<br>fous et perroquets : {fous}"],
           ["La parole qui dissimule", "{traitresse}<br>exemple : {exFigure}<br>{dissim}"],
           ["Le porte-parole", "{porteParole}<br>ce que l'on peut en conclure : {conclPorte}<br>réfutation : {refutP1b}"],
           ["Conclusion", "{cclP1}"]
