@@ -347,6 +347,11 @@
   function avance(vers) {
     const avant = etapeDe(etat.i);
     let suiv = vers != null ? vers : etat.i + 1;
+    /* le chemin suivi, pour « Question précédente » */
+    if (!etat.reprise && interactive(sujet.etapes[etat.i])) {
+      etat.pile = etat.pile || [];
+      if (etat.pile[etat.pile.length - 1] !== etat.i) etat.pile.push(etat.i);
+    }
     if (etat.reprise) {
       /* « Reprendre cette question avec Socratys » : on revient ensuite là où on en était */
       const r = etat.reprise;
@@ -372,6 +377,50 @@
     rendrePanneau();
     etape();
   }
+  /* ---------- « Question précédente » ---------- */
+
+  function interactive(n) {
+    return !!n && !!(n.choix || n.champs || n.reponse || n.amorce || n.association || n.redaction);
+  }
+  /* la question d'avant sur le chemin réellement suivi (embranchements compris) */
+  function indexPrecedent() {
+    const pile = etat.pile || [];
+    let k = etat.reprise ? pile.lastIndexOf(etat.i) : pile.length;
+    if (k < 0) k = pile.length;
+    while (k > 0 && pile[k - 1] >= (etat.reprise ? etat.i : Infinity)) k--;
+    if (k > 0) return pile[k - 1];
+    for (let j = Math.min(etat.i, sujet.etapes.length) - 1; j >= 0; j--) if (interactive(sujet.etapes[j])) return j;
+    return -1;
+  }
+  function majPrecedente() {
+    btnPrec.hidden = !(sujet && etat && vue === "dialogue" && indexPrecedent() >= 0);
+  }
+  function precedente() {
+    const cible = indexPrecedent();
+    if (cible < 0) return;
+    fermerTiroir();
+    if (!etat.reprise) {
+      etat.reprise = { retour: etat.fini ? sujet.etapes.length : etat.i, seul: true };
+      dire("etape", ["Revenons à la question précédente.", "Tu reviendras ensuite là où tu en étais."]);
+    }
+    etat.reprise.s = etapeDe(cible).s;
+    etat.reprise.seul = true;
+    vide();
+    etat.i = cible;
+    etat.essais = 0;
+    etat.affiche = false;
+    sauve();
+    rendreFrise();
+    rendrePanneau();
+    etape();
+  }
+  const btnPrec = el("button", "prec", ICO.back + "<span>Question précédente</span>");
+  btnPrec.type = "button";
+  btnPrec.id = "precedente";
+  btnPrec.hidden = true;
+  btnPrec.onclick = precedente;
+  document.querySelector(".top .brand").insertAdjacentElement("afterend", btnPrec);
+
   /* Relance si l'élève n'a pas trouvé ; renvoie false quand il n'en reste plus
      (on accepte alors sa réponse et on avance, sans jamais donner la solution). */
   function relance(n) {
@@ -391,6 +440,7 @@
   function etape() {
     vue = "dialogue";
     const n = sujet.etapes[etat.i];
+    majPrecedente();
     if (!n) return fin();
     if (!etat.affiche) {
       etat.affiche = true;
@@ -463,6 +513,7 @@
     ctl.innerHTML = '<div class="f"><label class="sr" for="x">' + esc(n.reponse) + '</label>' +
       '<textarea id="x" rows="2" placeholder="' + esc(n.reponse) + '…"></textarea></div>' + rangee(n, "Envoyer");
     const x = $("x");
+    if (etat.reprise && typeof etat.A[n.id] === "string") x.value = etat.A[n.id];
     const go = () => {
       const v = x.value.trim();
       if (!v) { x.focus(); return; }
@@ -506,6 +557,7 @@
       '<div class="f"><label for="m' + k + '">' + interp(l) +
       (requis.indexOf(k) < 0 ? ' <span class="opt">(facultatif)</span>' : "") +
       '</label><textarea id="m' + k + '" rows="2"></textarea></div>').join("") + rangee(n, "Envoyer");
+    if (etat.reprise && Array.isArray(etat.A[n.id])) etat.A[n.id].forEach((x, k) => { if ($("m" + k)) $("m" + k).value = x || ""; });
     $("go").onclick = () => {
       const v = n.champs.map((_, k) => $("m" + k).value.trim());
       if (requis.some((k) => !v[k])) { erreur("Complète les champs essentiels avant d'envoyer."); return; }
@@ -951,6 +1003,7 @@
 
   function synthese() {
     vue = "synthese";
+    majPrecedente();
     fermerTiroir();
     remplirCopie();
     const A = etat.A;
@@ -1004,6 +1057,7 @@
       etape();
     } else {
       marquer();
+      majPrecedente();
       ctl.innerHTML = '<div class="ch"><button class="btn suite" id="go" type="button">Ouvrir mon brouillon</button></div>';
       $("go").onclick = () => synthese();
     }
@@ -1109,6 +1163,7 @@
     sujet = null;
     etat = null;
     vue = "accueil";
+    majPrecedente();
     effacer("courant");
     $("titre-sujet").textContent = "";
     $("enreg").hidden = true;

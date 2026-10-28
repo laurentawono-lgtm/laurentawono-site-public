@@ -22,6 +22,18 @@ button, input, textarea { font: inherit; color: inherit; }
   border-bottom: 1px solid var(--line);
 }
 .brand { font-family: var(--font-serif); font-weight: 600; font-size: 18px; color: var(--terra); }
+.prec {
+  flex: none; display: inline-flex; align-items: center; gap: 2px; min-height: 36px; padding: 0 12px 0 6px;
+  border: 1px solid var(--line); border-radius: 999px; background: var(--paper-raised);
+  font: inherit; font-size: 14px; font-weight: 600; color: var(--terra); cursor: pointer;
+}
+.prec[hidden] { display: none; }
+.prec:hover { border-color: var(--terra); }
+.prec:focus-visible { outline: 2px solid var(--terra); outline-offset: 2px; }
+/* téléphone : le bouton prend la place du mot « Enregistré » (le point reste, le mot reste lu à l'écran) */
+@media (max-width: 599px) {
+  .top:has(.prec:not([hidden])) #enreg-t { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+}
 .subject-top {
   flex: 1; min-width: 0; font-family: var(--font-serif); font-size: 14px; line-height: 20px;
   color: var(--ink-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
