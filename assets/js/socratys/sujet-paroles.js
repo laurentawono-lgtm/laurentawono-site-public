@@ -435,8 +435,9 @@
         repere: ["Première hypothèse", "La maîtrise de la parole serait naturelle."],
         dit: ["Si la maîtrise de la parole est naturelle, qu'est-ce que cela implique ?"],
         reponse: "Ta réponse", id: "argNat",
-        relances: ["Si cette maîtrise était naturelle, tous les hommes ne la posséderaient-ils pas, dès la naissance, sans avoir à l'apprendre ?",
-                   "Souviens-toi de Descartes : la parole convient à tous les hommes, même au plus imparfait. Qu'en serait-il alors de sa maîtrise ?"]
+        relances: ["Si tous les hommes avaient naturellement la maîtrise de leurs paroles, notre question se poserait-elle encore ?",
+                   "Or elle se pose. Tous les hommes ont la parole : en font-ils tous le même usage ?",
+                   "Souviens-toi de ta deuxième partie : le rhéteur qui fait paraître les choses autrement qu'elles ne sont, celui qui ment… ont-ils la maîtrise de leurs paroles ?"]
       },
       {
         dit: ["Cette disposition naturelle suffit-elle à en avoir la maîtrise ? Un nouveau-né a-t-il, comme tout homme, la faculté de parler ? En a-t-il pour autant la maîtrise ?"],
