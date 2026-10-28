@@ -1,7 +1,7 @@
 /* Sujet 2 — « Avons-nous la maîtrise de nos paroles ? »
    Contenu : docs/SOCRATYS-METHODE.md, §4, et la leçon « Paroles » (V2), corrigé de référence.
    Textes : « Avons-nous la maîtrise de nos paroles ? — textes ».
-   Nietzsche : citation de Swift seule, sans texte à lire (décision du 29/09/2026). */
+   Swift (cité par Nietzsche) et les exercices sur la baleine retirés le 28/10/2026. */
 (function () {
   const B = window.SOCRATYS.BON;
   const C = window.SOCRATYS.CONSIGNES;
@@ -24,15 +24,6 @@
       "Ce qui me semble un très fort argument pour prouver que ce qui fait que les bêtes ne parlent point comme nous est qu'elles n'ont aucune pensée, et non point que les organes leur manquent. Et on ne peut dire qu'elles parlent entre elles, mais que nous ne les entendons pas ; car, comme les chiens et quelques autres animaux nous expriment leurs passions, ils nous exprimeraient aussi bien leurs pensées, s'ils en avaient."
     ],
     source: "Descartes, <em>Lettre au marquis de Newcastle</em>, 23 novembre 1646, éd. Adam et Tannery, t. IV, p. 574-575"
-  };
-
-  const BALEINE = ["La baleine est un poisson.", "La baleine est un mammifère.",
-                   "La baleine n'est pas un mammifère.", "La baleine n'est pas un poisson."];
-  const FORMES = {
-    vrai1: "Dire de ce qui appartient à une chose qu'il lui appartient",
-    faux1: "Dire de ce qui appartient à une chose qu'il ne lui appartient pas",
-    vrai2: "Dire de ce qui ne lui appartient pas qu'il ne lui appartient pas",
-    faux2: "Dire de ce qui ne lui appartient pas qu'il lui appartient"
   };
 
   window.SOCRATYS_SUJETS.push({
@@ -368,77 +359,7 @@
         relances: ["Dire vrai, est-ce dire ce que l'on voit, ou dire de ce qui est qu'il est ?"]
       },
       {
-        dit: ["Nommons-nous les choses parce que nous les connaissons, ou les connaissons-nous parce que nous les nommons ?"],
-        reponse: "Ta réponse", id: "nommer"
-      },
-      {
-        dit: ["Si parler, c'est dire d'une chose qu'elle est ce qu'elle est, qu'est-ce que cela implique ?"],
-        reponse: "Ta réponse", id: "implic",
-        motsCles: ["connai", "savoir", "sait", "sache"],
-        relances: ["Pour dire ce qu'est une chose, que faut-il d'abord en avoir ?"]
-      },
-      {
-        bon: "Pour Aristote, la parole affirme ou nie. Affirmer, c'est attribuer une qualité à une chose ; nier, c'est la lui retirer. Il existe quatre formes d'affirmation : dire de ce qui appartient à une chose qu'il lui appartient ; dire de ce qui lui appartient qu'il ne lui appartient pas ; dire de ce qui ne lui appartient pas qu'il ne lui appartient pas ; dire de ce qui ne lui appartient pas qu'il lui appartient.",
-        dit: ["Voici quatre phrases sur une même chose, la baleine.", "Associe à chacune des deux formes d'affirmation vraies l'exemple qui lui correspond."],
-        association: {
-          gauche: [FORMES.vrai1, FORMES.vrai2],
-          droite: BALEINE,
-          solution: [1, 3]
-        },
-        id: "assoVrai",
-        relances: ["Relis la première forme : la phrase doit attribuer à la baleine une qualité qu'elle a vraiment.",
-                   "Pour la seconde forme, cherche une phrase qui retire à la baleine une qualité qu'elle n'a pas."]
-      },
-      {
-        dit: ["Que cela nous dit-il de la maîtrise de la parole ?"],
-        reponse: "Ta réponse", id: "aristVrai",
-        motsCles: ["vrai", "verit", "ce qui est", "reel", "connai", "exact"],
-        relances: ["Ces deux phrases disent-elles la chose telle qu'elle est ?",
-                   "Dire vrai, est-ce une manière de maîtriser sa parole ?"]
-      },
-      {
-        dit: ["Il reste deux formes d'affirmation. Avant de chercher des exemples, définis : laquelle correspond au mensonge, laquelle à l'illusion ?"],
-        association: {
-          gauche: ["Le mensonge", "L'illusion"],
-          droite: [FORMES.faux1, FORMES.faux2],
-          solution: [0, 1]
-        },
-        id: "assoDef",
-        relances: ["Le menteur connaît la vérité : que fait-il de ce qui appartient réellement à la chose ?",
-                   "Celui qui est dans l'illusion croit voir dans la chose quelque chose qui n'y est pas : ajoute-t-il ou retire-t-il une qualité ?"]
-      },
-      {
-        dit: ["Associe maintenant à chacune un exemple."],
-        association: {
-          gauche: ["Le mensonge", "L'illusion"],
-          droite: [BALEINE[0], BALEINE[2]],
-          solution: [1, 0]
-        },
-        id: "assoEx",
-        relances: ["Le mensonge dit de ce qui est comme n'étant pas : quelle phrase retire à la baleine ce qu'elle est vraiment ?"]
-      },
-      {
-        dit: ["Imagine deux personnes qui disent toutes deux « la baleine est un poisson » : l'une sait que c'est faux, l'autre le croit sincèrement. Disent-elles la même chose ? Que faut-il savoir de celui qui parle pour distinguer le mensonge de l'illusion ?"],
-        reponse: "Ta réponse", id: "posture",
-        motsCles: ["sait", "savoir", "intention", "croit", "sincer", "conna", "volont"],
-        relances: ["Le menteur sait-il qu'il dit faux ? Et celui qui est dans l'illusion ?"]
-      },
-      {
-        bon: "Nietzsche cite Swift : « Celui qui énonce un mensonge se rend rarement compte du lourd fardeau qu'il s'impose ; il lui faut en effet, pour soutenir un mensonge, en inventer vingt autres. »",
-        dit: ["Explique cette citation. Le menteur a-t-il la maîtrise de sa parole ?"],
-        reponse: "Ta réponse", id: "menteur",
-        motsCles: ["provisoire", "autres", "invent", "prisonnier", "pas maitre", "contraint", "oblig", "fardeau"],
-        relances: ["Pour soutenir son premier mensonge, que doit faire le menteur ?",
-                   "Est-ce encore lui qui choisit ses paroles, ou son premier mensonge qui les lui dicte ?"]
-      },
-      {
-        dit: ["Et celui qui est dans l'illusion : a-t-il davantage la maîtrise de ses paroles ?"],
-        reponse: "Ta réponse", id: "illusion",
-        relances: ["Sait-il qu'il se trompe ?",
-                   "Ses paroles ont-elles prise sur la réalité ?"]
-      },
-      {
-        dit: ["Supposons maintenant que l'on ne mente pas et que l'on ne se trompe pas. Lis ce texte de Locke."],
+        dit: ["Lis maintenant ce texte de Locke."],
         texte: {
           corps: ["Les mots signifient dans la bouche de chaque homme les idées qu'il a dans l'esprit, et qu'il voudrait exprimer par ces mots-là. Ainsi, un enfant n'ayant remarqué dans le métal qu'il entend nommer Or, rien autre chose qu'une brillante couleur jaune, applique seulement le mot d'or à l'idée qu'il a de cette couleur, et à nulle autre chose ; c'est pourquoi il donne le nom d'or à cette même couleur qu'il voit dans la queue d'un paon.",
                   "Un autre qui est à mieux observer ce métal, ajoute à la couleur jaune une grande pesanteur ; et alors le mot d'or signifie dans sa bouche une idée complexe d'un jaune brillant, et d'une substance fort pesante. Un troisième ajoute à ces qualités la fusibilité, et de là ce nom signifie à son égard un corps brillant, jaune, fusible, et fort pesant. Un autre ajoute la malléabilité. Chacune de ces personnes se sert également du mot d'or, lorsqu'il a besoin d'exprimer l'idée à laquelle il l'applique ; mais il est évident qu'aucun d'eux ne peut l'appliquer qu'à sa propre idée, et qu'il ne saurait le rendre signe d'une idée complexe qu'il n'a pas dans l'esprit."],
@@ -488,11 +409,7 @@
           ["Première signification : dire les choses comme elles nous apparaissent", "argument : {argApp}<br>le bâton dans l'eau : {baton}<br>réfutation : {refutP2a}"],
           ["Platon, les rhéteurs", "thèse : {rheteursThese}<br>le pouvoir de la parole : {rheteursPont}<br>{dissim}"],
           ["Transition", "{tP2}"],
-          ["Seconde signification : dire les choses comme elles sont", "la vérité selon Aristote : {veriteArist}<br>nommer et connaître : {nommer}<br>{implic}"],
-          ["Aristote", "les formes vraies : {assoVrai.0} ; {assoVrai.1}<br>dire vrai : {aristVrai}"],
-          ["Mensonge et illusion", "{assoDef.0} ; {assoDef.1}<br>{posture}"],
-          ["Le menteur (Swift, cité par Nietzsche)", "{menteur}"],
-          ["L'illusion", "{illusion}"],
+          ["Seconde signification : dire les choses comme elles sont", "la vérité selon Aristote : {veriteArist}"],
           ["Locke", "thèse : {lockeThese}<br>l'enfant et l'or : {enfantOr}<br>pour notre question : {lockePont}<br>réfutation : {refutP2b}"],
           ["Conclusion", "{cclP2}"]
         ]
