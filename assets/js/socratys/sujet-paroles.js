@@ -474,14 +474,27 @@
         relances: ["Que faut-il réunir, selon Platon, pour manier le discours « avec art » ?"]
       },
       {
-        dit: ["Que doit connaître l'orateur avant de composer son discours ?"],
+        dit: ["Selon Platon, que faut-il savoir faire pour avoir la maîtrise de sa parole ?"],
         reponse: "Ta réponse", id: "orateur",
-        motsCles: ["ame", "auditoire", "verit", "nature", "celui"],
-        relances: ["Suffit-il, selon Platon, de savoir définir ce dont on parle ? Que faut-il encore connaître ?"]
+        relances: ["Relis le texte : que faut-il savoir faire de la chose dont on parle ? Et que faut-il connaître de celui à qui l'on parle ?"]
       },
       {
-        dit: ["Pourquoi un même discours ne convient-il pas à toute âme ?"],
-        reponse: "Ta réponse", id: "touteAme"
+        dit: ["Que nous apprend ce texte sur la maîtrise de la parole : est-elle donnée, ou relève-t-elle d'un art ?"],
+        reponse: "Ta réponse", id: "touteAme",
+        relances: ["Définir, diviser, connaître la nature de l'âme : cela se reçoit-il de la nature, ou cela s'apprend-il ?"]
+      },
+      {
+        dit: ["Reviens maintenant à la première hypothèse : « la maîtrise de la parole serait naturelle ». Que devient-elle ?",
+              "Formule toi-même la réfutation."],
+        reponse: "Ta réfutation", id: "refutP3a",
+        relances: ["Si tous ont la parole sans en avoir la maîtrise, et si cette maîtrise suppose un art, peut-elle encore être naturelle ?"]
+      },
+      { repere: ["Ta première réfutation", "{refutP3a}"] },
+      {
+        dit: ["Avant de passer à la seconde hypothèse, marque le passage de l'une à l'autre. Complète cette transition."],
+        amorce: "Si la maîtrise de la parole n'est pas donnée par la nature, puisque ___, ne faut-il pas ___ ?",
+        relances: ["Si la maîtrise de la parole ne nous est pas donnée, comment pouvons-nous l'acquérir ?"],
+        id: "tP3"
       },
       {
         repere: ["Seconde hypothèse", "La maîtrise de la parole serait un art."],
@@ -520,7 +533,8 @@
           ["Les deux significations", "Avoir la maîtrise de nos paroles peut signifier soit que cette maîtrise est naturelle, soit qu'elle est artificielle.", true],
           ["Couple naturel / artificiel", "une maîtrise naturelle : {matNat}<br>une maîtrise artificielle : {matArt}"],
           ["Hypothèse du naturel", "ce que cela implique : {argNat}<br>le sophiste : {sophiste}<br>le menteur : {menteurP3}<br>ce que l'on peut en conclure : {conclNat}<br>le nouveau-né : {nouveauNe}"],
-          ["Platon", "thèse : {platonThese}<br>l'orateur : {orateur}<br>toute âme : {touteAme}"],
+          ["Platon", "thèse : {platonThese}<br>ce qu'il faut savoir faire : {orateur}<br>une maîtrise qui relève d'un art : {touteAme}<br>réfutation : {refutP3a}"],
+          ["Transition", "{tP3}"],
           ["Hypothèse de l'art", "{implArt}"],
           ["L'agriculteur", "{metaphore}<br>bien semé : {seme}<br>fécondité : {fecondite}"],
           ["Conclusion", "{ccl3}"]
