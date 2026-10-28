@@ -149,7 +149,7 @@
       },
 
       /* ============ PARTIE I ============ */
-      { section: "Partie I · l'aspect subjectif de la parole" },
+      { section: "Partie I · la maîtrise de nos paroles au sens subjectif" },
       {
         dit: ["Première partie : avons-nous la maîtrise de nos paroles au sens subjectif ?",
               "Si nous avons la maîtrise de nos paroles au sens subjectif, qu'est-ce que cela veut dire ?"],
@@ -284,7 +284,7 @@
       },
 
       /* ============ PARTIE II ============ */
-      { section: "Partie II · le caractère objectif de la parole" },
+      { section: "Partie II · la maîtrise de nos paroles au sens objectif" },
       {
         dit: ["Deuxième partie : avons-nous la maîtrise de nos paroles au sens objectif ?",
               "Si nous avons la maîtrise de nos paroles au sens objectif, qu'est-ce que cela veut dire ?"],
@@ -413,7 +413,7 @@
       },
 
       /* ============ PARTIE III ============ */
-      { section: "Partie III · une maîtrise naturelle ou artificielle ?" },
+      { section: "Partie III · une maîtrise naturelle ou artificielle de la parole ?" },
       {
         dit: ["Troisième partie : la maîtrise de nos paroles est-elle naturelle, ou artificielle ?",
               "Avoir la maîtrise de nos paroles peut signifier soit que cette maîtrise est naturelle, soit qu'elle est artificielle."]

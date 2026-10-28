@@ -133,7 +133,7 @@
       },
 
       /* ============ PARTIE I ============ */
-      { section: "Partie I · la raison au sens théorique" },
+      { section: "Partie I · le bonheur, une affaire de raison au sens théorique ?" },
       {
         dit: ["Première partie : le bonheur est-il une affaire de raison au sens théorique ?",
               "Si le bonheur est une affaire de raison au sens théorique, qu'est-ce que cela veut dire ?"],
@@ -261,7 +261,7 @@
       },
 
       /* ============ PARTIE II ============ */
-      { section: "Partie II · la raison au sens pratique" },
+      { section: "Partie II · le bonheur, une affaire de raison au sens pratique ?" },
       {
         dit: ["Deuxième partie : le bonheur est-il une affaire de raison au sens pratique ?",
               "Si le bonheur est une affaire de raison au sens pratique, qu'est-ce que cela veut dire ?"],
@@ -377,7 +377,7 @@
       },
 
       /* ============ PARTIE III ============ */
-      { section: "Partie III · conséquence ou effet" },
+      { section: "Partie III · le bonheur, une affaire de raison comme conséquence ou comme effet ?" },
       {
         bon: "Une conséquence est nécessairement liée à sa cause : elle en découle. Un effet, lui, est contingent — il peut se produire, ou non, sans lien nécessaire avec ce qui l'a précédé.",
         dit: ["Troisième partie : le bonheur est-il une conséquence de la raison, ou un effet ?",

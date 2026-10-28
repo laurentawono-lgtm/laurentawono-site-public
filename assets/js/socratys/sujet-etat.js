@@ -179,7 +179,7 @@
       },
 
       /* ============ PARTIE I ============ */
-      { section: "Partie I · la justice au sens de la légalité" },
+      { section: "Partie I · est-ce à l'État de faire la justice au sens de la légalité ?" },
       {
         dit: ["Reprends ce que tu as annoncé pour cette partie et pose-le sous la forme d'une question."],
         reponse: "Ta question", id: "p1q",
@@ -345,7 +345,7 @@
       },
 
       /* ============ PARTIE II ============ */
-      { section: "Partie II · la justice au sens de l'égalité" },
+      { section: "Partie II · est-ce à l'État de faire la justice au sens de l'égalité ?" },
       {
         dit: ["Reprends ce que tu as annoncé pour ta deuxième partie et pose-le sous la forme d'une question."],
         reponse: "Ta question", id: "p2q",
@@ -487,7 +487,7 @@
       },
 
       /* ============ PARTIE III ============ */
-      { section: "Partie III · de quel État attendre la justice ?" },
+      { section: "Partie III · quel État peut faire la justice ?" },
       {
         bon: "Le sujet grammatical, ici « l'État », est interrogé dans la troisième partie à l'aide d'un couple philosophique.",
         dit: ["Si c'est à l'État de faire la justice, de quel État s'agit-il ?",
