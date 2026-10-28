@@ -94,11 +94,11 @@
       { section: "Introduction · l'amorce" },
       {
         bon: B.amorce,
-        dit: ["Commençons par l'amorce de ton introduction.",
-              "Ce sujet associe l'État (le sujet grammatical) et la justice (le prédicat). Rédige une amorce qui les dissocie : montre que la justice est d'abord un sentiment, alors que l'État est une institution conventionnelle.",
-              "Tu peux partir d'un exemple : l'enfant qui trouve injuste de recevoir une plus petite part du gâteau."],
+        dit: ["Commençons par l'amorce de ton introduction. Rédige-la."],
         reponse: "Ton amorce", id: "amorce",
         relances: [
+          "Dans ce sujet, l'État est le sujet grammatical et « faire la justice » est le prédicat : la question les associe, puisqu'elle suppose que ce serait à l'État de faire la justice. Ton amorce doit donc les dissocier, par exemple en montrant que la justice est d'abord un sentiment, alors que l'État est une institution conventionnelle. Dans ta copie, n'écris pas « sujet grammatical » ni « prédicat ».",
+          "Tu peux partir d'un exemple : l'enfant qui trouve injuste de recevoir une plus petite part du gâteau.",
           "L'enfant a-t-il besoin d'une loi ou d'un tribunal pour trouver cela injuste ? Que t'apprend cet exemple sur la justice ?",
           "L'État, lui, n'existe pas par nature : les hommes l'ont institué par convention. Comment peux-tu opposer ce sentiment de justice et cette institution ?"
         ]
