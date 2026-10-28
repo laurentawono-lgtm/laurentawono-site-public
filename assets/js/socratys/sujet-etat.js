@@ -9,10 +9,10 @@
   /* introduction assemblée à partir des réponses de l'élève, qu'il peut ensuite modifier */
   const INTRO =
     "{amorce} Est-ce à l'État de faire la justice ? La justice peut s'entendre en deux sens, que distingue le couple {couple}. Au sens de la légalité, la justice se définit comme {defs2.0|defs.0} ; on l'oppose alors à {defs.1}. " +
-    "Au sens de l'égalité, elle se définit comme {defs2.1|defs.3} ; on l'oppose alors à {defs.4}.\n\n" +
+    "Au sens de l'égalité, elle se définit comme {defs2.1|defs.2} ; on l'oppose alors à {defs.3}.\n\n" +
     "Se demander si c'est à l'État de faire la justice, revient à se demander s'il doit la faire comme {reform.0}, ou comme {reform.1}. " +
-    "Si c'est à l'État de faire la justice au sens de la légalité, alors {probl.0}, toutefois {probl.1}. " +
-    "Si c'est à l'État de faire la justice au sens de l'égalité, alors {probl.2}, toutefois {probl.3}.\n\n" +
+    "Si c'est à l'État de faire la justice au sens de la légalité, alors {probl.0}, toutefois {problemes.0}. " +
+    "Si c'est à l'État de faire la justice au sens de l'égalité, alors {probl.1}, toutefois {problemes.1}.\n\n" +
     "Dans une première partie, nous nous demanderons ce qu'implique {plan.0}. Dans une deuxième partie, nous nous demanderons ce que suppose {plan.1}. " +
     "Et dans une troisième partie, nous nous demanderons {plan.2}.";
 
@@ -76,15 +76,15 @@
 
     fiche: [
       ["Amorce", "{amorce}"],
-      ["Sujet grammatical", "{sujetGram}"],
+      ["Sujet grammatical", "l'État"],
       ["Prédicat", "faire la justice"],
-      ["Première définition de « faire la justice »", "{predicat}"],
       ["Couple philosophique", "{couple}"],
       ["Justice-légalité", "{defs2.0|defs.0}"],
-      ["Justice-égalité", "{defs2.1|defs.3}"],
+      ["Justice-égalité", "{defs2.1|defs.2}"],
       ["Reformulation", "Se demander si c'est à l'État de faire la justice, revient à se demander s'il doit la faire comme {reform.0}, ou comme {reform.1}."],
-      ["Première hypothèse", "Si c'est à l'État de faire la justice au sens de la légalité, alors {probl.0}, toutefois {probl.1}"],
-      ["Seconde hypothèse", "Si c'est à l'État de faire la justice au sens de l'égalité, alors {probl.2}, toutefois {probl.3}"],
+      ["Première hypothèse", "Si c'est à l'État de faire la justice au sens de la légalité, alors {probl.0}"],
+      ["Seconde hypothèse", "Si c'est à l'État de faire la justice au sens de l'égalité, alors {probl.1}"],
+      ["Problèmes", "toutefois {problemes.0} — toutefois {problemes.1}"],
       ["Plan", "I. {plan.0} — II. {plan.1} — III. {plan.2}"],
       ["Couple de la partie III", "{couple3}"]
     ],
@@ -106,22 +106,8 @@
 
       { section: "Introduction · le sujet" },
       {
-        bon: B.sujet,
-        dit: ["Comment peux-tu définir « faire la justice » ?"],
-        reponse: "Ta définition", id: "predicat",
-        relances: ["Dans ce sujet, c'est « faire la justice » qui joue le rôle de prédicat : c'est la première expression que tu vas définir. Dans ton introduction, tu n'écriras pas « le prédicat est… », tu définiras directement ce que signifie faire la justice.",
-                   "Quand dit-on qu'une décision ou un partage est juste ? Qu'est-ce qui le distingue d'une décision ou d'un partage injuste ?"]
-      },
-      {
-        dit: ["Et quel est le sujet grammatical de cette question ?"],
-        reponse: "Ta réponse", id: "sujetGram",
-        motsCles: ["etat"],
-        relances: [window.SOCRATYS.AIDE_SUJETGRAM, "Quel est le sujet grammatical ?"]
-      },
-      {
         bon: B.couple,
-        dit: ["Pour bien cerner ce que signifie faire la justice, il faut définir l'expression « faire la justice » à partir d'un couple philosophique.",
-              "Avec quel couple philosophique peux-tu la définir ?"],
+        dit: ["Avec quel couple philosophique peux-tu t'aider pour définir la justice ?"],
         choix: [{ l: "légalité / égalité", bon: true }, { l: "subjectif / objectif" }, { l: "individuel / collectif" }],
         id: "couple",
         relances: [
@@ -134,9 +120,9 @@
       { section: "Introduction · définir et problématiser" },
       {
         dit: ["Définis maintenant la justice à partir de ce couple."],
-        champs: ["Au sens de la légalité, la justice peut se définir comme…", "On l'oppose alors à…", "Peux-tu donner un exemple ?",
-                 "Au sens de l'égalité, la justice peut se définir comme…", "On l'oppose alors à…", "Peux-tu donner un exemple ?"],
-        id: "defs", requis: [0, 1, 3, 4]
+        champs: ["Au sens de la légalité, la justice peut se définir comme…", "On l'oppose alors à…",
+                 "Au sens de l'égalité, la justice peut se définir comme…", "On l'oppose alors à…"],
+        id: "defs"
       },
       {
         bon: B.distinctes,
@@ -145,33 +131,42 @@
         id: "distinctes"
       },
       {
-        dit: ["Repars du sens général de chaque terme du couple, indépendamment de la justice : que veut dire « légalité » ? Que veut dire « égalité » ?",
-              "Réécris ensuite tes deux définitions."],
+        dit: ["Réécris tes deux définitions pour mieux les distinguer."],
+        relances: ["Pars du sens ordinaire de chaque terme du couple, indépendamment de la justice : dans la vie de tous les jours, que veut dire « légalité » ? Que veut dire « égalité » ? Applique ensuite chacun de ces sens à la justice."],
         champs: ["Au sens de la légalité, la justice peut se définir comme…", "Au sens de l'égalité, la justice peut se définir comme…"],
         id: "defs2"
       },
       {
         ancre: "reformulation",
-        dit: ["Reformule maintenant le sujet : remplace le mot « justice » par les deux sens que tu as obtenus.",
+        bon: B.reformulation,
+        dit: ["Reformule maintenant le sujet à partir de tes deux définitions.",
               "Se demander si c'est à l'État de faire la justice, revient à se demander s'il doit la faire comme… ou comme…"],
         champs: ["…s'il doit la faire comme", "…ou comme"],
         id: "reform"
       },
       {
-        dit: ["Formulons maintenant deux hypothèses, à partir de ta reformulation.",
-              "Chacune de ces deux hypothèses doit soulever un problème, qui s'énonce sous la forme : « Si…, alors…, toutefois… »."],
-        champs: ["Si c'est à l'État de faire la justice au sens de la légalité, alors…", "Toutefois…",
-                 "Si c'est à l'État de faire la justice au sens de l'égalité, alors…", "Toutefois…"],
+        dit: ["Formulons maintenant deux hypothèses, à partir de ta reformulation."],
+        champs: ["Si c'est à l'État de faire la justice au sens de la légalité, alors…",
+                 "Si c'est à l'État de faire la justice au sens de l'égalité, alors…"],
+        relances: ["Si la justice est ce qui est conforme à la loi, quel rôle revient à l'État ? Et si elle consiste à corriger les inégalités, que doit-il faire ?"],
         id: "probl"
       },
-      { dit: [window.SOCRATYS.SYNTHESE_PROBLEMES] },
       {
-        bon: "Les deux hypothèses te fournissent déjà les deux premières parties. La troisième interrogera l'État à partir d'un nouveau couple philosophique : fait / droit.",
+        bon: B.problematisation,
+        dit: ["Ces deux hypothèses soulèvent chacune un problème. Lequel ?"],
+        champs: ["Si c'est à l'État de faire la justice au sens de la légalité, alors {probl.0}, toutefois…",
+                 "Si c'est à l'État de faire la justice au sens de l'égalité, alors {probl.1}, toutefois…"],
+        relances: ["Toute loi est-elle juste ? Et l'État peut-il rendre les hommes égaux sans porter atteinte à leur liberté ?"],
+        id: "problemes"
+      },
+      {
+        bon: "Les deux hypothèses indiquent déjà le plan : le premier problème sera traité dans la première partie, et le deuxième problème sera traité dans la deuxième partie.",
         dit: ["Annonce maintenant ton plan."],
         champs: ["Dans une première partie, nous nous demanderons ce qu'implique…",
                  "Dans une deuxième partie, nous nous demanderons ce que suppose…",
                  "Et dans une troisième partie, nous nous demanderons…"],
-        id: "plan"
+        id: "plan",
+        relances: ["Si l'analyse du prédicat, faire la justice, te donne les deux premières parties, c'est celle du sujet grammatical, l'État, qui te donne la troisième : on questionne alors l'État à l'aide d'un autre couple philosophique. Tu peux par exemple questionner l'État à partir du couple fait / droit : de quel État peut-on attendre la justice ?"]
       },
       {
         redaction: "intro", titre: "Ton introduction", modele: INTRO,
