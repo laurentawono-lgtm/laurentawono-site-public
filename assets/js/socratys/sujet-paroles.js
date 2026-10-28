@@ -433,10 +433,10 @@
       },
       {
         repere: ["Première hypothèse", "La maîtrise de la parole serait naturelle."],
-        dit: ["Si la maîtrise de la parole est naturelle, quel argument peux-tu tirer du texte de Descartes, que tu as lu en première partie ?"],
-        reponse: "Ton argument", id: "argNat",
-        motsCles: ["homme seul", "seul", "pens", "nature", "animal", "bete", "propre"],
-        relances: ["Selon Descartes, la parole est-elle propre à tous les hommes, même au plus imparfait ?"]
+        dit: ["Si la maîtrise de la parole est naturelle, qu'est-ce que cela implique ?"],
+        reponse: "Ta réponse", id: "argNat",
+        relances: ["Si cette maîtrise était naturelle, tous les hommes ne la posséderaient-ils pas, dès la naissance, sans avoir à l'apprendre ?",
+                   "Souviens-toi de Descartes : la parole convient à tous les hommes, même au plus imparfait. Qu'en serait-il alors de sa maîtrise ?"]
       },
       {
         dit: ["Cette disposition naturelle suffit-elle à en avoir la maîtrise ? Un nouveau-né a-t-il, comme tout homme, la faculté de parler ? En a-t-il pour autant la maîtrise ?"],
@@ -504,7 +504,7 @@
           ["Question de la partie", "La maîtrise de nos paroles est-elle naturelle, ou artificielle ?", true],
           ["Les deux significations", "Avoir la maîtrise de nos paroles peut signifier soit que cette maîtrise est naturelle, soit qu'elle est artificielle.", true],
           ["Couple naturel / artificiel", "une maîtrise naturelle : {matNat}<br>une maîtrise artificielle : {matArt}"],
-          ["Hypothèse du naturel", "argument tiré de Descartes : {argNat}<br>le nouveau-né : {nouveauNe}"],
+          ["Hypothèse du naturel", "ce que cela implique : {argNat}<br>le nouveau-né : {nouveauNe}"],
           ["Platon", "thèse : {platonThese}<br>l'orateur : {orateur}<br>toute âme : {touteAme}"],
           ["Hypothèse de l'art", "{implArt}"],
           ["L'agriculteur", "{metaphore}<br>bien semé : {seme}<br>fécondité : {fecondite}"],
