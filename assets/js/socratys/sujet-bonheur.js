@@ -51,7 +51,7 @@
         dit: ["Commençons par l'amorce de ton introduction. Rédige-la."],
         reponse: "Ton amorce", id: "amorce",
         relances: [
-          "Dans ce sujet, le bonheur est le sujet grammatical et la raison est le prédicat : la question les associe, puisqu'elle fait du bonheur une affaire de raison. Ton amorce doit donc les dissocier. Dans ta copie, n'écris pas « sujet grammatical » ni « prédicat » : nomme directement le bonheur et la raison.",
+          "Dans ce sujet, le bonheur est le sujet grammatical et la raison est le prédicat : la question les associe, puisqu'elle fait du bonheur une affaire de raison. Ton amorce doit donc les dissocier. Dans ta copie, n'écris pas « sujet grammatical » ni « prédicat ».",
           "Dissocier, c'est séparer : cherche une opinion courante, une situation ou un exemple où le bonheur semble n'avoir rien à voir avec la raison.",
           "Pense à ce que l'on dit de l'amoureux, de l'enfant qui joue, ou de celui qui « ne se pose pas de questions » : est-ce grâce à leur raison qu'ils sont heureux ?"
         ]
