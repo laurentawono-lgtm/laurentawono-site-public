@@ -370,18 +370,6 @@
         relances: ["Selon Locke, que signifient les mots dans la bouche de chaque homme ?"]
       },
       {
-        dit: ["Pourquoi l'enfant appelle-t-il « or » la couleur de la queue d'un paon ? Son idée de l'or est-elle complète ?"],
-        reponse: "Ta réponse", id: "enfantOr",
-        motsCles: ["couleur", "jaune", "idee", "seulement", "incomplet", "partiel"],
-        relances: ["Qu'a-t-il remarqué, lui, dans ce métal ?"]
-      },
-      {
-        dit: ["Dans le texte, plusieurs personnes emploient le même mot « or ». Ont-elles la même idée ? Que nous apprend cette différence ?"],
-        reponse: "Ta réponse", id: "ideesOr",
-        relances: ["Relis le texte : qu'ajoute chacun, l'un après l'autre, à l'idée de l'or ?",
-                   "Celui qui connaît la couleur, le poids, la fusibilité et la malléabilité a-t-il, lui, une idée complète de l'or ?"]
-      },
-      {
         dit: ["En quoi le texte de Locke montre-t-il qu'il est difficile de maîtriser sa parole ? Justifie ta réponse en restant sur le texte."],
         reponse: "Ta réponse", id: "lockePont",
         relances: ["Relis la dernière phrase : chacun peut-il appliquer le mot « or » à une autre idée que la sienne ?",
@@ -412,7 +400,7 @@
           ["Platon, les rhéteurs", "thèse : {rheteursThese}<br>le pouvoir de la parole : {rheteursPont}"],
           ["Transition", "{tP2}"],
           ["Seconde signification : dire les choses comme elles sont", "la vérité selon Aristote : {veriteArist}"],
-          ["Locke", "thèse : {lockeThese}<br>l'enfant et l'or : {enfantOr}<br>les idées de l'or : {ideesOr}<br>la difficulté de maîtriser sa parole : {lockePont}<br>réfutation : {refutP2b}"],
+          ["Locke", "thèse : {lockeThese}<br>la difficulté de maîtriser sa parole : {lockePont}<br>réfutation : {refutP2b}"],
           ["Conclusion", "{cclP2}"]
         ]
       },
