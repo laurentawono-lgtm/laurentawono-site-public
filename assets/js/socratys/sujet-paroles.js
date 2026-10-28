@@ -349,11 +349,6 @@
         relances: ["Disent-ils les choses comme elles sont, ou comme ils veulent qu'elles paraissent ?"]
       },
       {
-        bon: "Les figures de style — l'euphémisme, la métaphore, la métonymie, le superlatif — permettent de dire les choses autrement qu'elles ne sont.",
-        dit: ["Donne un exemple de parole qui dit les choses autrement qu'elles ne sont."],
-        reponse: "Ton exemple", id: "exFigure"
-      },
-      {
         dit: ["Si la parole peut dissimuler, faut-il la définir comme une dissimulatrice ? Celui qui parle cherche-t-il d'abord à tromper, ou à se faire comprendre ?"],
         reponse: "Ta réponse", id: "dissim"
       },
@@ -485,7 +480,7 @@
           ["Ce que veut dire l'hypothèse", "{p2q}"],
           ["Significations", "soit que nous disons les choses {signifP2.0} ; soit que nous les disons {signifP2.1}"],
           ["Première signification : dire les choses comme elles nous apparaissent", "argument : {argApp}<br>le bâton dans l'eau : {baton}<br>réfutation : {refutP2a}"],
-          ["Platon, les rhéteurs", "thèse : {rheteursThese}<br>le pouvoir de la parole : {rheteursPont}<br>exemple : {exFigure}<br>{dissim}"],
+          ["Platon, les rhéteurs", "thèse : {rheteursThese}<br>le pouvoir de la parole : {rheteursPont}<br>{dissim}"],
           ["Transition", "{tP2}"],
           ["Seconde signification : dire les choses comme elles sont", "nommer et connaître : {nommer}<br>{implic}"],
           ["Aristote", "les formes vraies : {assoVrai.0} ; {assoVrai.1}<br>dire vrai : {aristVrai}"],
