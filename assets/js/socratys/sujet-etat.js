@@ -166,7 +166,7 @@
                  "Dans une deuxième partie, nous nous demanderons ce que suppose…",
                  "Et dans une troisième partie, nous nous demanderons…"],
         id: "plan",
-        relances: ["Si l'analyse du prédicat, faire la justice, te donne les deux premières parties, c'est celle du sujet grammatical, l'État, qui te donne la troisième : on questionne alors l'État à l'aide d'un autre couple philosophique. Tu peux par exemple questionner l'État à partir du couple fait / droit : de quel État peut-on attendre la justice ?"]
+        relances: ["Si l'analyse du prédicat, faire la justice, te donne les deux premières parties, c'est celle du sujet grammatical, l'État, qui te donne la troisième : on questionne alors l'État à l'aide d'un autre couple philosophique. Tu peux par exemple questionner l'État à partir du couple fait / droit, ou du couple nature / civil (l'état de nature et l'état civil) : de quel État peut-on attendre la justice ?"]
       },
       {
         redaction: "intro", titre: "Ton introduction", modele: INTRO,
