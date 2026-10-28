@@ -454,12 +454,6 @@
         relances: ["Tous les hommes ont la parole : en font-ils tous un bon usage ? La maîtrise de la parole est-elle alors donnée à tous ?"]
       },
       {
-        dit: ["Cette disposition naturelle suffit-elle à en avoir la maîtrise ? Un nouveau-né a-t-il, comme tout homme, la faculté de parler ? En a-t-il pour autant la maîtrise ?"],
-        reponse: "Ta réponse", id: "nouveauNe",
-        motsCles: ["non", "appren", "faculte", "depass", "suffit pas", "pas encore"],
-        relances: ["Que manque-t-il au nouveau-né, qui a pourtant la faculté de parler ?"]
-      },
-      {
         dit: ["Lis maintenant ce texte de Platon."],
         texte: {
           corps: ["Tant qu'on ne sera pas capable de définir toute chose en elle-même ; tant que, après avoir défini cette chose, on ne saura pas, à l'inverse, la diviser selon ses espèces jusqu'à ce qu'on atteigne l'indivisible ; tant que, après avoir selon la même méthode analysé la nature de l'âme et découvert l'espèce de discours qui correspond à chaque nature, on ne disposera et on n'organisera pas son discours en conséquence – en offrant à une âme complexe des discours complexes et qui correspondent exactement à ce qu'elle demande, et des discours simples à une âme simple –, on restera incapable de manier le genre oratoire avec autant d'art que sa nature le permet, que ce soit pour enseigner ou pour persuader."],
@@ -532,7 +526,7 @@
           ["Question de la partie", "La maîtrise de nos paroles est-elle naturelle, ou artificielle ?", true],
           ["Les deux significations", "Avoir la maîtrise de nos paroles peut signifier soit que cette maîtrise est naturelle, soit qu'elle est artificielle.", true],
           ["Couple naturel / artificiel", "une maîtrise naturelle : {matNat}<br>une maîtrise artificielle : {matArt}"],
-          ["Hypothèse du naturel", "ce que cela implique : {argNat}<br>le sophiste : {sophiste}<br>le menteur : {menteurP3}<br>ce que l'on peut en conclure : {conclNat}<br>le nouveau-né : {nouveauNe}"],
+          ["Hypothèse du naturel", "ce que cela implique : {argNat}<br>le sophiste : {sophiste}<br>le menteur : {menteurP3}<br>ce que l'on peut en conclure : {conclNat}"],
           ["Platon", "thèse : {platonThese}<br>ce qu'il faut savoir faire : {orateur}<br>une maîtrise qui relève d'un art : {touteAme}<br>réfutation : {refutP3a}"],
           ["Transition", "{tP3}"],
           ["Hypothèse de l'art", "{implArt}"],
