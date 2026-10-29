@@ -18,18 +18,6 @@
     "Et dans une troisième partie, nous nous demanderons {plan.2}.";
 
   /* deuxième et troisième parties, conclusion : même principe */
-  const PARTIE2 =
-    "{p2q}\n\n" +
-    "La justice distributive porte sur la répartition des richesses, des charges et des avantages. Mais que faut-il égaliser ? {egaliser}. " +
-    "L'égalité peut se définir comme {egaliteDef} ; elle s'oppose à {egaliteOppose} (par exemple, {egaliteEx}). " +
-    "La question devient alors : {p2ref}. Aristote montre qu'il serait aussi injuste de donner des parts égales à des personnes inégales " +
-    "que des parts inégales à des personnes égales. L'État doit alors {aristote}.\n\n" +
-    "L'égalité en droit ne tient pas compte des différences de situation. Or les individus à qui s'applique cette égalité ne vivent pas sous les mêmes conditions, ce que confirme la lecture du texte de Marx. " +
-    "Marx soutient que {marxThese}. En effet, {marxMesure}. Ce que Marx reproche au droit, c'est que {risque}. La contestation du droit induit-elle celle de l'État ? {marxEtat}.\n\n" +
-    "Pour surmonter cette difficulté, Rawls propose d'abord le voile d'ignorance : {voile}. Par exemple, {voileEx}.\n\n" +
-    "On peut aussi tenir compte des différences pour les corriger. Accorder une aide supplémentaire à un élève défavorisé, est-ce lui donner un privilège ? {aide}. " +
-    "C'est le principe de différence de Rawls, dont on trouve un exemple dans {difference}. {rawlsPont}.\n\n" +
-    "{cclP2}. {conclNiveau}.";
   const PARTIE3 =
     "Si c'est à l'État de faire la justice, de quel État s'agit-il ?\n\n" +
     "Rousseau soutient que {rous8These}. Il oppose l'état de nature ({rous8Termes.0}) à l'état civil ({rous8Termes.1}) : {rous8FaitDroit}. " +
@@ -51,7 +39,7 @@
       ["Introduction", "red_intro", INTRO],
       ["Première partie", "red_p1"],
       ["Transition", "t1"],
-      ["Deuxième partie", "red_p2", PARTIE2],
+      ["Deuxième partie", "red_p2"],
       ["Transition", "t2"],
       ["Troisième partie", "red_p3", PARTIE3],
       ["Conclusion", "red_ccl", CONCLUSION]
@@ -302,55 +290,56 @@
       /* ============ PARTIE II ============ */
       { section: "Partie II · est-ce à l'État de faire la justice au sens de l'égalité ?" },
       {
-        dit: ["Reprends ce que tu as annoncé pour ta deuxième partie et pose-le sous la forme d'une question."],
-        reponse: "Ta question", id: "p2q",
-        motsCles: ["?"],
-        relances: ["Si la justice, c'est l'égalité, que veut dire « faire la justice » pour l'État ? Écris-le sous la forme d'une question."]
+        dit: ["Deuxième partie : est-ce à l'État de faire la justice au sens de l'égalité ?",
+              "Si c'est à l'État de faire la justice au sens de l'égalité, qu'est-ce que cela veut dire ?"],
+        reponse: "Ta réponse", id: "p2q",
+        relances: ["Il faut trouver deux significations à cette hypothèse. Concentre-toi sur le mot « égalité » : en quoi des hommes peuvent-ils être égaux ?",
+                   "Être égaux devant la loi, est-ce la même chose qu'avoir les mêmes conditions de vie ?"]
       },
       {
-        bon: "La justice distributive porte sur la répartition des richesses, des charges et des avantages entre les membres d'une communauté.",
-        dit: ["Puisque cette répartition concerne à la fois des personnes et des biens, que faut-il égaliser ? Faut-il donner à tous une part égale, ou à chacun une part différente ?"],
-        reponse: "Ta réponse", id: "egaliser"
+        dit: ["Concentre-toi maintenant sur les deux significations que tu viens de trouver. Complète :"],
+        champs: ["Si c'est à l'État de faire la justice au sens de l'égalité, cela peut signifier deux choses : soit qu'il doit…",
+                 "…soit qu'il doit…"],
+        relances: ["La loi s'applique-t-elle de la même façon au riche et au pauvre ? Est-ce suffisant pour qu'ils soient égaux ?",
+                   "L'État doit-il seulement traiter chacun de la même manière, ou aussi réduire les écarts de richesse et de conditions ?"],
+        id: "signifP2"
       },
       {
-        dit: ["Comment peux-tu définir l'égalité ?"],
-        reponse: "Ta définition", id: "egaliteDef",
-        motsCles: ["meme", "pareil", "identique", "equivalen", "critere", "mesure", "traite", "autant"],
-        relances: ["Quand dit-on que deux choses, ou deux personnes, sont égales ?",
-                   "Être égaux, est-ce recevoir la même chose, ou être mesurés selon le même critère ?"]
+        repere: ["Première signification", "Faire la justice au sens de l'égalité, ce serait traiter tous les citoyens de la même manière : c'est l'égalité en droit."],
+        dit: ["Pourquoi peut-on soutenir que l'État fait la justice en traitant tous les citoyens de la même manière ?"],
+        reponse: "Ton argument", id: "argDroit",
+        relances: ["Que serait une loi qui ne s'appliquerait pas de la même façon à tous ?",
+                   "Pense aux privilèges de la noblesse sous l'Ancien Régime : qu'a-t-on voulu abolir en 1789 ?"]
       },
       {
-        dit: ["À quoi l'égalité s'oppose-t-elle ?"],
-        reponse: "Ta réponse", id: "egaliteOppose",
-        motsCles: ["inegal", "privilege", "discrimin", "injust", "hierarch", "differen"],
-        relances: ["Comment appelle-t-on la situation où certains ont plus que d'autres sans raison ?"]
+        dit: ["Examinons la validité de cette hypothèse. À un examen, tous les candidats disposent du même temps, y compris un élève dyslexique ou malvoyant. La règle est la même pour tous : est-elle juste ?"],
+        reponse: "Ta réponse", id: "examen",
+        relances: ["Tous les candidats partent-ils avec les mêmes chances ?"]
       },
       {
-        dit: ["Peux-tu donner un exemple ?"],
-        reponse: "Ton exemple", id: "egaliteEx"
+        dit: ["Et si chaque citoyen payait la même somme d'impôt, qu'il soit riche ou pauvre : serait-ce juste ?"],
+        reponse: "Ta réponse", id: "impot",
+        relances: ["Cette somme pèse-t-elle autant pour celui qui gagne peu que pour celui qui gagne beaucoup ?"]
       },
       {
-        dit: ["Peux-tu reformuler la question avec ce nouveau sens de la justice ?"],
-        reponse: "Ta reformulation", id: "p2ref",
-        motsCles: ["egal", "inegal", "meme", "repart", "distribu", "corrig"],
-        relances: ["Si faire la justice, c'est établir l'égalité, que se demande-t-on de l'État ?"]
+        dit: ["Reviens maintenant à la première signification : « faire la justice au sens de l'égalité, ce serait traiter tous les citoyens de la même manière ». Que devient-elle, au regard de l'examen et de l'impôt ?",
+              "Formule toi-même la réfutation."],
+        reponse: "Ta réfutation", id: "refutP2a",
+        relances: ["Une même règle appliquée à des personnes qui ne sont pas dans la même situation produit-elle l'égalité ?",
+                   "Aristote disait qu'il serait aussi injuste de donner des parts égales à des personnes inégales que des parts inégales à des personnes égales. Qu'en conclus-tu ?"]
+      },
+      { repere: ["Ta première réfutation", "{refutP2a}"] },
+      {
+        dit: ["Avant de passer à la seconde signification, marque le passage de l'une à l'autre. Complète cette transition."],
+        amorce: "Si l'égalité en droit ne suffit pas à faire la justice, puisque ___, l'État ne doit-il pas plutôt ___ ?",
+        relances: ["Si une même règle laisse subsister les inégalités de situation, que devrait faire l'État de ces inégalités ?"],
+        id: "tP2"
       },
       {
-        bon: "Selon Aristote (<em>Éthique à Nicomaque</em>, V), il serait aussi injuste d'accorder des parts égales à des personnes inégales que d'attribuer des parts inégales à des personnes égales.",
-        dit: ["En considérant la définition aristotélicienne de la justice, quel sens faut-il donner à l'État ?"],
-        reponse: "Ta réponse", id: "aristote",
-        motsCles: ["conten", "limit", "veill", "aggrav", "propor", "repart", "corrig", "regle", "distribu", "arbitr", "equilibr"],
-        relances: ["Selon Aristote, la justice consiste à répartir selon une règle : qui doit fixer cette règle et la faire respecter ?",
-                   "Si les personnes sont inégales, que doit faire l'État pour que ces inégalités ne deviennent pas injustes ?"]
+        repere: ["Seconde signification", "Faire la justice au sens de l'égalité, ce serait corriger les inégalités de fait : réduire les écarts de richesse et de conditions entre les citoyens."]
       },
       {
-        bon: "L'égalité en droit signifie que tous sont reconnus comme sujets de droit, sans que leur naissance, leur fortune ou leur position sociale leur confèrent une dignité supérieure : les différences de situation n'autorisent pas une différence de traitement de la part de l'État."
-      },
-      {
-        bon: "Les individus à qui s'applique cette égalité ne vivent pas sous les mêmes conditions. C'est une hypothèse que la lecture du texte de Marx va permettre de confirmer."
-      },
-      {
-        dit: ["Lis ce texte de Marx."],
+        dit: ["Pour examiner ce second sens, lis ce texte de Marx."],
         texte: {
           corps: ["Ce droit égal est un droit inégal pour un travail inégal. Il ne reconnaît aucune distinction de classe, puisque tout homme n'est qu'un travailleur comme tous les autres, mais il reconnaît tacitement comme un privilège de nature le talent inégal des travailleurs et, par suite, l'inégalité de leurs capacités productives. C'est donc dans sa teneur un droit de l'inégalité comme tout droit. Par sa nature, le droit ne peut consister que dans l'emploi d'une mesure égale pour tous ; mais les individus inégaux (ils ne seraient pas distincts s'ils n'étaient pas inégaux) ne peuvent être mesurés à une mesure égale qu'autant qu'on les considère d'un même point de vue, qu'on les regarde sous un aspect unique et déterminé."],
           source: "Marx, <em>Critique du programme de Gotha</em>, 1875, partie I"
@@ -371,19 +360,11 @@
                    "Sous quel aspect le droit regarde-t-il les individus, et que laisse-t-il de côté ?"]
       },
       {
-        dit: ["Que reproche Marx au concept de droit ?"],
-        reponse: "Ta réponse", id: "risque",
-        motsCles: ["inegal", "mesure", "aspect", "point de vue", "unique", "abstrait", "talent", "capacit", "privilege", "differen"],
-        relances: ["Relis cette phrase : « C'est donc dans sa teneur un droit de l'inégalité comme tout droit. » Que veut dire Marx ?",
-                   "En appliquant une mesure égale à des individus inégaux, le droit fait-il disparaître leurs inégalités, ou les consacre-t-il ?"]
-      },
-      {
-        bon: "Pour Marx, le droit et l'État sont liés à la domination d'une classe sur une autre. Dans une société sans classes, l'État serait appelé à disparaître ; Engels parle de son « dépérissement ».",
-        dit: ["La contestation du droit induit-elle celle de l'État selon Marx ? Qu'en penses-tu ?"],
-        reponse: "Ta réponse", id: "marxEtat",
-        motsCles: ["oui", "instrument", "classe", "domin", "dispar", "deperi", "inutile", "conteste"],
-        relances: ["Si le droit consacre l'inégalité, que penser de l'État qui institue ce droit ?",
-                   "Selon Marx, l'État aurait-il encore une raison d'être dans une société sans classes ?"]
+        dit: ["Selon Marx, que faudrait-il prendre en compte pour que la justice soit réellement égale ?"],
+        reponse: "Ta réponse", id: "marxFait",
+        motsCles: ["inegal", "differen", "talent", "capacit", "situation", "condition", "besoin", "fait", "distinct"],
+        relances: ["Relis la fin du texte : que laisse de côté le droit lorsqu'il regarde les individus « sous un aspect unique et déterminé » ?",
+                   "Les individus sont-ils réellement égaux ? Que faudrait-il alors corriger ?"]
       },
       {
         bon: "Rawls (<em>Théorie de la justice</em>, 1971) imagine des personnes chargées de choisir les principes de leur société sans connaître la place qu'elles y occuperont : elles ignorent leur origine sociale, leur fortune et leurs aptitudes. C'est ce qu'il appelle le voile d'ignorance.",
@@ -411,33 +392,37 @@
         relances: ["Pense aux mesures prises pour les élèves en difficulté, ou pour les personnes en situation de handicap."]
       },
       {
-        dit: ["Exprime la difficulté qu'il y a à concilier l'égalité en droit et les inégalités de fait."],
-        reponse: "Ta réponse", id: "rawlsPont",
-        motsCles: ["concili", "uniforme", "renforc", "corrig", "difficile", "contradi", "tension", "meme regle", "traite", "different"],
-        relances: ["Une règle identique pour tous corrige-t-elle les inégalités de fait, ou peut-elle les renforcer ?",
-                   "Et si l'on traite différemment les personnes pour corriger ces inégalités, respecte-t-on encore l'égalité en droit ?"]
-      },
-      {
-        repere: ["Le chemin parcouru",
-          "Que faut-il égaliser ? {aristote}<br>Le risque de l'égalité de droit : {risque}<br>Le voile d'ignorance : {voile}<br>Le principe de différence : {rawlsPont}"],
-        dit: ["Quels obstacles y a-t-il pour l'État à faire la justice au sens de l'égalité ?"],
-        reponse: "Ta conclusion", id: "cclP2",
-        motsCles: ["contrain", "liberte", "libre", "demotiv", "motiv", "effort", "merite", "impose", "coerci", "autoritaire", "uniformis", "assist"],
+        dit: ["Reviens maintenant à la seconde signification : « faire la justice au sens de l'égalité, ce serait corriger les inégalités de fait ». Si l'État devait corriger toutes les inégalités de fait, que deviendraient la liberté et l'effort de chacun ?",
+              "Formule toi-même la réfutation."],
+        reponse: "Ta réfutation", id: "refutP2b",
         relances: ["Pour imposer l'égalité, que devrait faire l'État ? Qu'en serait-il alors de la liberté des individus ?",
                    "Si chacun reçoit la même part quoi qu'il fasse, que devient l'envie de faire des efforts ?"]
       },
+      { repere: ["Ta seconde réfutation", "{refutP2b}"] },
       {
-        dit: ["Que peut-on en conclure à ce niveau de la réflexion ?"],
-        reponse: "Ta réponse", id: "conclNiveau",
-        relances: ["Ni la légalité ni l'égalité ne suffisent à garantir la justice : que faut-il alors interroger ?"]
+        repere: ["Le chemin parcouru",
+          "Première signification, l'égalité en droit. Ta réfutation : {refutP2a}<br>Seconde signification, corriger les inégalités de fait. Ta réfutation : {refutP2b}"],
+        dit: ["Formule maintenant la conclusion de ta deuxième partie : au terme de l'examen de ces deux significations, est-ce à l'État de faire la justice au sens de l'égalité ?"],
+        reponse: "Ta conclusion", id: "cclP2",
+        relances: ["Une même règle pour tous suffit-elle à rendre les hommes égaux ? Et l'État peut-il corriger toutes les inégalités sans menacer la liberté ?"]
       },
       {
-        redaction: "p2", titre: "Ta deuxième partie", modele: PARTIE2,
-        consigne: "Voici ta deuxième partie, rassemblée à partir de tes réponses. Ce n'est qu'un premier jet : la dissertation est d'abord un exercice d'écriture. Réécris-la avec tes propres phrases, affine-la et corrige-la."
+        redaction: "p2", titre: "Ta deuxième partie", brouillon: true, consigne: C.reecrire,
+        notes: [
+          ["Question de la partie", "Est-ce à l'État de faire la justice au sens de l'égalité ?", true],
+          ["Ce que veut dire l'hypothèse", "{p2q}"],
+          ["Significations", "soit qu'il doit {signifP2.0} ; soit qu'il doit {signifP2.1}"],
+          ["Première signification : l'égalité en droit", "argument : {argDroit}<br>l'examen : {examen}<br>l'impôt : {impot}<br>réfutation : {refutP2a}"],
+          ["Transition", "{tP2}"],
+          ["Seconde signification : corriger les inégalités de fait", "Marx, thèse : {marxThese}<br>une même mesure pour tous : {marxMesure}<br>ce qu'il faudrait prendre en compte : {marxFait}<br>Rawls, le voile d'ignorance : {voile}<br>l'accès aux études : {voileEx}<br>l'aide à l'élève défavorisé : {aide}<br>le principe de différence : {difference}"],
+          ["Seconde réfutation", "{refutP2b}"],
+          ["Conclusion", "{cclP2}"]
+        ]
       },
       {
         dit: ["Rédige maintenant ta transition en complétant cette amorce."],
-        amorce: "Nous avons distingué deux sens de la justice : ___. Mais l'existence de lois injustes montre que ___, tandis que la persistance des inégalités de fait ___. Il faut donc préciser de quel État ___.",
+        amorce: "Nous avons vu que l'État ne peut pas faire la justice au sens de l'égalité, puisque ___. Si ni la légalité ni l'égalité ne suffisent à faire la justice, ne faut-il pas plutôt se demander ___ ?",
+        relances: ["Jusqu'ici, nous avons interrogé le sens de la justice. Quel autre terme du sujet reste-t-il à interroger ?"],
         id: "t2"
       },
 
