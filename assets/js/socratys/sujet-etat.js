@@ -2,7 +2,7 @@
    Contenu : docs/SOCRATYS-METHODE.md, §5, et la leçon « L'État et la justice » (2026),
    corrigé de référence (docs/Etat_et_Justice_2026.pdf).
    Textes : « État et justice — textes » (docs/Etat_et_Justice_textes.pdf) pour Locke, Marx et
-   Rousseau ; extrait du Gorgias pour Calliclès ; Aristote et Rawls en bulles. */
+   Rousseau ; Aristote et Rawls en bulles. */
 (function () {
   const B = window.SOCRATYS.BON;
   const C = window.SOCRATYS.CONSIGNES;
@@ -16,19 +16,6 @@
     "Si c'est à l'État de faire la justice au sens de l'égalité, alors {probl.1}. Or {problemes.1}.\n\n" +
     "Dans une première partie, nous nous demanderons ce qu'implique {plan.0}. Dans une deuxième partie, nous nous demanderons ce que suppose {plan.1}. " +
     "Et dans une troisième partie, nous nous demanderons {plan.2}.";
-
-  /* première partie assemblée à partir des réponses de l'élève, qu'il peut affiner ou corriger */
-  const PARTIE1 =
-    "{p1q}\n\n" +
-    "Si la justice est ce qui est légal, elle repose sur {mot}, que l'on oppose à {loiOppose.0} (par exemple, {loiOppose.1}). " +
-    "La question devient alors : {p1ref}. Si faire la justice, c'est faire adopter des lois, l'État peut se définir comme {role}. " +
-    "Mais pourquoi obéit-on à la loi ? {pourquoiObeir}. La contrainte relève du fait ({faitDroit.0}), la justice de la loi relève du droit ({faitDroit.1}).\n\n" +
-    "Dans le Gorgias de Platon, Calliclès soutient que {callThese}. Le texte oppose deux conceptions de la justice : {deuxConceptions}. " +
-    "Calliclès s'appuie sur la nature : {exNature}. Selon lui, la justice devrait donc reposer sur {callHyp} : c'est l'hypothèse de la priorité du fait sur le droit. " +
-    "Mais si Calliclès a raison, est-il encore nécessaire d'avoir un État ? {callPont}. Pour justifier la nécessité de l'État, il nous faut donc {liberte}.\n\n" +
-    "Si le droit dit ce qui doit être, une règle ne cesse pas d'être valide quand on la transgresse. Locke soutient que {lockeThese}. " +
-    "En effet, {lockeRisque}. {lockePont}. Ce pouvoir commun, c'est {pouvoirCommun}.\n\n" +
-    "Toutefois, toute loi édictée par l'État n'est pas juste pour autant : {loisInjustes}. {protegeViole}. {cclP1}.";
 
   /* deuxième et troisième parties, conclusion : même principe */
   const PARTIE2 =
@@ -56,18 +43,13 @@
     "L'État, quant à lui, a d'abord été compris comme {cclC.0}, puis comme {cclC.1}, et enfin comme {cclC.2}.\n\n" +
     "{cclD}.";
 
-  const CALLICLES = {
-    corps: ["Et quand on dit qu'il est injuste, qu'il est vilain, de vouloir avoir plus que la plupart des gens, on s'exprime en se référant à la loi. Or, au contraire, il est évident, selon moi, que la justice consiste en ce que le meilleur ait plus que le moins bon et le plus fort plus que le moins fort. Partout il en est ainsi, c'est ce que la nature enseigne, chez toutes les espèces animales, chez toutes les races humaines et dans toutes les cités ! Si le plus fort domine le moins fort et s'il est supérieur à lui, c'est là le signe que c'est juste."],
-    source: "Calliclès, dans Platon, <em>Gorgias</em>, 483c-d"
-  };
-
   window.SOCRATYS_SUJETS.push({
     id: "etat-justice",
     titre: "Est-ce à l'État de faire la justice ?",
 
     copie: [
       ["Introduction", "red_intro", INTRO],
-      ["Première partie", "red_p1", PARTIE1],
+      ["Première partie", "red_p1"],
       ["Transition", "t1"],
       ["Deuxième partie", "red_p2", PARTIE2],
       ["Transition", "t2"],
@@ -187,105 +169,61 @@
       /* ============ PARTIE I ============ */
       { section: "Partie I · est-ce à l'État de faire la justice au sens de la légalité ?" },
       {
-        dit: ["Reprends ce que tu as annoncé pour cette partie et pose-le sous la forme d'une question."],
-        reponse: "Ta question", id: "p1q",
-        motsCles: ["?"],
-        relances: ["Si la justice, c'est ce qui est légal, que veut dire « faire la justice » pour l'État ? Écris-le sous la forme d'une question."]
+        dit: ["Première partie : est-ce à l'État de faire la justice au sens de la légalité ?",
+              "Si c'est à l'État de faire la justice au sens de la légalité, qu'est-ce que cela veut dire ?"],
+        reponse: "Ta réponse", id: "p1q",
+        relances: ["Il faut trouver deux significations à cette hypothèse. Concentre-toi sur le mot « légalité » : que voudrait dire, pour l'État, « faire la légalité » ?",
+                   "Qu'est-ce qui rend une action légale ? D'où vient ce qui la rend légale ?"]
       },
       {
-        dit: ["Si la justice est ce qui est légal, sur quoi repose-t-elle ? Réponds en un mot."],
-        reponse: "Un mot", id: "mot",
-        motsCles: ["loi", "legal", "droit"],
-        relances: ["Quand dit-on d'un acte qu'il est illégal ?",
-                   "Au nom de quoi le juge condamne-t-il au tribunal ?"]
+        dit: ["Concentre-toi maintenant sur les deux significations que tu viens de trouver. Complète :"],
+        champs: ["Si c'est à l'État de faire la justice au sens de la légalité, cela peut signifier deux choses : soit qu'il doit…",
+                 "…soit qu'il doit…"],
+        relances: ["Pour qu'une action puisse être légale, il faut d'abord une loi : qui l'établit ?",
+                   "Quand dit-on d'une action qu'elle est légale ? L'État peut-il, lui aussi, agir de cette manière ?"],
+        id: "signifP1"
       },
       {
-        dit: ["À quoi peut-on l'opposer ? Peux-tu trouver un exemple ?"],
-        champs: ["On peut l'opposer à…", "Un exemple…"],
-        id: "loiOppose"
+        repere: ["Première signification", "Faire la justice au sens de la légalité, ce serait faire la loi."],
+        dit: ["Partons du sens ordinaire de l'expression. Quand tu dis à un camarade qu'il veut « faire la loi », à quoi penses-tu ?"],
+        reponse: "Ta réponse", id: "faireLoi",
+        motsCles: ["impos", "command", "decid", "chef", "domin", "ordre", "obei", "sa loi", "autorit", "pouvoir", "dirig"],
+        relances: ["Que veut obtenir des autres celui qui veut faire la loi dans un groupe ?",
+                   "Celui qui fait la loi, est-ce celui qui obéit ou celui qui commande ?"]
       },
       {
-        bon: "Au sens juridique, la loi est une règle générale et obligatoire, édictée par une autorité légitime et assortie d'une sanction.",
-        dit: ["Peux-tu reprendre la question en la reformulant avec ce nouveau sens de la justice ?"],
-        reponse: "Ta reformulation", id: "p1ref",
-        motsCles: ["loi"],
-        relances: ["Si faire la justice, c'est faire respecter la loi, que se demande-t-on de l'État ?"]
+        dit: ["Si l'État fait la légalité au sens de faire la loi, que doivent faire les citoyens ?"],
+        reponse: "Ta réponse", id: "citoyensObeir",
+        motsCles: ["obei", "soumet", "soumis", "respect", "suivre", "applique", "plier", "execut"],
+        relances: ["Face à celui qui commande, quelle est la place des autres ?",
+                   "Si l'État commande, que reste-t-il à faire aux citoyens devant ses lois ?"]
       },
       {
-        dit: ["Si faire la justice, c'est faire adopter des lois, quel sens peut-on alors donner à l'État ?"],
-        reponse: "Ta réponse", id: "role",
-        motsCles: ["legisla", "autorit", "pouvoir", "edict", "institu", "souverain", "fait les lois", "faire les lois", "vote"],
-        relances: ["Relis la définition de la loi : par qui est-elle édictée ?",
-                   "Qui fait les lois, et au nom de quel pouvoir ?"]
+        dit: ["Cette obéissance est-elle contrainte ou volontaire ?"],
+        reponse: "Ta réponse", id: "obeissance",
+        relances: ["Obéit-on à la loi seulement parce qu'on craint la sanction ?",
+                   "Peut-on obéir à une loi sans y être forcé ? Pour quelle raison le ferait-on ?"]
       },
       {
-        dit: ["Mais pourquoi obéit-on à la loi : parce qu'on y est contraint, ou parce qu'elle est juste ?"],
-        reponse: "Ta réponse", id: "pourquoiObeir"
+        repere: ["Première réfutation", "Une loi imposée par la force est-elle encore une loi juste ?"],
+        dit: ["Que peut-on conclure si les individus doivent obéir par contrainte ? Qu'est-ce que cela implique pour l'État qui fait des lois ?"],
+        reponse: "Ta conclusion", id: "conclContrainte",
+        motsCles: ["volont", "accept", "consent", "adher", "impos", "force", "approuv", "libre"],
+        relances: ["Une loi que l'on respecte seulement par peur est-elle vraiment respectée ? Que se passe-t-il quand la contrainte disparaît ?",
+                   "Pour que les citoyens obéissent sans y être forcés, comment l'État doit-il faire ses lois ?"]
       },
       {
-        bon: "Le fait désigne ce qui se produit effectivement : ce que les individus font réellement, indépendamment de ce qu'ils devraient faire. Le droit détermine ce qui doit être.",
-        dit: ["De ces deux raisons d'obéir — la contrainte, ou la justice de la loi —, laquelle relève du fait, et laquelle relève du droit ?"],
-        champs: ["Relève du fait…", "Relève du droit…"],
-        id: "faitDroit"
+        dit: ["Avant de passer à la seconde signification, marque le passage de l'une à l'autre. Complète cette transition."],
+        amorce: "Si l'État ne peut pas faire la loi en l'imposant par la force, puisque ___, ne doit-il pas plutôt ___ ?",
+        relances: ["Si les lois doivent être acceptées, comment l'État lui-même doit-il agir à leur égard ? Et que doivent-elles garantir aux citoyens ?"],
+        id: "tP1"
       },
       {
-        repere: ["Deux hypothèses", "La priorité du fait sur le droit, ou la priorité du droit sur le fait."],
-        dit: ["Notre question admet donc deux hypothèses. Pour examiner la première, lis ce que soutient Calliclès, face à Socrate."],
-        texte: CALLICLES,
-        bon: B.these
-      },
-      {
-        dit: ["Quelle est la thèse de Calliclès ?"],
-        reponse: "La thèse", id: "callThese",
-        motsCles: ["fort", "meilleur", "nature", "plus"],
-        relances: ["Selon Calliclès, qui doit avoir plus que les autres ?"]
-      },
-      {
-        dit: ["Quelles sont les deux conceptions de la justice que le texte oppose ?"],
-        reponse: "Ta réponse", id: "deuxConceptions",
-        motsCles: ["nature", "loi", "convention"],
-        relances: ["Relis le début du texte : quand on dit qu'il est injuste de vouloir avoir plus que les autres, à quoi se réfère-t-on ?",
-                   "À quoi Calliclès oppose-t-il cette justice fondée sur la loi ? Qu'est-ce qui, selon lui, « enseigne » la justice ?"]
-      },
-      {
-        dit: ["Sur quoi Calliclès s'appuie-t-il pour justifier sa thèse ? Dans la nature, qui domine ? Donne un exemple."],
-        reponse: "Ton exemple", id: "exNature",
-        motsCles: ["nature", "animal", "animaux", "espece", "race", "cite", "partout", "fort", "domin", "lion", "predat"],
-        relances: ["Relis le texte : selon Calliclès, qu'enseigne la nature ?",
-                   "Parmi les animaux, entre les peuples ou entre les cités, qui l'emporte ?"]
-      },
-      {
-        dit: ["Selon Calliclès, la justice devrait-elle reposer sur le fait ou sur le droit ?"],
-        reponse: "Ta réponse", id: "callHyp",
-        motsCles: ["fait", "nature", "naturel"],
-        relances: ["Calliclès fonde-t-il la justice sur ce qui se passe dans la nature, ou sur une convention entre les hommes ?",
-                   "Pour Calliclès, ce qui se fait dans la nature devient-il ce qui doit se faire ?"]
-      },
-      {
-        repere: ["Première hypothèse", "La priorité du fait sur le droit."],
-        dit: ["Si Calliclès a raison, est-il encore nécessaire d'avoir un État ?"],
-        reponse: "Ta réponse", id: "callPont",
-        motsCles: ["non", "inutile", "pas besoin", "pas necessaire", "plus necessaire", "plus fort", "force", "nature"],
-        relances: ["Si la nature enseigne déjà ce qui est juste, à quoi servirait une loi commune ?",
-                   "Si le plus fort domine déjà le moins fort, qui a encore besoin d'un État pour faire la justice ?"]
-      },
-      {
-        dit: ["Que nous faut-il faire alors pour justifier la nécessité de l'État ?"],
-        reponse: "Ta réponse", id: "liberte",
-        motsCles: ["droit", "priorit", "convention", "seconde hypothese", "deuxieme hypothese", "autre hypothese"],
-        relances: ["Quelle était la seconde hypothèse que nous avions annoncée ?",
-                   "Si le fait ne suffit pas à justifier l'État, sur quoi faudrait-il le fonder ?"]
-      },
-      {
-        repere: ["Seconde hypothèse", "La priorité du droit sur le fait."],
-        dit: ["Si le droit dit ce qui doit être, une règle cesse-t-elle d'être valide quand on la transgresse ?"],
-        reponse: "Ta réponse", id: "validite",
-        motsCles: ["non", "reste", "toujours", "valide", "depend pas"],
-        relances: ["Le vol est-il autorisé du seul fait que des gens volent ?"]
+        repere: ["Seconde signification", "Faire la justice au sens de la légalité, ce serait agir conformément à la loi : par des lois communes, l'État garantirait à chacun la sécurité de ses droits."]
       },
       {
         bon: "Selon Locke (<em>Second Traité du gouvernement civil</em>), l'homme possède dès l'état de nature des droits fondamentaux : le droit à la vie, à la liberté et à la propriété.",
-        dit: ["Lis ce texte de Locke."],
+        dit: ["Pour examiner ce second sens, lis ce texte de Locke."],
         texte: {
           corps: ["Si l'homme, dans l'état de nature, est aussi libre que j'ai dit, s'il est le seigneur absolu de sa personne et de ses possessions, égal au plus grand et sujet à personne ; pourquoi se dépouille-t-il de sa liberté et de cet empire, pourquoi se soumet-il à la domination et à l'inspection de quelque autre pouvoir ? Il est aisé de répondre, qu'encore que, dans l'état de nature, l'homme ait un droit, tel que nous avons posé, la jouissance de ce droit est pourtant fort incertaine et exposée sans cesse à l'invasion d'autrui. Car, tous les hommes étant Rois, tous étant égaux et la plupart peu exacts observateurs de l'équité et de la justice, la jouissance d'un bien propre, dans cet état, est mal assurée, et ne peut guère être tranquille."],
           source: "Locke, <em>Traité du gouvernement civil</em>, IX, § 123"
@@ -296,57 +234,68 @@
         dit: ["Quelle est la thèse de ce texte ?"],
         reponse: "La thèse", id: "lockeThese",
         motsCles: ["incertain", "assur", "invasion", "autrui", "soumet", "pouvoir", "proteg", "garanti"],
-        relances: ["Selon Locke, pourquoi l'homme accepte-t-il de se soumettre à un autre pouvoir ?",
+        relances: ["Selon Locke, pourquoi l'homme quitte-t-il l'état de nature pour se soumettre à un pouvoir ?",
                    "Dans l'état de nature, la jouissance de son droit est-elle assurée ?"]
       },
       {
-        dit: ["Pourquoi, selon Locke, la jouissance des droits est-elle incertaine dans l'état de nature ?"],
-        reponse: "Ta réponse", id: "lockeRisque",
-        motsCles: ["interet", "chacun", "propre", "conflit", "violen", "guerre", "interpret", "venge", "juge"],
-        relances: ["Qui décidera, en cas de désaccord, de ce que sont les droits de chacun ?",
-                   "Chacun ne risque-t-il pas de défendre ses droits selon son intérêt particulier ?"]
+        dit: ["Selon Locke, quelle est la condition d'une loi juste ?"],
+        reponse: "Ta réponse", id: "loiJuste",
+        motsCles: ["etat", "pouvoir", "commun", "gouvernement", "civil", "societe", "souverain"],
+        relances: ["Dans l'état de nature, « tous les hommes étant Rois », qui décide de ce qui est juste ?",
+                   "À quel pouvoir les hommes se soumettent-ils pour que la justice ne dépende plus de chacun ?"]
       },
       {
-        dit: ["Reconstitue l'argumentation qui conduit à la nécessité de l'État selon Locke."],
-        reponse: "Ton argumentation", id: "lockePont",
-        motsCles: ["condition", "etat civil", "necessaire", "garanti", "protege", "assur", "pouvoir commun", "autorite", "soumet"],
-        relances: ["Pars de l'état de nature : les hommes y sont-ils libres et égaux ? Leurs droits y sont-ils pour autant assurés ?",
-                   "Que leur manque-t-il pour jouir de leurs droits en sécurité ? Pourquoi acceptent-ils alors de se soumettre à un pouvoir commun ?"]
+        dit: ["Comment Locke justifie-t-il la nécessité d'un pouvoir commun ?"],
+        reponse: "Ta réponse", id: "lockePont",
+        motsCles: ["incertain", "assur", "invasion", "autrui", "equite", "garanti", "protege", "securite", "tranquill", "roi"],
+        relances: ["Dans l'état de nature, la jouissance des droits est-elle assurée ? Pourquoi ?",
+                   "Si chacun est juge de ses propres droits, que se passe-t-il en cas de désaccord ?"]
       },
       {
-        dit: ["Qu'est-ce que Locke appelle « pouvoir commun » ?"],
-        reponse: "Ta réponse", id: "pouvoirCommun",
-        motsCles: ["etat", "gouvernement", "souverain"],
-        relances: ["À quel pouvoir les hommes se soumettent-ils en sortant de l'état de nature ?",
-                   "Quelle institution fait les lois communes et les fait respecter ?"]
+        dit: ["Selon Locke, que garantit l'État lorsqu'il agit conformément à des lois communes ?"],
+        reponse: "Ta réponse", id: "lockeSecurite",
+        motsCles: ["secur", "droit", "vie", "liberte", "propriet", "bien", "jouissance", "tranquill", "proteg", "assur"],
+        relances: ["Relis la fin du texte : qu'est-ce qui est « mal assuré » dans l'état de nature ?",
+                   "Que gagne chacun à vivre sous des lois communes ?"]
       },
       {
-        dit: ["Mais toute loi édictée par l'État est-elle juste pour autant ? Connais-tu des lois qui ont organisé l'injustice ?"],
+        repere: ["Seconde réfutation", "La loi faite par l'État est-elle juste pour autant ?"],
+        dit: ["Est-ce parce que l'État est légitime à faire des lois que celles-ci sont nécessairement justes ?"],
+        reponse: "Ta réponse", id: "legitimeJuste",
+        relances: ["Est légitime ce qui est fondé en droit, c'est-à-dire reconnu comme juste. La légalité n'est que la conformité à la loi : ce qui est légal peut donc ne pas être légitime."]
+      },
+      {
+        dit: ["Connais-tu des lois qui ont organisé l'injustice ?"],
         reponse: "Ton exemple", id: "loisInjustes",
         motsCles: ["race", "racia", "nazi", "reich", "code noir", "esclav", "segreg", "apartheid", "juif", "vichy", "non"],
         relances: ["Pense à l'esclavage dans les colonies : était-il interdit par la loi ?",
                    "Pense à l'Allemagne nazie : ses persécutions étaient-elles illégales ?"]
       },
-      {
-        dit: ["Comment la loi peut-elle, en même temps, protéger et violer des droits ?"],
-        reponse: "Ta réponse", id: "protegeViole"
-      },
+      { repere: ["Ta seconde réfutation", "{legitimeJuste}"] },
       {
         repere: ["Le chemin parcouru",
-          "Le sens de l'État : {role}<br>La priorité du fait (Calliclès) : {callPont}<br>Vers la seconde hypothèse : {liberte}<br>La priorité du droit (Locke) : {lockePont}<br>Ce qui lui résiste : {loisInjustes}"],
-        dit: ["Si l'État n'arrive pas à faire la justice comme légalité, que peut-on en conclure ? Quel autre sens de la justice nous faut-il examiner ?"],
+          "Première signification, faire la loi. Ta réfutation : {conclContrainte}<br>Seconde signification, agir conformément à la loi. Ta réfutation : {legitimeJuste}"],
+        dit: ["Formule maintenant la conclusion de ta première partie : au terme de l'examen de ces deux significations, est-ce à l'État de faire la justice au sens de la légalité ?"],
         reponse: "Ta conclusion", id: "cclP1",
-        motsCles: ["egalit", "distribu"],
-        relances: ["La légalité suffit-elle à garantir la justice ?",
-                   "Quel était le second sens de la justice, dans ton introduction ?"]
+        relances: ["Une loi imposée par la force est-elle juste ? Et une loi faite par un État légitime l'est-elle toujours ?"]
       },
       {
-        redaction: "p1", titre: "Ta première partie", modele: PARTIE1,
-        consigne: "Voici ta première partie, rassemblée à partir de tes réponses. Ce n'est qu'un premier jet : la dissertation est d'abord un exercice d'écriture. Réécris-la avec tes propres phrases, affine-la et corrige-la."
+        redaction: "p1", titre: "Ta première partie", brouillon: true, consigne: C.reecrire,
+        notes: [
+          ["Question de la partie", "Est-ce à l'État de faire la justice au sens de la légalité ?", true],
+          ["Ce que veut dire l'hypothèse", "{p1q}"],
+          ["Significations", "soit qu'il doit {signifP1.0} ; soit qu'il doit {signifP1.1}"],
+          ["Première signification : faire la loi", "au sens ordinaire : {faireLoi}<br>les citoyens : {citoyensObeir}<br>contrainte ou volonté : {obeissance}<br>réfutation : {conclContrainte}"],
+          ["Transition", "{tP1}"],
+          ["Seconde signification : agir conformément à la loi (Locke)", "thèse : {lockeThese}<br>la condition d'une loi juste : {loiJuste}<br>la nécessité d'un pouvoir commun : {lockePont}<br>ce que garantit l'État : {lockeSecurite}"],
+          ["Seconde réfutation", "légitime, donc juste ? {legitimeJuste}<br>des lois qui ont organisé l'injustice : {loisInjustes}"],
+          ["Conclusion", "{cclP1}"]
+        ]
       },
       {
         dit: ["Rédige maintenant ta transition en complétant cette amorce."],
-        amorce: "Nous avons vu que faire la justice au sens de la légalité ___. Mais certaines lois, bien que valides, ___. Il faut donc chercher un autre critère de la justice : ___.",
+        amorce: "Nous avons vu que l'État ne fait pas nécessairement la justice en faisant la loi, puisque ___. Qu'en est-il si la justice ne se définit plus comme ce qui est légal, mais comme ___ ?",
+        relances: ["Si une loi peut être légale sans être juste, quel était le second sens de la justice, dans ton introduction ?"],
         id: "t1"
       },
 
@@ -535,11 +484,10 @@
       {
         repere: ["Première hypothèse", "L'État de fait."],
         bon: "Rousseau distingue l'état de nature, où les hommes vivent dispersés, solitaires et sans liaison entre eux — il relève du fait —, et l'état civil, institution politique qui organise la vie sociale par des lois communes — il relève du droit.",
-        dit: ["L'État de fait, ou état de nature, peut-il faire la justice ? Que serait la nature d'une telle justice ?",
-              "Rappelle-toi la position de Calliclès, en première partie."],
+        dit: ["L'État de fait, ou état de nature, peut-il faire la justice ? Que serait la nature d'une telle justice ?"],
         reponse: "Ta réponse", id: "etatNature",
         motsCles: ["plus fort", "force", "domin", "puissan", "non", "nature"],
-        relances: ["Selon Calliclès, qu'enseigne la nature sur ce qui est juste ?",
+        relances: ["Dans la nature, qui l'emporte ?",
                    "Une justice fondée sur la seule force est-elle encore une justice ?"]
       },
       {
