@@ -18,19 +18,6 @@
     "Et dans une troisième partie, nous nous demanderons {plan.2}.";
 
   /* deuxième et troisième parties, conclusion : même principe */
-  const PARTIE3 =
-    "Si c'est à l'État de faire la justice, de quel État s'agit-il ?\n\n" +
-    "Rousseau soutient que {rous8These}. Il oppose l'état de nature ({rous8Termes.0}) à l'état civil ({rous8Termes.1}) : {rous8FaitDroit}. " +
-    "L'État de fait, ou état de nature, peut-il faire la justice ? {etatNature}.\n\n" +
-    "S'il ne tient sa légitimité ni de la nature ni de la force, l'État la tient {legitimite}. Rousseau appelle état civil cet État fondé sur une convention.\n\n" +
-    "Rousseau soutient que {rousThese}. Chez lui, le consentement s'exprime ainsi : {rester}. Par opposition à la force, on peut l'appeler {consentSyn}. Le pacte social exige un consentement unanime parce que {rousPont}. Cela éclaire la nature de l'État : {natureEtat}. " +
-    "Pourtant, {rousLimite}. À cette objection, Rousseau répond que {rousReponse}. Quelle est alors la forme de l'État la mieux à même de faire la justice ? {civilJustice}.";
-  const CONCLUSION =
-    "Nous nous demandions : {cclA.0} Le problème était le suivant : {cclA.1}.\n\n" +
-    "Dans la première partie, faire la justice signifiait {cclB.0} ; dans la deuxième, {cclB.1} ; dans la troisième, {cclB.2}. " +
-    "L'État, quant à lui, a d'abord été compris comme {cclC.0}, puis comme {cclC.1}, et enfin comme {cclC.2}.\n\n" +
-    "{cclD}.";
-
   window.SOCRATYS_SUJETS.push({
     id: "etat-justice",
     titre: "Est-ce à l'État de faire la justice ?",
@@ -41,8 +28,8 @@
       ["Transition", "t1"],
       ["Deuxième partie", "red_p2"],
       ["Transition", "t2"],
-      ["Troisième partie", "red_p3", PARTIE3],
-      ["Conclusion", "red_ccl", CONCLUSION]
+      ["Troisième partie", "red_p3"],
+      ["Conclusion", "red_ccl"]
     ],
 
     fiche: [
@@ -57,7 +44,7 @@
       ["Seconde hypothèse", "Si c'est à l'État de faire la justice au sens de l'égalité, alors {probl.1}"],
       ["Problèmes", "Or {problemes.0} — Or {problemes.1}"],
       ["Plan", "I. {plan.0} — II. {plan.1} — III. {plan.2}"],
-      ["Couple de la partie III", "{couple3}"]
+      ["Couple de la partie III", "état de nature / état civil"]
     ],
 
     etapes: [
@@ -137,7 +124,7 @@
                  "Dans une deuxième partie, nous nous demanderons ce que suppose…",
                  "Et dans une troisième partie, nous nous demanderons…"],
         id: "plan",
-        relances: ["Si l'analyse du prédicat, faire la justice, te donne les deux premières parties, c'est celle du sujet grammatical, l'État, qui te donne la troisième : on questionne alors l'État à l'aide d'un autre couple philosophique. Tu peux par exemple questionner l'État à partir du couple fait / droit, que l'on peut aussi nommer nature / civil : de quel État peut-on attendre la justice ?"]
+        relances: ["Si l'analyse du prédicat, faire la justice, te donne les deux premières parties, c'est celle du sujet grammatical, l'État, qui te donne la troisième : on questionne alors l'État à l'aide d'un autre couple philosophique. Tu peux par exemple questionner l'État à partir du couple état de nature / état civil : de quel État peut-on attendre la justice ?"]
       },
       {
         redaction: "intro", titre: "Ton introduction", modele: INTRO, consigne: C.reecrireIntro,
@@ -429,17 +416,39 @@
       /* ============ PARTIE III ============ */
       { section: "Partie III · quel État peut faire la justice ?" },
       {
-        bon: "Le sujet grammatical, ici « l'État », est interrogé dans la troisième partie à l'aide d'un couple philosophique.",
-        dit: ["Si c'est à l'État de faire la justice, de quel État s'agit-il ?",
-              "Avec quel couple philosophique peux-tu définir l'État ?"],
-        choix: [{ l: "État de fait / État de droit", bon: true }, { l: "individuel / collectif" }, { l: "subjectif / objectif" }],
-        id: "couple3",
-        relances: [
-          "Applique ce couple à l'État : un État « {couple3} »… est-ce que cela éclaire d'où l'État tient son pouvoir ?",
-          "Quand on dit « nul n'est au-dessus des lois », à qui pense-t-on aussi ? Qu'est-ce que cela distingue entre deux sortes de pouvoir ?",
-          "Dans quel domaine parle-t-on de « coup d'État », de « dictature » ou de « Constitution » ? Qu'est-ce qui oppose un pouvoir pris par la force et un pouvoir reconnu ?"
-        ]
+        dit: ["Troisième partie : quel État peut faire la justice ?",
+              "La justice peut se faire soit dans l'état de nature, soit dans l'état civil. Que veut dire « état de nature » ?"],
+        reponse: "Ta réponse", id: "defNature",
+        relances: ["Imagine des hommes qui vivraient sans État, sans lois communes, sans police ni tribunaux : dans quelle condition seraient-ils ?",
+                   "Pourquoi parle-t-on de « nature » ? Qu'est-ce qui manquerait, qui est l'œuvre des hommes ?"]
       },
+      {
+        dit: ["Et que veut dire « état civil » ?"],
+        reponse: "Ta réponse", id: "defCivil",
+        relances: ["Le mot « civil » vient du latin <em>civis</em>, le citoyen : qu'est-ce qui caractérise la vie des citoyens ?",
+                   "Qu'apportent aux hommes l'État et les lois communes ?"]
+      },
+      {
+        repere: ["Première hypothèse", "Faire la justice dans l'état de nature : sans État, chacun se ferait justice lui-même."],
+        dit: ["Qu'est-ce qui prévaut dans l'état de nature ?"],
+        reponse: "Ta réponse", id: "argNature",
+        motsCles: ["force", "fort", "puissan", "violen", "domin", "faible"],
+        relances: ["Sans lois communes, qu'est-ce qui décide de ce que chacun peut faire ?",
+                   "S'il y a un conflit entre deux hommes, et qu'aucun juge ne peut trancher, lequel l'emporte ?"]
+      },
+      {
+        dit: ["Peut-il y avoir justice dans un état où c'est le plus fort qui a raison ?"],
+        reponse: "Ta réponse", id: "plusFortRaison",
+        relances: ["Si le plus faible a été lésé, qui lui rendra ce qui lui est dû ?",
+                   "Avoir la force de l'emporter, est-ce avoir raison ?"]
+      },
+      {
+        dit: ["Formule maintenant une réfutation de l'idée qu'il puisse y avoir une justice dans l'état de nature."],
+        reponse: "Ta réfutation", id: "refutP3a",
+        relances: ["Là où c'est le plus fort qui a raison, le droit de chacun est-il respecté ?",
+                   "Une justice qui dépend de la force de chacun est-elle encore une justice ?"]
+      },
+      { repere: ["Ta première réfutation", "{refutP3a}"] },
       {
         dit: ["Lis ce texte de Rousseau."],
         texte: {
@@ -455,36 +464,31 @@
         relances: ["Selon Rousseau, que change en l'homme le passage de l'état de nature à l'état civil ?"]
       },
       {
-        dit: ["Relève les termes qui caractérisent l'état de nature, et ceux qui caractérisent l'état civil."],
-        champs: ["L'état de nature…", "L'état civil…"],
-        id: "rous8Termes"
+        dit: ["Comment Rousseau définit-il l'état civil ?"],
+        reponse: "Ta réponse", id: "rous8Def",
+        motsCles: ["justice", "devoir", "droit", "raison", "moral", "principe"],
+        relances: ["Relis le texte : qu'est-ce que l'état civil substitue à l'instinct ? à l'impulsion physique ? à l'appétit ?",
+                   "Dans l'état civil, l'homme écoute-t-il d'abord ses penchants, ou sa raison ?"]
       },
       {
-        dit: ["L'état de nature relève-t-il du fait ou du droit ? Et l'état civil ?"],
-        reponse: "Ta réponse", id: "rous8FaitDroit",
-        motsCles: ["fait", "droit"],
-        relances: ["L'instinct, l'impulsion physique, l'appétit disent-ils ce qui se produit effectivement, ou ce qui doit être ?",
-                   "La justice, le devoir, le droit disent-ils ce qui est, ou ce qui doit être ?"]
+        dit: ["Pourquoi, selon Rousseau, la justice n'apparaît-elle qu'avec l'état civil ?"],
+        reponse: "Ta réponse", id: "rous8Pourquoi",
+        relances: ["Relis la fin du texte : l'homme qui « n'avait regardé que lui-même », que doit-il faire désormais ?",
+                   "Agir selon sa raison et en tenant compte des autres, est-ce déjà une condition de la justice ?"]
       },
       {
-        repere: ["Première hypothèse", "L'État de fait."],
-        bon: "Rousseau distingue l'état de nature, où les hommes vivent dispersés, solitaires et sans liaison entre eux — il relève du fait —, et l'état civil, institution politique qui organise la vie sociale par des lois communes — il relève du droit.",
-        dit: ["L'État de fait, ou état de nature, peut-il faire la justice ? Que serait la nature d'une telle justice ?"],
-        reponse: "Ta réponse", id: "etatNature",
-        motsCles: ["plus fort", "force", "domin", "puissan", "non", "nature"],
-        relances: ["Dans la nature, qui l'emporte ?",
-                   "Une justice fondée sur la seule force est-elle encore une justice ?"]
+        dit: ["Avant de passer à la seconde hypothèse, marque le passage de l'une à l'autre. Complète cette transition."],
+        amorce: "Si la justice ne peut pas se faire dans l'état de nature, puisque ___, ne faut-il pas la chercher dans ___ ?",
+        relances: ["Où Rousseau situe-t-il l'apparition de la justice ?"],
+        id: "tP3"
       },
       {
-        repere: ["Seconde hypothèse", "L'État de droit."],
-        dit: ["Si un État ne tient sa légitimité ni de la nature ni de la force, d'où peut-il la tenir ?"],
+        repere: ["Seconde hypothèse", "Faire la justice dans l'état civil."],
+        dit: ["Si l'état civil ne tient sa légitimité ni de la nature ni de la force, d'où peut-il la tenir ?"],
         reponse: "Ta réponse", id: "legitimite",
         motsCles: ["volonte", "convention", "contrat", "accord", "consent", "peuple", "citoyen", "individu"],
         relances: ["Qui doit accepter le pouvoir pour qu'il soit légitime ?",
                    "Comment appelle-t-on un accord passé entre des personnes ?"]
-      },
-      {
-        bon: "Chez Rousseau, l'État fondé sur une convention, le contrat social, s'appelle l'état civil. Attention au glissement : ce que nous appelons l'État de droit, Rousseau le nomme l'état civil."
       },
       {
         dit: ["Lis cet autre texte de Rousseau."],
@@ -511,28 +515,11 @@
                    "Celui qui pourrait partir et ne part pas, qu'exprime-t-il ?"]
       },
       {
-        dit: ["Quel synonyme donnes-tu au consentement, par rapport à la force ?"],
-        reponse: "Un mot", id: "consentSyn",
-        motsCles: ["accord", "adhes", "assentiment", "accept", "volont", "libre", "approb", "agrement", "acquiesc"],
-        relances: ["La force contraint ; le consentement, lui, que suppose-t-il de la part de celui qui obéit ?"]
-      },
-      {
         dit: ["Pourquoi, selon Rousseau, le pacte social exige-t-il un consentement unanime ?"],
         reponse: "Ta réponse", id: "rousPont",
         motsCles: ["libre", "maitre", "volontaire", "aveu", "assujett", "accord", "consent", "force"],
         relances: ["Relis : « tout homme étant né libre et maître de lui-même… » Que peut-on en conclure ?",
                    "Peut-on, selon Rousseau, faire entrer quelqu'un dans l'association civile sans son accord ?"]
-      },
-      {
-        dit: ["En quoi ceci éclaire-t-il la nature de l'État ?"],
-        reponse: "Ta réponse", id: "natureEtat",
-        motsCles: ["convention", "volont", "consent", "association", "artifici", "institu", "contrat", "pacte", "pas naturel", "libre"],
-        relances: ["L'État repose-t-il alors sur la nature, sur la force, ou sur la volonté des hommes ?"]
-      },
-      {
-        dit: ["Mais as-tu choisi l'État dans lequel tu es né ? Tout le monde peut-il partir ? Que vaut un consentement qui n'a jamais été exprimé ?"],
-        reponse: "Ta réponse", id: "rousLimite",
-        relances: ["Celui qui n'a ni les moyens ni la liberté de s'établir ailleurs consent-il vraiment en restant ?"]
       },
       {
         dit: ["Rousseau se pose lui-même l'objection : comment être libre en obéissant à des lois auxquelles on n'a pas consenti ? Que répond-il ?"],
@@ -541,16 +528,25 @@
         relances: ["Relis la dernière phrase du texte : par quoi les membres de l'État sont-ils citoyens et libres ?"]
       },
       {
-        dit: ["Quelle est la forme de l'État la mieux à même de faire la justice ?"],
-        reponse: "Ta réponse", id: "civilJustice",
-        motsCles: ["droit", "civil", "volonte generale", "democrat", "republi", "contrat", "consent", "loi"],
-        relances: ["Entre l'État de fait et l'État de droit, lequel peut faire la justice ?",
+        repere: ["Le chemin parcouru",
+          "Première hypothèse, la justice dans l'état de nature. Ta réfutation : {refutP3a}<br>Seconde hypothèse, la justice dans l'état civil. Ce que montre Rousseau : {rous8Pourquoi}<br>Le consentement : {rousPont}"],
+        dit: ["Formule maintenant la conclusion de ta troisième partie : quel État peut faire la justice ?"],
+        reponse: "Ta conclusion", id: "civilJustice",
+        motsCles: ["civil", "droit", "volonte generale", "democrat", "republi", "contrat", "consent", "loi"],
+        relances: ["Entre l'état de nature et l'état civil, où la justice peut-elle se faire ?",
                    "Quel État repose sur le consentement des citoyens et sur des lois qu'ils ont eux-mêmes faites ?"]
       },
-      { repere: ["Ta conclusion de la partie III", "{civilJustice}"] },
       {
-        redaction: "p3", titre: "Ta troisième partie", modele: PARTIE3,
-        consigne: "Voici ta troisième partie, rassemblée à partir de tes réponses. Ce n'est qu'un premier jet : la dissertation est d'abord un exercice d'écriture. Réécris-la avec tes propres phrases, affine-la et corrige-la."
+        redaction: "p3", titre: "Ta troisième partie", brouillon: true, consigne: C.reecrire,
+        notes: [
+          ["Question de la partie", "Quel État peut faire la justice ?", true],
+          ["L'état de nature et l'état civil", "l'état de nature : {defNature}<br>l'état civil : {defCivil}"],
+          ["Première hypothèse : la justice dans l'état de nature", "ce qui y prévaut : {argNature}<br>justice là où le plus fort a raison ? {plusFortRaison}<br>réfutation : {refutP3a}"],
+          ["Rousseau, l'état civil", "thèse : {rous8These}<br>définition : {rous8Def}<br>pourquoi la justice n'apparaît qu'avec lui : {rous8Pourquoi}"],
+          ["Transition", "{tP3}"],
+          ["Seconde hypothèse : la justice dans l'état civil", "légitimité : {legitimite}<br>Rousseau, thèse : {rousThese}<br>le consentement : {rester}<br>pourquoi l'unanimité : {rousPont}<br>l'objection et sa réponse : {rousReponse}"],
+          ["Conclusion", "{civilJustice}"]
+        ]
       },
 
       /* ============ CONCLUSION ============ */
@@ -578,8 +574,13 @@
                    "Si chaque terme a dû changer de sens, que peut-on en dire de la question elle-même ?"]
       },
       {
-        redaction: "ccl", titre: "Ta conclusion", modele: CONCLUSION,
-        consigne: "Voici ta conclusion, rassemblée à partir de tes réponses. Ce n'est qu'un premier jet : la dissertation est d'abord un exercice d'écriture. Réécris-la avec tes propres phrases, affine-la et corrige-la."
+        redaction: "ccl", titre: "Ta conclusion", brouillon: true, consigne: C.reecrire,
+        notes: [
+          ["Sujet et problématique", "{cclA.0}<br>{cclA.1}"],
+          ["Faire la justice", "I. {cclB.0}<br>II. {cclB.1}<br>III. {cclB.2}"],
+          ["L'État", "I. {cclC.0}<br>II. {cclC.1}<br>III. {cclC.2}"],
+          ["Ce que montrent ces variations", "{cclD}"]
+        ]
       }
     ]
   });
